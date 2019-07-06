@@ -1,10 +1,10 @@
 {
   "version": "3.0.0",
-  "name": "gatsby-starter-lumen",
-  "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
+  "name": "personal-website",
+  "description": "Igor Gassmann's personal website",
   "main": "n/a",
   "scripts": {
-    "develop": "yarn run clean && gatsby develop",
+    "dev": "yarn run clean && gatsby develop",
     "build": "yarn run clean && gatsby build",
     "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public",
     "clean": "rimraf .cache public",
@@ -18,25 +18,17 @@
     "test:watch": "jest --watch --config ./jest/jest-config.js",
     "release": "standard-version"
   },
-  "repository": "https://github.com/alxshelepenok/gatsby-starter-lumen",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
-  "license": "MIT",
+  "repository": "https://github.com/IGassmann/personal-website",
+  "author": "Igor Gassmann <igor@igassmann.me>",
   "keywords": [
     "gatsby",
     "graphql",
     "netlify",
-    "netlify-cms",
-    "pagination",
-    "categories",
-    "tags",
     "prismjs",
     "static",
-    "lost",
     "blog",
     "minimal",
     "react",
-    "theme",
-    "starter",
     "disqus"
   ],
   "dependencies": {

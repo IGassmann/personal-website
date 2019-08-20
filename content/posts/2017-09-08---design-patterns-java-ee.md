@@ -1,0 +1,55 @@
+---
+title: Exploring Design Patterns with Java EE
+date: 2017-09-08
+template: post
+draft: false
+slug: /posts/design-patterns-java-ee
+category: Project
+tags:
+  - web
+description: A short explanation of the patterns that I encountered during project researches.
+---
+
+During the first semester of this year, I developed a few Java EE web projects. Before starting to code and build something, I needed to decide how I would structure and organize the application’s components. After researching for a moment, I became obsessed with these concepts. There were so many different ways to structure an app, and I wanted to find the most appropriate one for the project needs.
+
+Java EE offers resources that you can use for developing a web app. Like for example, Servlets and JSP. But it’s the responsibility of the developer to decide how he will make use of those. There are many design patterns that offer practical ways to structure web apps.
+
+The one that I already knew was MVC (Model View Controller). It’s probably one of the most well know pattern, but it’s also the most confuse one. Nowadays, it became a buzzword to indicate that we are separating the presentation layer from the model layer. It isn’t anymore a well-defined pattern as it was during the Smalltalk time. The problem is that we hardly implement the original MVC in the web world because the web is per nature request based. We had to adapt it to the web needs. This is where enter the [JSP Model 2](http://www.javaranch.com/journal/200603/frontman.html), also known as MVC Model 2.
+
+## MVC Model 2
+
+MVC Model 2 was introduced as a solution to architect Java EE web applications in a way that would be easier to scale it. It separates the application code in three parts:
+
+### Model
+
+The model includes all the business rules of the application. That means that it’s responsible for ensuring the data integrity. He’s also in charge of the communication with any data source.
+
+### View
+
+The view is in charge of the presentation layer of our application. It dictates in what form our data will be served. In the context of the MVC Model 2, the view is represented by JSP files.
+
+### Controller
+
+Finally, the controller is in charge to ensure the communication between the model and the view. It’s also responsible for receiving client requests and direct them to the appropriate resources. The controllers are the Servlets in the MVC Model 2.
+
+## Structuring the Model
+
+With the MVC Model 2, I found a solution for how to separate the presentation layer to the model layer. But I still needed a way to structure the model. After spending hours researching, I became familiar with a few design patterns used on the model side.
+
+### Domain Objects
+
+A domain object is a plain old Java object that represents an entity of the domain of our application. For example, a domain object named “Book” would be an abstraction of a book in real life, if we were designing an app for a library. This object would incorporate domain rules that ensure that the business norms are enforced. If the library doesn't allow numbers in Book names, the domain object shouldn’t allow it.
+
+### Active Record
+
+Active Record is a pattern that became popular with the Ruby on Rails framework. The idea is to get the data access logic of the application inside domain objects. Consequently, a domain object will incorporate code to access a SQL database, for example. The problem of this pattern is that it produces a strong relationship between our application and our data source. It will be hard to switch to a different type of data source in the future without modifying some important objects of our application. The benefit is that it’s easy and quick to implement.
+
+### Data Mapper
+
+Data Mappers can be used instead of Active Record. It separates the data access logic from the domain objects into a data mapper object. This object will contain all the code to access the data sources. Then, if our application needs to switch to another data source, we won’t need to modify our domain objects.
+
+## The App Architecture
+
+After analyzing those design patterns, I used them in one application that I’ve written about in a [previous blog post](/posts/web-app-from-the-ground). One thing that I haven’t talked about that is in the diagram below is that I separated the controllers into two types. View controllers and action controllers. A view controller is directly linked to a view. It can, for example, get the necessary data for a view and forward the client request to that view. On the other hand, an action controller will perform actions like delete, add or edit. You could have an action that adds a new book to our application.
+
+![Application architecture](/media/omwa-architecture.png)

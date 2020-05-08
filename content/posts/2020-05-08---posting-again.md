@@ -18,3 +18,5 @@ First, I wrote down my high-level goals. The next step was to define daily activ
 One of those daily activities is daily blogging. I won’t mention all the great benefits of daily blogging here. Seth Godin would be better placed. The point is that I hope through this practice get closer to my goals which include learning. Through this blog, I will lay down my ideas and think through them.
 
 One post at a time, I will get through that stack
+
+![The Stack](/media/learn-mind-map.png)

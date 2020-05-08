@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "1.0.0",
   "name": "personal-website",
   "description": "Igor Gassmann's personal website",
   "main": "n/a",
@@ -80,11 +80,11 @@
     "@babel/plugin-transform-flow-strip-types": "^7.4.4",
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
-    "babel-preset-gatsby": "0.2.0",
     "autoprefixer": "9.6.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.2",
     "babel-jest": "24.8.0",
+    "babel-preset-gatsby": "0.2.0",
     "browserslist": "4.6.3",
     "concurrently": "4.1.1",
     "eslint": "6.0.1",
@@ -94,8 +94,8 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.2",
     "eslint-watch": "5.1.2",
-    "flow-typed": "^2.5.1",
     "flow-bin": "^0.98.1",
+    "flow-typed": "^2.5.1",
     "gh-pages": "2.0.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.8.0",
@@ -108,5 +108,6 @@
     "stylelint": "10.1.0",
     "stylelint-config-recommended-scss": "3.3.0",
     "stylelint-scss": "3.9.0"
-  }
+  },
+  "license": "UNLICENSED"
 }

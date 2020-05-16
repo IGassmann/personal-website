@@ -3,8 +3,14 @@ title: "About me"
 template: "page"
 ---
 
-I'm a co-founder of Odeon. We're building the next video platform for independent content creators. There I work as a developer and on operations.
+I'm a founder at Odeon. We're building the next video platform for independent content creators.
 
-When I’m not developing, I can be found thinking about philosophy. I also love to learn and discuss about politics and economics.
+I'm currently deep diving into the following:
 
-Two key values in my life, are flexibility and accountability. These are essential to achieve personal growth without some worthless obstacles. Beyond that, I believe that one must pursue one’s path with reason and an open mind if he wants to rise into a fulfilled life.
+- Test-Driven Development
+- Trunk Based Development
+- Continuous Delivery
+- Extreme Programming
+- Monorepo
+- Domain-Driven Design
+- REST API Design

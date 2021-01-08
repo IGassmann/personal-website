@@ -26,7 +26,7 @@ module.exports = {
   author: {
     name: 'Igor Gassmann',
     photo: '/portrait.jpg',
-    bio: 'Founder at Odeon',
+    bio: 'Supporting content creators with code since 2017.',
     contacts: {
       email: 'igor@igassmann.me',
       twitter: 'i_gassmann',

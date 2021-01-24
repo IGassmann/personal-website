@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import classNames from 'classnames/bind';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import { PAGINATION } from '../../constants';
 import styles from './Pagination.module.scss';
 
@@ -33,10 +33,14 @@ const Pagination = ({
   return (
     <div className={styles['pagination']}>
       <div className={styles['pagination__prev']}>
-        <Link rel="prev" to={prevPagePath} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>
+        <Link rel="prev" href={prevPagePath} className={prevClassName}>
+          <a>{PAGINATION.PREV_PAGE}</a>
+        </Link>
       </div>
       <div className={styles['pagination__next']}>
-        <Link rel="next" to={nextPagePath} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link>
+        <Link rel="next" href={nextPagePath} className={nextClassName}>
+          <a>{PAGINATION.NEXT_PAGE}</a>
+        </Link>
       </div>
     </div>
   );

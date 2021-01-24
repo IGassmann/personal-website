@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import styles from './Tags.module.scss';
 
 type Props = {
@@ -13,8 +13,8 @@ const Tags = ({ tags, tagSlugs }: Props) => (
     <ul className={styles['tags__list']}>
       {tagSlugs && tagSlugs.map((slug, i) => (
         <li className={styles['tags__list-item']} key={tags[i]}>
-          <Link to={slug} className={styles['tags__list-item-link']}>
-            {tags[i]}
+          <Link href={slug} className={styles['tags__list-item-link']}>
+            <a>{tags[i]}</a>
           </Link>
         </li>
       ))}

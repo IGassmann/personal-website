@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import kebabCase from 'lodash/kebabCase';
 import Sidebar from '../components/Sidebar';
 import Layout from '../components/Layout';
@@ -18,8 +18,8 @@ const CategoriesListTemplate = () => {
         <ul>
           {categories.map((category) => (
             <li key={category.fieldValue}>
-              <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
-                {category.fieldValue} ({category.totalCount})
+              <Link href={`/category/${kebabCase(category.fieldValue)}/`}>
+                <a>{category.fieldValue} ({category.totalCount})</a>
               </Link>
             </li>
           ))}

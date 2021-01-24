@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import styles from './Menu.module.scss';
 
 type Props = {
@@ -16,11 +16,11 @@ const Menu = ({ menu }: Props) => (
       {menu.map((item) => (
         <li className={styles['menu__list-item']} key={item.path}>
           <Link
-            to={item.path}
+            href={item.path}
             className={styles['menu__list-item-link']}
             activeClassName={styles['menu__list-item-link--active']}
           >
-            {item.label}
+            <a>{item.label}</a>
           </Link>
         </li>
       ))}

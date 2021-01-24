@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import Author from './Author';
 import Comments from './Comments';
 import Content from './Content';
@@ -20,7 +20,9 @@ const Post = ({ post }: Props) => {
 
   return (
     <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">All Articles</Link>
+      <Link className={styles['post__home-button']} href="/">
+        <a>All Articles</a>
+      </Link>
 
       <div className={styles['post__content']}>
         <Content body={html} title={title} />

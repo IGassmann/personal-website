@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from './Pagination';","map":{"version":3,"sources":["/Users/IGassmann/Developer/IGassmann/personal-website/src/components/Pagination/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,cAAxB","sourcesContent":["export { default } from './Pagination';\n"]},"metadata":{},"sourceType":"module"}

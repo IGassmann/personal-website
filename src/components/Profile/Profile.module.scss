@@ -2,8 +2,13 @@
 @use 'styles/breakpoints';
 
 .profile {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+
+  &.inline {
+    flex-direction: row;
+  }
 }
 
 .title {
@@ -32,9 +37,22 @@
 }
 
 .profilePictureLink {
+  width: 64px;
+
   &.inline {
-    float: left;
     margin-right: 16px;
+  }
+}
+
+.text {
+  &.inline {
+    flex: 1;
+  }
+}
+
+@include breakpoints.sm {
+  .profilePicture {
+    width: 80px;
   }
 }
 

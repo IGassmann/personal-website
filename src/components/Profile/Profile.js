@@ -11,6 +11,7 @@ const Profile = ({ isIndex, isInline }) => {
     layoutBreakpointSmall,
     profile: profileStyle,
     inline,
+    text,
     title,
     profilePictureLink
   } = styles;
@@ -23,7 +24,7 @@ const Profile = ({ isIndex, isInline }) => {
   const imageSize = isInline ? 64 : 80;
 
   return (
-    <div className={profileStyle}>
+    <div className={`${profileStyle} ${isInline || !isPageWide ? inline : ''}`}>
       <Link href="/">
         <a className={`${profilePictureLink} ${isInline || !isPageWide ? inline : ''}`}>
           <Image
@@ -35,12 +36,14 @@ const Profile = ({ isIndex, isInline }) => {
           />
         </a>
       </Link>
-      <TitleHeaderTag className={`${title} ${isInline || !isPageWide ? inline : ''}`}>
-        <Link href="/">
-          <a>{profile.name}</a>
-        </Link>
-      </TitleHeaderTag>
-      <p className={`${subtitle} ${isInline || !isPageWide ? inline : ''}`}>{profile.bio}</p>
+      <div className={`${text} ${isInline || !isPageWide ? inline : ''}`}>
+        <TitleHeaderTag className={`${title} ${isInline || !isPageWide ? inline : ''}`}>
+          <Link href="/">
+            <a>{profile.name}</a>
+          </Link>
+        </TitleHeaderTag>
+        <p className={`${subtitle} ${isInline || !isPageWide ? inline : ''}`}>{profile.bio}</p>
+      </div>
     </div>
   );
 };

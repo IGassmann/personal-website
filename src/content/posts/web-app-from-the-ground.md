@@ -1,10 +1,10 @@
 ---
 title: Building a Web App From the Ground Up
-publishedAt: '2017-06-22'
+summary: The final project of my Swiss apprenticeship.
 category: Project
 tags:
   - web
-description: The final project of my Swiss apprenticeship.
+publishedAt: '2017-06-22'
 ---
 
 During the last year of a Swiss developer apprenticeship, the apprentice has to develop a project in 3 weeks to demonstrate that he is capable of handling a project by himself.

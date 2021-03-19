@@ -1,6 +1,6 @@
 ---
-title: I’ve Interviewed 8 Influential Content Creators – Here’s What I’ve Learned
-description: Lessons I got from interviewing 8 brazilian content creators.
+title: I’ve Interviewed 8 Influential Content Creators
+summary: Lessons I got from interviewing 8 brazilian content creators.
 publishedAt: '2021-01-08'
 tags:
  - content-creation

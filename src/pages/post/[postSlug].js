@@ -2,27 +2,46 @@ import { BlogHomeButton } from '@/components/BlogHomeButton/BlogHomeButton';
 import Layout from '@/components/Layout';
 import Post from '@/components/Post';
 import { getAllPosts, getPostBySlug } from '@/lib/api';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 // noinspection JSUnusedGlobalSymbols
-export default function PostPage({siteTitle, siteSubtitle, post }) {
-  const metaDescription = post.description !== null ? post.description : siteSubtitle;
+export default function PostPage({ post, origin }) {
+  const router = useRouter()
 
   return (
-    <Layout isSingleColumn title={`${(post.title)} - ${siteTitle}`} description={metaDescription}>
-      <BlogHomeButton/>
-      <Post post={post} />
-    </Layout>
+    <>
+      <NextSeo
+        title={post.title}
+        description={post.summary}
+        openGraph={{
+          title: post.title,
+          url: `${origin}${router.asPath}`,
+          type: 'article',
+          article: {
+            publishedTime: post.publishedAt,
+            authors: [`${origin}/about`],
+            tags: post.tags,
+          }
+        }}
+      />
+      <Layout isSingleColumn>
+        <BlogHomeButton/>
+        <Post post={post} />
+      </Layout>
+    </>
   );
 }
 
 // noinspection JSUnusedGlobalSymbols
 export async function getStaticProps({ params: { postSlug } }) {
-  const { default: { title, description } } = await import('@/site.config')
+  const { default: { origin } } = await import('@/site.config')
 
   const post = await getPostBySlug(postSlug, [
     'title',
-    'description',
+    'summary',
+    'coverImage',
     'publishedAt',
     'content',
     'tags',
@@ -32,9 +51,8 @@ export async function getStaticProps({ params: { postSlug } }) {
 
   return {
     props: {
-      siteTitle: title,
-      siteSubtitle: description,
       post: post,
+      origin,
     },
   };
 }

@@ -2,19 +2,31 @@ import PostFeed from '@/components/PostFeed';
 import Layout from '@/components/Layout';
 import Pagination from '@/components/Pagination';
 import { getAllPosts } from '@/lib/api';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import React from 'react';
 
-export default function BlogPagePage({ siteTitle, siteSubtitle, posts, currentPage, numberOfPages }) {
-  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : `Blog - ${siteTitle}`;
+export default function BlogPagePage({ posts, currentPage, numberOfPages, origin }) {
+  const router = useRouter()
+  const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage}` : '';
 
   return (
-    <Layout pageTitle={pageTitle} pageDescription={siteSubtitle} isIndex>
-      <PostFeed posts={posts} />
-      <Pagination
-        currentPage={currentPage}
-        numberOfPages={numberOfPages}
+    <>
+      <NextSeo
+        title={pageTitle}
+        openGraph={{
+          title: pageTitle,
+          url: `${origin}${router.asPath}`,
+        }}
       />
-    </Layout>
+      <Layout isIndex>
+        <PostFeed posts={posts} />
+        <Pagination
+          currentPage={currentPage}
+          numberOfPages={numberOfPages}
+        />
+      </Layout>
+    </>
   );
 }
 
@@ -22,11 +34,11 @@ export async function getStaticProps({ params }) {
   const pageIndexParam = params?.blogPageIndex;
   const pageIndex = parseInt(pageIndexParam || '0')
 
-  const { default: { title, description, postsPerPage } } = await import('@/site.config')
+  const { default: { postsPerPage, origin } } = await import('@/site.config')
 
   const posts = getAllPosts([
     'title',
-    'description',
+    'summary',
     'category',
     'publishedAt',
     'slug',
@@ -41,11 +53,10 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      siteTitle: title,
-      siteSubtitle: description,
       posts: paginatedPosts,
       currentPage: pageIndex,
       numberOfPages,
+      origin,
     },
   };
 }

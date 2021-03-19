@@ -1,6 +1,6 @@
 ---
 title: The Balance Between Confidence and Safety
-description: How to balance confidence and safety.
+summary: How to balance confidence and safety.
 publishedAt: '2017-09-22'
 ---
 

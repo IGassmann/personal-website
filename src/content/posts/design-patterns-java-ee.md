@@ -1,6 +1,6 @@
 ---
 title: Exploring Design Patterns with Java EE
-description: A short explanation of the patterns that I encountered during project researches.
+summary: A short explanation of the patterns that I encountered during project researches.
 category: Project
 tags:
   - web

@@ -1,12 +1,26 @@
 import Layout from '@/components/Layout';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import React from 'react';
 
-const NotFoundPage = ({ siteTitle, siteSubtitle }) => {
+const NotFoundPage = ({ origin }) => {
+  const router = useRouter()
+
   return (
-    <Layout title={`Not Found - ${siteTitle}`} description={siteSubtitle}>
-      <h1>Not Found</h1>
-      <p>Nothing to see here. Move along.</p>
-    </Layout>
+    <>
+      <NextSeo
+        title='Not Found'
+        description="The page doesn't exist."
+        openGraph={{
+          title: 'Not Found',
+          url: `${origin}${router.asPath}`,
+        }}
+      />
+      <Layout>
+        <h1>Not Found</h1>
+        <p>Nothing to see here. Move along.</p>
+      </Layout>
+    </>
   );
 };
 
@@ -15,12 +29,11 @@ export default NotFoundPage;
 
 // noinspection JSUnusedGlobalSymbols
 export async function getStaticProps() {
-  const { default: { title, description } } = await import('@/site.config')
+  const { default: { origin } } = await import('@/site.config')
 
   return {
     props: {
-      siteTitle: title,
-      siteSubtitle: description,
+      origin,
     },
   };
 }

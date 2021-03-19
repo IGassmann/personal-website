@@ -4,7 +4,7 @@ import styles from './BlogHomeButton.module.scss';
 
 export function BlogHomeButton() {
   return (
-    <Link href="/blog">
+    <Link href="/">
       <a className={styles.blogHomeButton}>All Posts</a>
     </Link>
   );

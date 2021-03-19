@@ -1,6 +1,6 @@
 ---
 title: Developing my First Mobile App
-description: My first experience with mobile development.
+summary: My first experience with mobile development.
 category: Project
 tags:
   - mobile

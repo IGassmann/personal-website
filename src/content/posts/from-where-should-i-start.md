@@ -1,6 +1,6 @@
 ---
 title: From Where Should I Start?
-description: The different approaches for starting a development project.
+summary: The different approaches for starting a development project.
 publishedAt: '2020-05-14'
 ---
 

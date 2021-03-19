@@ -1,6 +1,5 @@
 ---
 title: About
-description:
 skills:
   product:
     - name: TypeScript

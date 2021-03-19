@@ -6,7 +6,7 @@ import styles from 'components/PostFeed/PostFeed.module.scss';
 
 const PostFeed = ({ posts }) => (
   <div className={styles.postFeed}>
-    {posts.map(({ category, publishedAt, description, slug, title }) => (
+    {posts.map(({ category, publishedAt, summary, slug, title }) => (
       <div className={styles.postPreview} key={slug}>
         <div className={styles.postMetadata}>
           <time className={styles.postTime} dateTime={moment(publishedAt).format('MMMM D, YYYY')}>
@@ -23,8 +23,8 @@ const PostFeed = ({ posts }) => (
             <a className={styles.postTitleLink} >{title}</a>
           </Link>
         </h2>
-        { description &&
-          <p className={styles.postDescription}>{description}</p>
+        { summary &&
+          <p className={styles.postSummary}>{summary}</p>
         }
       </div>
     ))}

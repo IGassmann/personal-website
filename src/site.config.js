@@ -1,6 +1,9 @@
+const siteOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+
 export default {
-  title: 'Igor Gassmann',
-  description: 'Developing and deploying at startups since 2017.',
+  defaultTitle: 'Igor Gassmann',
+  titleTemplate: '%s - Igor Gassmann',
+  description: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
   profile: {
     name: 'Igor Gassmann',
     picture: '/profile-picture.jpg',
@@ -17,7 +20,7 @@ export default {
   menu: [
     {
       label: 'Blog',
-      path: '/blog'
+      path: '/'
     },
     {
       label: 'About',
@@ -28,4 +31,16 @@ export default {
       path: '/work'
     },
   ],
+  origin: siteOrigin,
+  openGraph: {
+    url: siteOrigin,
+    site_name: 'Igor Gassmann',
+    images: [
+      {
+        url: `${siteOrigin}/og-image.png`,
+        width: 1200,
+        height: 630,
+      },
+    ]
+  },
 };

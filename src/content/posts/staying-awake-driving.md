@@ -1,6 +1,6 @@
 ---
 title: How to Stay Awake While Driving
-description: Tips for staying up while driving.
+summary: Tips for staying up while driving.
 publishedAt: '2017-09-26'
 ---
 

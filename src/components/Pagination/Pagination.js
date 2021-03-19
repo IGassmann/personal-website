@@ -5,8 +5,8 @@ import styles from './Pagination.module.scss';
 const Pagination = ({ currentPage, numberOfPages }) => {
   const hasPreviousPage = currentPage !== 0;
   const hasNextPage = currentPage + 1 !== numberOfPages;
-  const previousPagePath = currentPage === 1 ? '/blog' : `/blog/page/${currentPage - 1}`
-  const nextPagePath = `/blog/page/${currentPage + 1}`
+  const previousPagePath = currentPage === 1 ? '/' : `/page/${currentPage - 1}`
+  const nextPagePath = `/page/${currentPage + 1}`
 
   return (
     <div className={styles.pagination}>

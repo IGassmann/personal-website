@@ -1,6 +1,6 @@
 ---
 title: I Wanted a Social Space, so I Built One
-description: How I fulfilled a need in a community.
+summary: How I fulfilled a need in a community.
 publishedAt: '2017-11-07'
 category: Project
 tags:

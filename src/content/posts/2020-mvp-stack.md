@@ -1,6 +1,6 @@
 ---
 title: The 2020 MVP Stack
-description: My ideal stack for building an MVP.
+summary: My ideal stack for building an MVP.
 publishedAt: '2020-05-13'
 tags:
   - startups

@@ -1,7 +1,7 @@
 ---
 title: Travel as a Self-Development Tool
+summary: How traveling can be used as a self-development tool.
 publishedAt: '2017-09-21'
-description: How traveling can be used as a self-development tool.
 ---
 
 It’s not uncommon to hear that people who come back from long travel have changed. Why is this the case? How can a simple trip to another place on earth changes someone's character and beliefs?

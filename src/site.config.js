@@ -33,13 +33,16 @@ export default {
   ],
   origin: siteOrigin,
   openGraph: {
+    type: 'website',
     url: siteOrigin,
     site_name: 'Igor Gassmann',
+    title: 'Igor Gassmann',
     images: [
       {
         url: `${siteOrigin}/og-image.png`,
         width: 1200,
         height: 630,
+        alt: 'Igor Gassmann',
       },
     ]
   },

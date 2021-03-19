@@ -1,0 +1,67 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 96px;
+}
+
+.workCard {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  width: 368px;
+  height: 208px;
+  object-fit: contain;
+
+  .image {
+    opacity: 0.9;
+  }
+
+  &:hover .overlay, &:active .overlay {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: relative;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  background: linear-gradient(72.28deg, variables.$color-primary-dark 0%, rgba(variables.$color-secondary-dark, 0.85) 100%);
+  width: 368px;
+  height: 208px;
+
+  .overlayText {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+
+    h2, p {
+      margin: 0;
+    }
+
+    p {
+      color: variables.$color-body-text;
+    }
+  }
+
+  &:hover {
+    display: block;
+  }
+
+  border-radius: 12px;
+}
+
+@include breakpoints.md {
+  .workCard, .overlay {
+    width: 300px;
+    height: 170px;
+  }
+}
+
+:export {
+  layoutBreakpointMedium: variables.$layout-breakpoint-md;
+}

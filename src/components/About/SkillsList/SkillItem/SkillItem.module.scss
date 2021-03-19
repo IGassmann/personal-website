@@ -1,0 +1,10 @@
+@use 'styles/variables';
+
+.link > div {
+  vertical-align: middle;
+}
+
+.linkText {
+  margin-left: 8px;
+  color: variables.$color-body-text;
+}

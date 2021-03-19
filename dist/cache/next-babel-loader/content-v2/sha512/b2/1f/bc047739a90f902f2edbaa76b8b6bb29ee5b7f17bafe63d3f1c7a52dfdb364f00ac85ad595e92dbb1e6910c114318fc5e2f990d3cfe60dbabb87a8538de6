@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './SocialLinks';","map":{"version":3,"sources":["/Users/IGassmann/Developer/IGassmann/personal-website/src/components/Sidebar/SocialLinks/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from './SocialLinks';\n"]},"metadata":{},"sourceType":"module"}

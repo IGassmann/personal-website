@@ -1,0 +1,17 @@
+@use 'variables';
+
+@mixin xs {
+    @content;
+}
+
+@mixin sm {
+    @media screen and (min-width: variables.$layout-breakpoint-sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: variables.$layout-breakpoint-md) {
+        @content;
+    }
+}

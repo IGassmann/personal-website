@@ -1,21 +1,26 @@
-// @flow
+import Layout from '@/components/Layout';
 import React from 'react';
-import Sidebar from '../components/Sidebar';
-import Layout from '../components/Layout';
-import Page from '../components/Page';
-import { useSiteMetadata } from '../hooks';
 
-const NotFoundTemplate = () => {
-  const { title, subtitle } = useSiteMetadata();
-
+const NotFoundPage = ({ siteTitle, siteSubtitle }) => {
   return (
-    <Layout title={`Not Found - ${title}`} description={subtitle}>
-      <Sidebar />
-      <Page title="NOT FOUND">
-        <p>You just hit a route that doesn&#39;t exist...</p>
-      </Page>
+    <Layout title={`Not Found - ${siteTitle}`} description={siteSubtitle}>
+      <h1>Not Found</h1>
+      <p>Nothing to see here. Move along.</p>
     </Layout>
   );
 };
 
-export default NotFoundTemplate;
+// noinspection JSUnusedGlobalSymbols
+export default NotFoundPage;
+
+// noinspection JSUnusedGlobalSymbols
+export async function getStaticProps() {
+  const { default: { title, description } } = await import('@/site.config')
+
+  return {
+    props: {
+      siteTitle: title,
+      siteSubtitle: description,
+    },
+  };
+}

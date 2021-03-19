@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './Icon';","map":{"version":3,"sources":["/Users/IGassmann/Developer/IGassmann/personal-website/src/components/Icon/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,QAAxB","sourcesContent":["export { default } from './Icon';\n"]},"metadata":{},"sourceType":"module"}

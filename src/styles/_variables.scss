@@ -1,0 +1,41 @@
+// Colors
+$color-background: #190950;
+$color-primary: #09BDC6;
+$color-secondary: #EA00D9;
+$color-primary-dark: #133E7C;
+$color-secondary-dark: #711C91;
+$color-body-text: #FFFFFF;
+
+// Typography
+$typographic-font-family: Blender Pro;
+$typographic-font-style: normal;
+$typographic-font-weight: normal;
+
+$typographic-heading-1-font-size: 48px;
+$typographic-heading-2-font-size: 32px;
+$typographic-heading-3-font-size: 24px;
+$typographic-body-text-font-size: 20px;
+
+$typographic-heading-1-line-height: 56px;
+$typographic-heading-2-line-height: 40px;
+$typographic-heading-3-line-height: 32px;
+$typographic-body-text-line-height: 28px;
+
+$typographic-heading-font-color: $color-primary;
+$typographic-body-text-font-color: $color-body-text;
+$typographic-faded-text-font-color: rgba($color-body-text, 0.8);
+$typographic-link-font-color: $color-secondary;
+$typographic-link-hover-font-color: $color-primary;
+
+// Buttons
+$button-height: 40px;
+$button-border-radius: 20px;
+$button-text-color: $color-secondary;
+
+// Layout
+$layout-single-column-single-width: 945px;
+$layout-single-column-width: $layout-single-column-single-width - 305px;
+
+$layout-width: 955px;
+$layout-breakpoint-sm: 700px;
+$layout-breakpoint-md: 1008px;

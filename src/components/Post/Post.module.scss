@@ -1,62 +1,60 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@use 'styles/variables';
+@use 'styles/breakpoints';
 
 .post {
-  &__footer {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
-  &__comments {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
-  &__home-button {
-    display: block;
-    max-width: 90px;
-    height: $button-height;
-    padding: 0 24px;
-    line-height: $button-height;
-    text-align: center;
-    color: $color-base;
-    border: 1px solid $color-gray-border;
-    border-radius: $button-border-radius;
-    font-size: $typographic-base-font-size;
-    font-weight: normal;
-    margin-left: auto;
-    margin-right: auto;
-    @include margin-top(1);
-
-    &:hover,
-    &:focus {
-      color: $color-primary;
-    }
-
-  }
-
+  max-width: variables.$layout-single-column-single-width;
+  padding: 0 15px;
+  margin: 32px auto 0;
 }
 
-@include breakpoint-md {
-  .post {
-    &__footer {
-      padding: 0;
-    }
+.title {
+  font-size: 36px;
+  line-height: 48px;
+}
 
-    &__comments {
-      padding: 0;
-    }
+.body {
+  margin-bottom: 32px;
 
-    &__home-button {
-      position: fixed;
-      max-width: auto;
-      margin: 0;
-      top: 30px;
-      left: 30px
-    }
+  & figure {
+    & blockquote {
+      font-style: italic;
+      text-align: center;
+      margin-top: 0;
 
+      & p {
+        margin-top: 0;
+      }
+    }
   }
 
+  & img {
+    max-width: 100%;
+  }
+
+  & li {
+    &:before {
+      content: "- ";
+    }
+  }
+}
+
+@include breakpoints.sm {
+  .post {
+    padding: 0;
+    max-width: variables.$layout-single-column-width;
+  }
+
+  .title {
+    font-size: variables.$typographic-heading-1-font-size;
+  }
+
+  .body {
+    font-size: variables.$typographic-body-text-font-size;
+  }
+}
+
+@include breakpoints.md {
+  .post {
+    margin: -32px auto 0;
+  }
 }

@@ -1,44 +1,23 @@
-// @flow
 import React from 'react';
-import Link from 'next/link';
-import Author from './Author';
-import Comments from './Comments';
-import Content from './Content';
-import Meta from './Meta';
-import Tags from './Tags';
+import PostMetadata from './PostMetadata'
+import ReactMarkdown from 'react-markdown'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import styles from './Post.module.scss';
-import type { Node } from '../../types';
 
-type Props = {
-  post: Node
-};
+// noinspection JSUnusedGlobalSymbols
+const renderers = {
+  code: ({language, value}) => {
+    return <SyntaxHighlighter style={dark} language={language} children={value} />
+  }
+}
 
-const Post = ({ post }: Props) => {
-  const { html } = post;
-  const { tagSlugs, slug } = post.fields;
-  const { tags, title, date } = post.frontmatter;
-
-  return (
-    <div className={styles['post']}>
-      <Link className={styles['post__home-button']} href="/">
-        <a>All Articles</a>
-      </Link>
-
-      <div className={styles['post__content']}>
-        <Content body={html} title={title} />
-      </div>
-
-      <div className={styles['post__footer']}>
-        <Meta date={date} />
-        {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
-        <Author />
-      </div>
-
-      <div className={styles['post__comments']}>
-        <Comments postSlug={slug} postTitle={post.frontmatter.title} />
-      </div>
-    </div>
-  );
-};
+const Post = ({ post }) => (
+  <article className={styles.post}>
+    <h1 className={styles.title}>{post.title}</h1>
+    <PostMetadata publishedAt={post.publishedAt} tags={post.tags}/>
+    <ReactMarkdown className={styles.body} renderers={renderers} children={post.content} />
+  </article>
+);
 
 export default Post;

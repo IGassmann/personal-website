@@ -5,7 +5,7 @@ node_modules/
 *.log*
 
 # Compiled sources
-.next
+./dist/
 
 # Code coverage output
 **/coverage/

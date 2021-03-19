@@ -1,33 +1,26 @@
-@import '../../../assets/scss/variables';
-@import '../../../assets/scss/mixins';
+@use 'styles/variables';
+@use 'styles/breakpoints';
 
 .menu {
-  @include margin-bottom(1);
-
-  &__list {
+  .list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 24px 0;
 
-    &-item {
+    .listItem {
       padding: 0;
-      margin: 10px 0;
+      margin: 8px 0;
 
-      &-link {
-        font-size: $typographic-base-font-size;
-        color: $typographic-base-font-color;
-        font-weight: normal;
-        border: 0;
-
+      .link {
         &:hover,
         &:focus {
-          color: $color-primary;
-          border-bottom: 1px solid $color-primary;
+          color: variables.$typographic-link-hover-font-color;
+          border-bottom: 1px solid variables.$typographic-link-hover-font-color;
         }
 
         &--active {
-          color: $color-base;
-          border-bottom: 1px solid $color-base;
+          color: variables.$color-body-text;
+          border-bottom: 1px solid variables.$color-body-text;
         }
 
       }

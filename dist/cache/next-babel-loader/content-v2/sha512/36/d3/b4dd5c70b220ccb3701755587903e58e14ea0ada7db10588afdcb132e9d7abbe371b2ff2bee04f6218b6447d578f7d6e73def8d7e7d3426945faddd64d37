@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as getIcon } from '@/lib/get-icon.js';","map":{"version":3,"sources":["/Users/IGassmann/Developer/IGassmann/personal-website/src/lib/index.js"],"names":["default","getIcon"],"mappings":"AAAA,SAASA,OAAO,IAAIC,OAApB,QAAmC,mBAAnC","sourcesContent":["export { default as getIcon } from '@/lib/get-icon.js';\n"]},"metadata":{},"sourceType":"module"}

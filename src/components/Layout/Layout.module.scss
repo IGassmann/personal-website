@@ -1,6 +1,21 @@
-@import '../../assets/scss/variables';
-@import '../../assets/scss/mixins';
+@use 'styles/variables';
+@use 'styles/breakpoints';
 
 .layout {
-    lost-center: $layout-width;
+    max-width: variables.$layout-width;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+@include breakpoints.sm {
+    .layout {
+        display: grid;
+        grid-template-columns: 275px 1fr;
+        gap: 40px;
+        padding: 0 32px;
+    }
+
+    .layout > :only-child{
+        grid-column: 1 / -1;
+    }
 }

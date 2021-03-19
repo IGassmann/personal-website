@@ -1,0 +1,43 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.profile {
+  display: inline-block;
+  width: 100%;
+}
+
+.title {
+  font-size: variables.$typographic-heading-3-font-size;
+  line-height: variables.$typographic-heading-3-line-height;
+  margin: 16px 0;
+
+  a {
+    color: variables.$typographic-heading-font-color;
+  }
+
+  &.inline {
+    margin: 0;
+  }
+}
+
+.subtitle {
+  color: variables.$typographic-faded-text-font-color;
+  margin: 0;
+}
+
+.profilePicture {
+  display: inline-block;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.profilePictureLink {
+  &.inline {
+    float: left;
+    margin-right: 16px;
+  }
+}
+
+:export {
+  layoutBreakpointSmall: variables.$layout-breakpoint-sm;
+}

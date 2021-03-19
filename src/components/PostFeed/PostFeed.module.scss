@@ -1,0 +1,39 @@
+@use 'styles/variables';
+
+.postFeed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .postPreview {
+    flex: none;
+    margin-bottom: 48px;
+
+    .postMetadata {
+      font-size: 18px;
+
+      .postTime {
+        color: variables.$typographic-faded-text-font-color;
+        margin-right: 8px;
+      }
+    }
+
+    .postTitle {
+      margin: 0;
+    }
+
+    .postTitleLink {
+      color: variables.$typographic-heading-font-color;
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid variables.$typographic-heading-font-color;
+      }
+    }
+
+    .postDescription {
+      margin-top: 4px;
+    }
+  }
+}
+

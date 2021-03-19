@@ -1,27 +1,35 @@
-// @flow
 import React from 'react';
 import Head from 'next/head';
-import type { Node as ReactNode } from 'react';
+import Footer from '../Footer/Footer';
+import Sidebar from '../Sidebar';
 import styles from './Layout.module.scss';
 
-type Props = {
-  children: ReactNode,
-  title: string,
-  description?: string
-};
-
-const Layout = ({ children, title, description }: Props) => (
-  <div className={styles.layout}>
+const Layout = ({ children, isSingleColumn, isIndex, pageTitle, pageDescription }) => (
+  <>
     <Head>
-      <html lang="en" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta property="og:site_name" content={title} />
+      <title>{pageTitle}</title>
+      <meta name="description" content={pageDescription} />
+      <meta property="og:site_name" content={pageTitle} />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={pageTitle} />
     </Head>
-    {children}
-  </div>
+    <div className={styles.layout}>
+      { isSingleColumn ? (
+          <main>
+            {children}
+            <Footer/>
+          </main>
+        ) : (
+          <>
+            <Sidebar isIndex={isIndex} />
+            <main>
+              {children}
+            </main>
+          </>
+        )
+      }
+    </div>
+  </>
 );
 
 export default Layout;

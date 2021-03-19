@@ -1,0 +1,21 @@
+.about {
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  h2:first-of-type {
+    margin-top: 0;
+  }
+
+  & h3 {
+    margin: 0 0 8px 0;
+  }
+
+  & ul {
+    padding: 0;
+  }
+
+  & li {
+    margin: 0;
+  }
+}

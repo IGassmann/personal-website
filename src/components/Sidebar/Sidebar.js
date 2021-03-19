@@ -1,28 +1,19 @@
-// @flow
 import React from 'react';
-import Author from './Author';
-import Contacts from './Contacts';
-import Copyright from './Copyright';
+import Profile from '../Profile';
+import SocialLinks from './SocialLinks';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
-import { useSiteMetadata } from '../../hooks';
+import { useSiteMetadata } from '@/hooks';
 
-type Props = {
-  isIndex?: boolean,
-};
-
-const Sidebar = ({ isIndex }: Props) => {
-  const { author, copyright, menu } = useSiteMetadata();
+const Sidebar = ({ isIndex }) => {
+  const { profile: { socialLinks }, menu } = useSiteMetadata();
 
   return (
-    <div className={styles['sidebar']}>
-      <div className={styles['sidebar__inner']}>
-        <Author author={author} isIndex={isIndex} />
-        <Menu menu={menu} />
-        <Contacts contacts={author.contacts} />
-        <Copyright copyright={copyright} />
-      </div>
-    </div>
+    <aside className={styles.sidebar}>
+      <Profile isIndex={isIndex} />
+      <Menu menu={menu} />
+      <SocialLinks socialLinks={socialLinks} />
+    </aside>
   );
 };
 

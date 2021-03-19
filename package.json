@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "repository": "https://github.com/IGassmann/personal-website",
-  "author": "Igor Gassmann <igor@igassmann.me>",
+  "author": "Igor Gassmann <igor@igassmann.me> (https://igassmann.me/)",
   "dependencies": {
     "gray-matter": "^4.0.2",
     "invariant": "^2.2.4",

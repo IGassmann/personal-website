@@ -44,6 +44,17 @@ export default {
         height: 630,
         alt: 'Igor Gassmann',
       },
+      {
+        url: `${siteOrigin}/twitter-image.png`,
+        width: 1200,
+        height: 600,
+        alt: 'Igor Gassmann',
+      },
     ]
+  },
+  twitter: {
+    handle: '@i_gassmann',
+    site: '@i_gassmann',
+    cardType: 'summary_large_image',
   },
 };

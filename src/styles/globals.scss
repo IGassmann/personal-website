@@ -108,11 +108,6 @@ figcaption {
   text-align: center;
 }
 
-.anchor {
-  margin-left: -30px !important;
-  padding-right: 14px !important;
-}
-
 @include breakpoints.sm {
   body {
     font-size: variables.$typographic-desktop-body-text-font-size;

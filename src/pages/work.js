@@ -24,6 +24,7 @@ const AboutPage = ({ origin }) => {
   );
 };
 
+// noinspection JSUnusedGlobalSymbols
 export default AboutPage;
 
 // noinspection JSUnusedGlobalSymbols

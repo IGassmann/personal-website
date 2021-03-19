@@ -45,14 +45,8 @@ export default {
         alt: 'Igor Gassmann',
       },
       {
-        url: `${siteOrigin}/twitter-image-2-1.png`,
+        url: `${siteOrigin}/twitter-image.png`,
         width: 1200,
-        height: 600,
-        alt: 'Igor Gassmann',
-      },
-      {
-        url: `${siteOrigin}/twitter-image-1-1.jpg`,
-        width: 600,
         height: 600,
         alt: 'Igor Gassmann',
       },

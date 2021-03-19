@@ -47,10 +47,6 @@
   .title {
     font-size: variables.$typographic-heading-1-font-size;
   }
-
-  .body {
-    font-size: variables.$typographic-body-text-font-size;
-  }
 }
 
 @include breakpoints.md {

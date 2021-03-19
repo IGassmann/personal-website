@@ -9,7 +9,7 @@
 
     .listItem {
       padding: 0;
-      margin: 8px 0;
+      margin: 16px 0;
 
       .link {
         &:hover,
@@ -29,4 +29,14 @@
 
   }
 
+}
+
+@include breakpoints.sm {
+  .menu {
+    .list {
+      .listItem {
+        margin: 8px 0;
+      }
+    }
+  }
 }

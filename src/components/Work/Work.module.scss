@@ -6,7 +6,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  margin-top: 96px;
 }
 
 .workCard {
@@ -53,6 +52,12 @@
   }
 
   border-radius: 12px;
+}
+
+@include breakpoints.sm {
+  .work {
+    margin-top: 96px;
+  }
 }
 
 @include breakpoints.md {

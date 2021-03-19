@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: variables.$typographic-font-family;
-  font-weight: 500;
+  font-weight: 400;
   color: variables.$typographic-body-text-font-color;
   background-color: variables.$color-background;
   line-height: variables.$typographic-body-text-line-height;
@@ -114,17 +114,8 @@ figcaption {
 }
 
 @include breakpoints.sm {
-  figure.float-left,
-  figure.float-right {
-    max-width: 310px;
+  body {
+    font-size: variables.$typographic-desktop-body-text-font-size;
+    font-weight: 500;
   }
-
-  .float-right {
-    float: right;
-  }
-
-  .float-left {
-    float: left;
-  }
-
 }

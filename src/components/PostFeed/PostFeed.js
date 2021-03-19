@@ -1,6 +1,6 @@
+import dayjs from 'dayjs';
 import kebabCase from 'lodash/kebabCase';
 import React from 'react';
-import moment from 'moment';
 import Link from 'next/link';
 import styles from 'components/PostFeed/PostFeed.module.scss';
 
@@ -9,8 +9,8 @@ const PostFeed = ({ posts }) => (
     {posts.map(({ category, publishedAt, summary, slug, title }) => (
       <div className={styles.postPreview} key={slug}>
         <div className={styles.postMetadata}>
-          <time className={styles.postTime} dateTime={moment(publishedAt).format('MMMM D, YYYY')}>
-            {moment(publishedAt).format('MMMM YYYY')}
+          <time className={styles.postTime} dateTime={dayjs(publishedAt).format('MMMM D, YYYY')}>
+            {dayjs(publishedAt).format('MMMM YYYY')}
           </time>
           { category &&
             <Link href={`/category/${kebabCase(category)}`}>

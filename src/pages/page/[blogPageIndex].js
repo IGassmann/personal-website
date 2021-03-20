@@ -1,6 +1,8 @@
 import PostFeed from '@/components/PostFeed';
 import Pagination from '@/components/Pagination';
 import { getAllPosts } from '@/lib/api';
+import generateRSS from '@/lib/generateRSS';
+import * as fs from 'fs';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -49,6 +51,9 @@ export async function getStaticProps({ params }) {
     pageIndex * postsPerPage,
     (pageIndex + 1) * postsPerPage
   )
+
+  const rss = generateRSS(posts);
+  fs.writeFileSync('./public/rss.xml', rss);
 
   return {
     props: {

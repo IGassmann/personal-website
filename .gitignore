@@ -14,4 +14,8 @@ node_modules/
 .env*.local
 
 # Vercel configuration
-.vercel
+/.vercel
+
+
+# Generated RSS file
+/public/rss.xml

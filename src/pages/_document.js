@@ -35,6 +35,12 @@ class MyDocument extends Document {
           `,
             }}
           />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS feed for blog posts"
+            href="/rss.xml"
+          />
         </Head>
         <body>
         <Main />

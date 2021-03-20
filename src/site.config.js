@@ -10,7 +10,7 @@ export default {
     bio: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
     socialLinks: {
       email: 'igor@igassmann.me',
-      rss: '/rss',
+      rss: '/rss.xml',
       twitter: 'i_gassmann',
       github: 'IGassmann',
       linkedin: 'igassmann',

@@ -1,3 +1,4 @@
+import GoogleTagManager from '@/components/GoogleTagManager/GoogleTagManager';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import { DefaultSeo } from 'next-seo';
 import React from 'react';
@@ -8,11 +9,11 @@ export default function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout || DefaultLayout;
 
   return (
-    <>
+    <GoogleTagManager>
       <DefaultSeo {...siteConfig} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </>
+    </GoogleTagManager>
   );
 }

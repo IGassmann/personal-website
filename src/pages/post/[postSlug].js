@@ -1,13 +1,12 @@
 import { BlogHomeButton } from '@/components/BlogHomeButton/BlogHomeButton';
-import Layout from '@/components/Layout';
 import Post from '@/components/Post';
+import SingleColumnLayout from '@/layouts/SingleColumnLayout/SingleColumnLayout';
 import { getAllPosts, getPostBySlug } from '@/lib/api';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-// noinspection JSUnusedGlobalSymbols
-export default function PostPage({ post, origin }) {
+const PostPage = ({ post, origin }) => {
   const router = useRouter()
 
   return (
@@ -26,15 +25,16 @@ export default function PostPage({ post, origin }) {
           }
         }}
       />
-      <Layout isSingleColumn>
-        <BlogHomeButton/>
-        <Post post={post} />
-      </Layout>
+      <BlogHomeButton/>
+      <Post post={post} />
     </>
   );
 }
 
-// noinspection JSUnusedGlobalSymbols
+PostPage.Layout = SingleColumnLayout;
+
+export default PostPage;
+
 export async function getStaticProps({ params: { postSlug } }) {
   const { default: { origin } } = await import('@/site.config')
 
@@ -57,7 +57,6 @@ export async function getStaticProps({ params: { postSlug } }) {
   };
 }
 
-// noinspection JSUnusedGlobalSymbols
 export async function getStaticPaths() {
   const posts = getAllPosts(['slug']);
 

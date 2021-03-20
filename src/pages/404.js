@@ -1,4 +1,3 @@
-import Layout from '@/components/Layout';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -16,18 +15,14 @@ const NotFoundPage = ({ origin }) => {
           url: `${origin}${router.asPath}`,
         }}
       />
-      <Layout>
-        <h1>Not Found</h1>
-        <p>Nothing to see here. Move along.</p>
-      </Layout>
+      <h1>Not Found</h1>
+      <p>Nothing to see here. Move along.</p>
     </>
   );
 };
 
-// noinspection JSUnusedGlobalSymbols
 export default NotFoundPage;
 
-// noinspection JSUnusedGlobalSymbols
 export async function getStaticProps() {
   const { default: { origin } } = await import('@/site.config')
 

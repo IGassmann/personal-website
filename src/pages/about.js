@@ -5,7 +5,6 @@ import * as matter from 'gray-matter';
 import { join } from 'path';
 import fs from 'fs';
 import About from '@/components/About/About';
-import Layout from '@/components/Layout';
 
 const AboutPage = ({ about, origin }) => {
   const router = useRouter()
@@ -20,16 +19,13 @@ const AboutPage = ({ about, origin }) => {
           title: about.title
         }}
       />
-      <Layout>
-        <About about={about} />
-      </Layout>
+      <About about={about} />
     </>
   );
 };
 
 export default AboutPage;
 
-// noinspection JSUnusedGlobalSymbols
 export async function getStaticProps() {
   const { default: { origin } } = await import('@/site.config')
 

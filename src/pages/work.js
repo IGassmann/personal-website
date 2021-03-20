@@ -1,10 +1,9 @@
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import React from 'react';
-import Layout from '@/components/Layout';
 import Work from '@/components/Work/Work';
 
-const AboutPage = ({ origin }) => {
+const WorkPage = ({ origin }) => {
   const router = useRouter()
 
   return (
@@ -17,17 +16,13 @@ const AboutPage = ({ origin }) => {
           title: 'Work'
         }}
       />
-      <Layout>
-        <Work />
-      </Layout>
+      <Work />
     </>
   );
 };
 
-// noinspection JSUnusedGlobalSymbols
-export default AboutPage;
+export default WorkPage;
 
-// noinspection JSUnusedGlobalSymbols
 export async function getStaticProps() {
   const { default: { origin } } = await import('@/site.config')
 

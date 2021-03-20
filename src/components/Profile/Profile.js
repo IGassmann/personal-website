@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './Profile.module.scss';
 
-const Profile = ({ isIndex, isInline }) => {
+const Profile = ({ isInline }) => {
   const {
     subtitle,
     profilePicture,
@@ -19,7 +19,6 @@ const Profile = ({ isIndex, isInline }) => {
   const isPageWide = useMediaQuery(`(min-width: ${layoutBreakpointSmall})`)
   const { profile } = useSiteMetadata();
 
-  const TitleHeaderTag = isIndex ? 'h1' : 'h2';
 
   const imageSize = isInline ? 64 : 80;
 
@@ -37,11 +36,11 @@ const Profile = ({ isIndex, isInline }) => {
         </a>
       </Link>
       <div className={`${text} ${isInline || !isPageWide ? inline : ''}`}>
-        <TitleHeaderTag className={`${title} ${isInline || !isPageWide ? inline : ''}`}>
+        <h1 className={`${title} ${isInline || !isPageWide ? inline : ''}`}>
           <Link href="/">
             <a>{profile.name}</a>
           </Link>
-        </TitleHeaderTag>
+        </h1>
         <p className={`${subtitle} ${isInline || !isPageWide ? inline : ''}`}>{profile.bio}</p>
       </div>
     </div>

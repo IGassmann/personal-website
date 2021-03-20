@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '@/components/About/SkillsList/SkillItem/SkillItem.module.scss';
 
 const SkillItem = ({ skill: { iconPath, name, url, }, }) => (
-  <li key={name}>
+  <li>
     <Link href={url}>
       <a className={styles.link}>
         <Image

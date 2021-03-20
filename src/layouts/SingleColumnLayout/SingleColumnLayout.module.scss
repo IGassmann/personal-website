@@ -9,13 +9,6 @@
 
 @include breakpoints.sm {
     .layout {
-        display: grid;
-        grid-template-columns: 275px 1fr;
-        gap: 40px;
         padding: 0 32px;
-    }
-
-    .layout > :only-child{
-        grid-column: 1 / -1;
     }
 }

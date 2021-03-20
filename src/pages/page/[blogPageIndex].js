@@ -1,12 +1,11 @@
 import PostFeed from '@/components/PostFeed';
-import Layout from '@/components/Layout';
 import Pagination from '@/components/Pagination';
 import { getAllPosts } from '@/lib/api';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-export default function BlogPagePage({ posts, currentPage, numberOfPages, origin }) {
+const BlogPagePage = ({ posts, currentPage, numberOfPages, origin }) => {
   const router = useRouter()
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage}` : '';
 
@@ -19,16 +18,16 @@ export default function BlogPagePage({ posts, currentPage, numberOfPages, origin
           url: `${origin}${router.asPath}`,
         }}
       />
-      <Layout isIndex>
-        <PostFeed posts={posts} />
-        <Pagination
-          currentPage={currentPage}
-          numberOfPages={numberOfPages}
-        />
-      </Layout>
+      <PostFeed posts={posts} />
+      <Pagination
+        currentPage={currentPage}
+        numberOfPages={numberOfPages}
+      />
     </>
   );
 }
+
+export default BlogPagePage;
 
 export async function getStaticProps({ params }) {
   const pageIndexParam = params?.blogPageIndex;
@@ -61,7 +60,6 @@ export async function getStaticProps({ params }) {
   };
 }
 
-// noinspection JSUnusedGlobalSymbols
 export async function getStaticPaths() {
   const { default: { postsPerPage } } = await import('@/site.config')
 

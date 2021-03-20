@@ -5,12 +5,12 @@ import Menu from './Menu';
 import styles from './Sidebar.module.scss';
 import { useSiteMetadata } from '@/hooks';
 
-const Sidebar = ({ isIndex }) => {
+const Sidebar = () => {
   const { profile: { socialLinks }, menu } = useSiteMetadata();
 
   return (
     <aside className={styles.sidebar}>
-      <Profile isIndex={isIndex} />
+      <Profile />
       <Menu menu={menu} />
       <SocialLinks socialLinks={socialLinks} />
     </aside>

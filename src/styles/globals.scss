@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+@use 'sass:meta';
 @use "breakpoints";
 @use "variables";
+
+@include meta.load-css('./fonts.scss');
 
 body {
   margin: 0;

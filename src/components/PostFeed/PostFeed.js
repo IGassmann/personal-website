@@ -19,8 +19,8 @@ const PostFeed = ({ posts }) => (
           }
         </div>
         <h2 className={styles.postTitle}>
-          <Link href={`/post/${slug}`}>
-            <a className={styles.postTitleLink} >{title}</a>
+          <Link href={`/post/${slug}`} prefetch={false}>
+            <a className={styles.postTitleLink}>{title}</a>
           </Link>
         </h2>
         { summary &&

@@ -41,6 +41,42 @@ class MyDocument extends Document {
             title="RSS feed for blog posts"
             href="/rss.xml"
           />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Book.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Book.woff"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Medium.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Medium.woff"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Bold.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/BlenderPro/BlenderPro-Bold.woff"
+            as="font"
+            crossOrigin=""
+          />
         </Head>
         <body>
         <Main />

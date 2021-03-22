@@ -1,8 +1,8 @@
+import React from 'react';
 import dayjs from 'dayjs';
 import kebabCase from 'lodash/kebabCase';
-import React from 'react';
 import Link from 'next/link';
-import styles from 'components/PostFeed/PostFeed.module.scss';
+import styles from './PostFeed.module.scss';
 
 const PostFeed = ({ posts }) => (
   <div className={styles.postFeed}>

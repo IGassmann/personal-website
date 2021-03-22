@@ -1,7 +1,7 @@
+import React from 'react';
+import Icon from '@/components/Icon';
 import { getContactHref } from '@/lib/getContactHref';
 import { getIcon } from '@/lib/getIcon';
-import React from 'react';
-import Icon from '../../Icon';
 import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ socialLinks }) => (

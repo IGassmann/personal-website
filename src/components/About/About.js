@@ -1,7 +1,7 @@
-import MainInterestsList from '@/components/About/MainInterestsList/MainInterestsList';
-import SkillsList from '@/components/About/SkillsList/SkillsList';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import SkillsList from './SkillsList';
+import MainInterestsList from './MainInterestsList';
 import styles from './About.module.scss';
 
 const About = ({ about: { content, mainInterests, skills } }) => (

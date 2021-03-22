@@ -1,7 +1,7 @@
-import { useMediaQuery, useSiteMetadata } from '@/hooks';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import { useMediaQuery, useSiteMetadata } from '@/hooks';
 import styles from './Profile.module.scss';
 
 const Profile = ({ isInline }) => {

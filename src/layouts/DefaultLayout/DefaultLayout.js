@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from 'components/Sidebar';
-import styles from '@/layouts/DefaultLayout/DefaultLayout.module.scss';
+import Sidebar from '@/layouts/DefaultLayout/Sidebar';
+import styles from './DefaultLayout.module.scss';
 
 const DefaultLayout = ({ children }) => (
   <div className={styles.layout}>

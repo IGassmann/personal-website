@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from 'components/Footer/Footer';
+import Footer from './Footer';
 import styles from './SingleColumnLayout.module.scss';
 
 const SingleColumnLayout = ({ children }) => (

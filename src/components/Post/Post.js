@@ -1,8 +1,8 @@
 import React from 'react';
-import PostMetadata from './PostMetadata'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import PostMetadata from './PostMetadata'
 import styles from './Post.module.scss';
 
 // noinspection JSUnusedGlobalSymbols

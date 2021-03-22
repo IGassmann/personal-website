@@ -1,11 +1,11 @@
+import React from 'react';
+import * as fs from 'fs';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import PostFeed from '@/components/PostFeed';
 import Pagination from '@/components/Pagination';
 import { getAllPosts } from '@/lib/api';
 import generateRSS from '@/lib/generateRSS';
-import * as fs from 'fs';
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react';
 
 const BlogPagePage = ({ posts, currentPage, numberOfPages, origin }) => {
   const router = useRouter()

@@ -1,5 +1,5 @@
-import InterestItem from '@/components/About/MainInterestsList/InterestItem/InterestItem';
 import React from 'react';
+import InterestItem from './InterestItem';
 
 const MainInterestsList = ({ mainInterests }) => (
   <>

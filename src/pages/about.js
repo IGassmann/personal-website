@@ -1,6 +1,6 @@
+import React from 'react';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
-import React from 'react';
 import * as matter from 'gray-matter';
 import { join } from 'path';
 import fs from 'fs';

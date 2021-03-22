@@ -1,1 +1,1 @@
-export { default } from 'components/PostFeed/PostFeed';
+export { default } from './PostFeed';

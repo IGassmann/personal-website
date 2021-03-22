@@ -1,6 +1,6 @@
+import React from 'react';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
-import React from 'react';
 import Work from '@/components/Work/Work';
 
 const WorkPage = ({ origin }) => {

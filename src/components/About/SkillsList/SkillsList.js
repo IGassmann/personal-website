@@ -1,6 +1,6 @@
 import React from 'react';
-import SkillItem from '@/components/About/SkillsList/SkillItem/SkillItem';
-import styles from '@/components/About/SkillsList/SkillsList.module.scss';
+import SkillItem from './SkillItem';
+import styles from './SkillsList.module.scss';
 
 const SkillsList = ({ skills: { product, infrastructure } }) => (
   <>

@@ -1,9 +1,9 @@
 import React from 'react';
-import Profile from '../Profile';
-import SocialLinks from './SocialLinks';
-import Menu from './Menu';
-import styles from './Sidebar.module.scss';
+import Menu from '@/layouts/DefaultLayout/Sidebar/Menu';
+import SocialLinks from '@/layouts/DefaultLayout/Sidebar/SocialLinks';
+import Profile from '@/components/Profile';
 import { useSiteMetadata } from '@/hooks';
+import styles from './Sidebar.module.scss';
 
 const Sidebar = () => {
   const { profile: { socialLinks }, menu } = useSiteMetadata();

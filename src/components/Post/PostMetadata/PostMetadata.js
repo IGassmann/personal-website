@@ -1,6 +1,6 @@
-import dayjs from 'dayjs';
 import React from 'react';
-import Tags from '../Tags';
+import dayjs from 'dayjs';
+import Tags from './Tags';
 import styles from './PostMetadata.module.scss';
 
 const PostMetadata = ({ publishedAt, tags }) => (

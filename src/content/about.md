@@ -3,47 +3,47 @@ title: About
 skills:
   product:
     - name: TypeScript
-      iconPath: /media/skills/typescript.png
+      iconPath: /images/skills/typescript.png
       url: https://www.typescriptlang.org/
     - name: React
-      iconPath: /media/skills/react.png
+      iconPath: /images/skills/react.png
       url: https://reactjs.org/
     - name: Next.js
-      iconPath: /media/skills/nextjs.png
+      iconPath: /images/skills/nextjs.png
       url: http://nextjs.org/
     - name: Node.js
-      iconPath: /media/skills/nodejs.png
+      iconPath: /images/skills/nodejs.png
       url: https://nodejs.org/
     - name: NestJS
-      iconPath: /media/skills/nestjs.png
+      iconPath: /images/skills/nestjs.png
       url: https://nestjs.com/
     - name: MongoDB
-      iconPath: /media/skills/mongodb.png
+      iconPath: /images/skills/mongodb.png
       url: https://www.mongodb.com/
     - name: PostgreSQL
-      iconPath: /media/skills/postgresql.png
+      iconPath: /images/skills/postgresql.png
       url: https://www.postgresql.org/
   infrastructure:
     - name: Google Cloud Platform (GCP)
-      iconPath: /media/skills/gcp.png
+      iconPath: /images/skills/gcp.png
       url: https://cloud.google.com/gcp
     - name: Amazon Web Services (AWS)
-      iconPath: /media/skills/aws.png
+      iconPath: /images/skills/aws.png
       url: https://aws.amazon.com/
     - name: Terraform
-      iconPath: /media/skills/terraform.png
+      iconPath: /images/skills/terraform.png
       url: https://www.terraform.io/
     - name: GitHub Actions
-      iconPath: /media/skills/github-actions.png
+      iconPath: /images/skills/github-actions.png
       url: https://github.com/features/actions
     - name: OAuth 2.0/OIDC
-      iconPath: /media/skills/oauth.png
+      iconPath: /images/skills/oauth.png
       url: https://oauth.net/2/
     - name: Kubernetes
-      iconPath: /media/skills/kubernetes.png
+      iconPath: /images/skills/kubernetes.png
       url: https://kubernetes.io/
     - name: Docker
-      iconPath: /media/skills/docker.png
+      iconPath: /images/skills/docker.png
       url: https://www.docker.com/
 mainInterests:
   - technology

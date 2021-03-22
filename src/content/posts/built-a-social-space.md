@@ -19,7 +19,7 @@ With the intent of fulfilling this clear need that the community had, I started 
 
 Then I had the idea of accepting donations instead of dividing the costs between us. This form of financing would give me much more flexibility to just start creating the platform. I arrived home after work, I started my computer and went searching for a hosting solution. I rented a VPS server at [Vultur](https://www.vultr.com), installed a [Web LEMP stack](https://lemp.io/) on it with all the configurations, bought a domain and configured the social platform. After 3-4 hours of work, everything was working. I just needed to inform the community about it.
 
-![Social platform](/media/social-platform-screenshot.png)
+![Social platform](/images/posts/social-platform-screenshot.png)
 
 I wrote a simple post on Workplace explaining that I built a social platform, and that I was covering the costs of it. No one was obligated to pay anything for it, but if they wanted to support my work and help pay the costs they could make me a donation.
 

@@ -6,7 +6,7 @@ export default {
   description: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
   profile: {
     name: 'Igor Gassmann',
-    picture: '/profile-picture.jpg',
+    picture: '/images/profile-picture.jpg',
     bio: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
     socialLinks: {
       email: 'igor@igassmann.me',
@@ -39,13 +39,13 @@ export default {
     title: 'Igor Gassmann',
     images: [
       {
-        url: `${siteOrigin}/og-image.png`,
+        url: `${siteOrigin}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Igor Gassmann',
       },
       {
-        url: `${siteOrigin}/twitter-image.png`,
+        url: `${siteOrigin}/images/twitter-image.png`,
         width: 1200,
         height: 600,
         alt: 'Igor Gassmann',

@@ -13,7 +13,7 @@ Apraxia of speech is a disorder in which the person has difficulty speaking. It 
 
 The application is named “Je Parle” which means in French “I Speak”. It’s a multiplatform mobile app developed for iOS and Android. Since it’s a B2B application, it’s not available in any public app store. We used the programming language Java for Android and Swift for iOS.
 
-![App's design](/media/je-parle-design.png)
+![App's design](/images/posts/je-parle-design.png)
 
 The project started in February 2015 with the kick-off meeting. Four apprentices were assigned to develop the app, including myself. We were separated into two distinct teams. One for developing the Android and the other for iOS. I was myself on the iOS team.
 

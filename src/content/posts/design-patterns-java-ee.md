@@ -49,4 +49,4 @@ Data Mappers can be used instead of Active Record. It separates the data access 
 
 After analyzing those design patterns, I used them in one application that I’ve written about in a [previous blog post](/post/web-app-from-the-ground). One thing that I haven’t talked about that is in the diagram below is that I separated the controllers into two types. View controllers and action controllers. A view controller is directly linked to a view. It can, for example, get the necessary data for a view and forward the client request to that view. On the other hand, an action controller will perform actions like delete, add or edit. You could have an action that adds a new book to our application.
 
-![Application architecture](/media/omwa-architecture.png)
+![Application architecture](/images/posts/omwa-architecture.png)

@@ -1,0 +1,14 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.layout {
+    max-width: variables.$layout-width;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+@include breakpoints.sm {
+    .layout {
+        padding: 0 32px;
+    }
+}

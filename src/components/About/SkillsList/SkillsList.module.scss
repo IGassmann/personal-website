@@ -1,0 +1,10 @@
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -16px -40px 0 0;
+
+  > div {
+    margin: 16px 40px 0 0;
+  }
+}

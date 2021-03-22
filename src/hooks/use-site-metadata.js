@@ -1,39 +1,7 @@
-// @flow
-import { useStaticQuery, graphql } from 'gatsby';
+import config from 'site.config';
 
 const useSiteMetadata = () => {
-  const { site } = useStaticQuery(
-    graphql`
-      query SiteMetaData {
-        site {
-          siteMetadata {
-            author {
-              name
-              bio
-              photo
-              contacts {
-                email
-                twitter
-                github
-                rss
-              }
-            }
-            menu {
-              label
-              path
-            }
-            url
-            title
-            subtitle
-            copyright
-            disqusShortname
-          }
-        }
-      }
-    `
-  );
-
-  return site.siteMetadata;
+  return config;
 };
 
 export default useSiteMetadata;

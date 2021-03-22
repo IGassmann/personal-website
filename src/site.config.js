@@ -1,0 +1,60 @@
+const siteOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+
+export default {
+  defaultTitle: 'Igor Gassmann',
+  titleTemplate: '%s - Igor Gassmann',
+  description: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
+  profile: {
+    name: 'Igor Gassmann',
+    picture: '/images/profile-picture.jpg',
+    bio: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
+    socialLinks: {
+      email: 'igor@igassmann.me',
+      rss: '/rss.xml',
+      twitter: 'i_gassmann',
+      github: 'IGassmann',
+      linkedin: 'igassmann',
+    }
+  },
+  postsPerPage: 4,
+  menu: [
+    {
+      label: 'Blog',
+      path: '/'
+    },
+    {
+      label: 'About',
+      path: '/about'
+    },
+    {
+      label: 'Work',
+      path: '/work'
+    },
+  ],
+  origin: siteOrigin,
+  openGraph: {
+    type: 'website',
+    url: siteOrigin,
+    site_name: 'Igor Gassmann',
+    title: 'Igor Gassmann',
+    images: [
+      {
+        url: `${siteOrigin}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Igor Gassmann',
+      },
+      {
+        url: `${siteOrigin}/images/twitter-image.png`,
+        width: 1200,
+        height: 600,
+        alt: 'Igor Gassmann',
+      },
+    ]
+  },
+  twitter: {
+    handle: '@i_gassmann',
+    site: '@i_gassmann',
+    cardType: 'summary_large_image',
+  },
+};

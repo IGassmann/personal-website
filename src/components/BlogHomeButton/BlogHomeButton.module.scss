@@ -1,0 +1,30 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.blogHomeButton {
+  display: block;
+  max-width: 90px;
+  height: variables.$button-height;
+  padding: 0 16px;
+  line-height: variables.$button-height;
+  text-align: center;
+  color: variables.$button-text-color;
+  border: 1px solid variables.$color-secondary-dark;
+  border-radius: variables.$button-border-radius;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+    color: variables.$typographic-link-hover-font-color;
+  }
+}
+
+@include breakpoints.md {
+  .blogHomeButton {
+    position: sticky;
+    margin: 0;
+    top: 30px;
+    left: 30px
+  }
+}

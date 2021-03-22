@@ -1,0 +1,17 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.layout {
+    max-width: variables.$layout-width;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+@include breakpoints.sm {
+    .layout {
+        display: grid;
+        grid-template-columns: 275px 1fr;
+        gap: 40px;
+        padding: 0 32px;
+    }
+}

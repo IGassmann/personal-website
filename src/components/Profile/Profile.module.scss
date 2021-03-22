@@ -1,0 +1,61 @@
+@use 'styles/variables';
+@use 'styles/breakpoints';
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &.inline {
+    flex-direction: row;
+  }
+}
+
+.title {
+  font-size: variables.$typographic-heading-3-font-size;
+  line-height: variables.$typographic-heading-3-line-height;
+  margin: 16px 0;
+
+  a {
+    color: variables.$typographic-heading-font-color;
+  }
+
+  &.inline {
+    margin: 0;
+  }
+}
+
+.subtitle {
+  color: variables.$typographic-faded-text-font-color;
+  margin: 0;
+}
+
+.profilePicture {
+  display: inline-block;
+  border-radius: 50%;
+  background-clip: padding-box;
+}
+
+.profilePictureLink {
+  width: 64px;
+
+  &.inline {
+    margin-right: 16px;
+  }
+}
+
+.text {
+  &.inline {
+    flex: 1;
+  }
+}
+
+@include breakpoints.sm {
+  .profilePicture {
+    width: 80px;
+  }
+}
+
+:export {
+  layoutBreakpointSmall: variables.$layout-breakpoint-sm;
+}

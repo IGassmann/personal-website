@@ -1,0 +1,14 @@
+@use 'styles/variables';
+
+.postMetadata {
+  margin: 16px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.publishedDate {
+  color: variables.$typographic-faded-text-font-color;
+  margin: 0 16px 0 0;
+  padding: 16px 0 0;
+}

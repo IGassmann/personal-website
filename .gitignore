@@ -1,9 +1,21 @@
+# Node dependencies
 node_modules/
-flow-typed/
-.cache/
-public/
-npm-debug.log
-.eslintcache
-.gatsby-context.js
-.idea
-gatsby-starter-lumen.iml
+
+# Log files
+*.log*
+
+# Compiled sources
+/dist/
+
+# Code coverage output
+**/coverage/
+
+# Local environment variables
+.env*.local
+
+# Vercel configuration
+/.vercel
+
+
+# Generated RSS file
+/public/rss.xml

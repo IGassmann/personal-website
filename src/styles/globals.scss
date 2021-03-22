@@ -66,8 +66,7 @@ a {
   color: variables.$typographic-link-font-color;
   text-decoration: none;
 
-  &:hover,
-  &:active {
+  &:hover {
     color: variables.$typographic-link-hover-font-color;
   }
 

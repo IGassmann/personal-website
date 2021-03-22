@@ -21,7 +21,7 @@
     opacity: 0.9;
   }
 
-  &:hover .overlay, &:active .overlay {
+  &:hover .overlay, &:active .overlay, &:focus .overlay {
     opacity: 1;
   }
 }

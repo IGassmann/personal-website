@@ -10,25 +10,8 @@
     .listItem {
       padding: 0;
       margin: 16px 0;
-
-      .link {
-        &:hover,
-        &:focus {
-          color: variables.$typographic-link-hover-font-color;
-          border-bottom: 1px solid variables.$typographic-link-hover-font-color;
-        }
-
-        &--active {
-          color: variables.$color-body-text;
-          border-bottom: 1px solid variables.$color-body-text;
-        }
-
-      }
-
     }
-
   }
-
 }
 
 @include breakpoints.sm {

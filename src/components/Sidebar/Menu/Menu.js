@@ -8,7 +8,7 @@ const Menu = ({ menu }) => (
       {menu.map((item) => (
         <li className={styles.listItem} key={item.path}>
           <Link href={item.path}>
-            <a className={styles.link}>{item.label}</a>
+            <a>{item.label}</a>
           </Link>
         </li>
       ))}

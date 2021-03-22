@@ -8,6 +8,14 @@ import siteConfig from '@/site.config';
 export default function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout || DefaultLayout;
 
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister();
+      });
+    }
+  });
+
   return (
     <GoogleTagManager>
       <DefaultSeo {...siteConfig} />

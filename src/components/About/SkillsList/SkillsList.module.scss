@@ -2,5 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px 40px;
+  margin: -16px -40px 0 0;
+
+  > div {
+    margin: 16px 40px 0 0;
+  }
 }

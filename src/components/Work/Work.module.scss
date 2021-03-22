@@ -5,10 +5,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  margin: -24px -24px 0 0;;
 }
 
 .workCard {
+  margin: 24px 24px 0 0;
   position: relative;
   display: block;
   border-radius: 16px;

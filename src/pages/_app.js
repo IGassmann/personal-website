@@ -1,9 +1,9 @@
-import GoogleTagManager from '@/components/GoogleTagManager/GoogleTagManager';
-import DefaultLayout from '@/layouts/DefaultLayout';
-import { DefaultSeo } from 'next-seo';
 import React, { useEffect } from 'react';
-import '@/styles/globals.scss';
+import { DefaultSeo } from 'next-seo';
+import DefaultLayout from '@/layouts/DefaultLayout';
+import GoogleTagManager from '@/components/GoogleTagManager/GoogleTagManager';
 import siteConfig from '@/site.config';
+import '@/styles/globals.scss';
 
 export default function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout || DefaultLayout;

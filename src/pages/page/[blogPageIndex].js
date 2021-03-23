@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import PostFeed from '@/components/PostFeed';
 import Pagination from '@/components/Pagination';
-import { getAllPosts } from '@/lib/api';
+import { getAllPosts } from '@/lib/posts';
 import generateRSS from '@/lib/generateRSS';
 
 const BlogPagePage = ({ posts, currentPage, numberOfPages, origin }) => {

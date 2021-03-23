@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import BlogHomeButton from '@/components/BlogHomeButton';
 import Post from '@/components/Post';
-import { getAllPosts, getPostBySlug } from '@/lib/api';
+import { getPostBySlug, getAllPostSlugs } from '@/lib/posts';
 
 const PostPage = ({ post, origin }) => {
   const router = useRouter()
@@ -58,12 +58,12 @@ export async function getStaticProps({ params: { postSlug } }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug']);
+  const postSlugs = getAllPostSlugs();
 
   return {
-    paths: posts.map(({ slug }) => ({
+    paths: postSlugs.map(postSlug => ({
       params: {
-        postSlug: slug,
+        postSlug: postSlug,
       },
     })),
     fallback: false,

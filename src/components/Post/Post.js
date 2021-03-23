@@ -5,7 +5,6 @@ import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import PostMetadata from './PostMetadata'
 import styles from './Post.module.scss';
 
-// noinspection JSUnusedGlobalSymbols
 const renderers = {
   code: ({language, value}) => {
     return <SyntaxHighlighter style={dark} language={language} children={value} />

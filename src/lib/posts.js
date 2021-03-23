@@ -4,13 +4,13 @@ import { join } from 'path';
 
 const postsDirectory = join(process.cwd(), 'src', 'content', 'posts');
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+export function getAllPostSlugs() {
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map(fileName => fileName.replace(/\.md$/, ''));
 }
 
 export function getPostBySlug(postSlug, fields = []) {
-  const realSlug = postSlug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(postsDirectory, `${postSlug}.md`);
   const fileContent = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContent);
 
@@ -19,7 +19,7 @@ export function getPostBySlug(postSlug, fields = []) {
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
-      items[field] = realSlug;
+      items[field] = postSlug;
     }
     if (field === 'content') {
       items[field] = content;
@@ -34,7 +34,7 @@ export function getPostBySlug(postSlug, fields = []) {
 }
 
 export function getAllPosts(fields = []) {
-  const slugs = getPostSlugs();
+  const slugs = getAllPostSlugs();
   return slugs
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by publishedAt in descending order

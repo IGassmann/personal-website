@@ -5,16 +5,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -24px -24px 0 0;;
+  margin: -12px;
 }
 
 .workCard {
-  margin: 24px 24px 0 0;
+  margin: 12px;
   position: relative;
   display: block;
   border-radius: 16px;
-  width: 368px;
-  height: 208px;
+  width: 322px;
+  height: 182px;
   object-fit: contain;
 
   .image {
@@ -31,8 +31,8 @@
   opacity: 0;
   transition: opacity .25s ease-in-out;
   background: linear-gradient(72.28deg, variables.$color-primary-dark 0%, rgba(variables.$color-secondary-dark, 0.85) 100%);
-  width: 368px;
-  height: 208px;
+  width: 322px;
+  height: 182px;
 
   .overlayText {
     position: absolute;

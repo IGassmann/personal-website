@@ -2,9 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: -16px -40px 0 0;
+  margin-top: -16px;
 
   > div {
-    margin: 16px 40px 0 0;
+    margin-top: 16px;
+  }
+
+  > div:first-child {
+    margin-right: 40px
   }
 }

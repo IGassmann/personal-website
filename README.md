@@ -20,6 +20,6 @@
 - [ ] Migrate to [Tailwind CSS](https://tailwindcss.com/)
 - [ ] Add share buttons for posts
 - [ ] Add commenting feature
-- [ ] Add "Edit on GitHub button" to pages
+- [ ] Add "Edit on GitHub" button to pages
 - [ ] Set up git-based CMS [Forestry](https://forestry.io/)
-- [ ] Set up newsletter
+- [ ] Set up a newsletter

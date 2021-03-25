@@ -1,4 +1,6 @@
-const siteOrigin = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+const siteOrigin = process.env.NODE_ENV === 'production' ?
+  `https://igassmann.me` :
+  'http://localhost:3000';
 
 export default {
   defaultTitle: 'Igor Gassmann',

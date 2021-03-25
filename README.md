@@ -6,7 +6,7 @@
 <br>
 
 - Inspired by the Gatsby starter [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
-- Desgined on [Figma](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/Mockups?node-id=65%3A0)
+- Desgined on [Figma](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website)
 - Built with [Next.js](http://nextjs.org/)
 - Hosted on [Vercel](https://vercel.com/)
 - Adopts [Conventional Commits](https://www.conventionalcommits.org/)

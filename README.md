@@ -7,7 +7,7 @@
 </h1>
 <br>
 
-- Inspired by the Gatsby starter [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
+- Inspired by [Gatsby starter Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
 - Desgined on [Figma](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website)
 - Designs published on [Zeplin](https://scene.zeplin.io/project/605ca4ee92a33101a2c90ac4)
 - Built with [Next.js](http://nextjs.org/)

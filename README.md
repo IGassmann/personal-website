@@ -19,9 +19,14 @@
 The website and its design sytem has been designed on [Figma](http://figma.com/) and published on [Zeplin](https://zeplin.io/) for development handoff.
 
 - [Design System](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0)
-- [Desktop](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=0%3A1)
-- [Tablet](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A139)
-- [Mobile](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A140)
+- Mockups
+  - [Desktop](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=0%3A1)
+  - [Tablet](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A139)
+  - [Mobile](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A140)
+- Prototypes
+  - [Desktop](https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=2%3A2&viewport=-238%2C360%2C0.2330128252506256&scaling=min-zoom&page-id=0%3A1)
+  - [Tablet](https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=129%3A0&viewport=-217%2C275%2C0.1537463515996933&scaling=scale-down&page-id=78%3A139)
+  - [Mobile](https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=78%3A327&viewport=-893%2C509%2C0.2890481948852539&scaling=scale-down&page-id=78%3A140)
 - [Moodboard](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=270%3A12)
 
 

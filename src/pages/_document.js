@@ -17,11 +17,7 @@ class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/favicon-180-precomposed.png" />
           <meta name="msapplication-TileColor" content="#190950" />
           <meta name="msapplication-TileImage" content="/images/favicons/favicon-114-precomposed.png" />
-          <link rel="manifest" href="/manifest.json" />
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `

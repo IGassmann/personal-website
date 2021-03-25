@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Igor Gassmann" title="Igor Gassmann" src="https://github.com/IGassmann/personal-website/blob/main/public/images/favicons/favicon-72.png" height="72" width="72">
+  <img alt="Igor Gassmann" title="Igor Gassmann" src="https://github.com/IGassmann/personal-website/blob/main/public/icon.png" height="72" width="72">
   <br>
   IGassmann's Personal Website
 </h1>

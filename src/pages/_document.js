@@ -11,31 +11,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
-          <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
-          <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/images/favicons/favicon.ico" />
-          <link rel="icon" sizes="192x192" href="/images/favicons/favicon-192.png" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/favicon-180-precomposed.png" />
-          <meta name="msapplication-TileColor" content="#190950" />
-          <meta name="msapplication-TileImage" content="/images/favicons/favicon-114-precomposed.png" />
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="RSS feed for blog posts"
-            href="/rss.xml"
-          />
+          <link rel="icon" sizes="192x192" href="icon.png" />
+          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          <meta name="theme-color" content="#190950" />
           <link
             rel="preload"
             href="/fonts/BlenderPro/BlenderPro-Book.woff2"
@@ -71,6 +49,25 @@ class MyDocument extends Document {
             href="/fonts/BlenderPro/BlenderPro-Bold.woff"
             as="font"
             crossOrigin=""
+          />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="RSS feed for blog posts"
+            href="/rss.xml"
           />
         </Head>
         <body>

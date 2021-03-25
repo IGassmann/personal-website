@@ -7,9 +7,21 @@
 
 - Inspired by the Gatsby starter [Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
 - Desgined on [Figma](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website)
+- Designs published on [Zeplin](https://scene.zeplin.io/project/605ca4ee92a33101a2c90ac4)
 - Built with [Next.js](http://nextjs.org/)
 - Hosted on [Vercel](https://vercel.com/)
 - Adopts [Conventional Commits](https://www.conventionalcommits.org/)
+
+## Desgins
+
+The website and its design sytem has been designed on [Figma](http://figma.com/) and published on [Zeplin](https://zeplin.io/) for development handoff.
+
+- [Design System](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0)
+- [Desktop](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=0%3A1)
+- [Tablet](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A139)
+- [Mobile](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=78%3A140)
+- [Moodboard](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=270%3A12)
+
 
 ## Future Improvements
 

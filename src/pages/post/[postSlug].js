@@ -41,7 +41,7 @@ export async function getStaticProps({ params: { postSlug } }) {
   const post = await getPostBySlug(postSlug, [
     'title',
     'summary',
-    'coverImage',
+    'ogImage',
     'publishedAt',
     'content',
     'tags',

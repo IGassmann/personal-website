@@ -27,13 +27,16 @@
     }
   }
 
-  & img {
-    max-width: 100%;
+  .image {
+    display: block;
+    width: fit-content;
+    margin: auto;
   }
 
   & li {
     &:before {
-      content: "- ";
+      content: "-";
+      padding-right: 8px;
     }
   }
 }

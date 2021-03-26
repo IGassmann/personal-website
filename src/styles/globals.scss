@@ -75,15 +75,17 @@ a {
 b,
 strong {
   font-weight: 600;
+  color: variables.$color-primary
 }
 
 ul {
-  margin: 0;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
   list-style: none;
-  padding-inline-start: 8px;
+  padding-inline-start: 32px;
 
-  & li {
-    margin-bottom: 8px;
+  ul {
+    margin: 0;
   }
 }
 

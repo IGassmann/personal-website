@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" sizes="192x192" href="icon.png" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-          <meta name="theme-color" content="#190950" />
+          <meta name="theme-color" content="#000037" />
           <link
             rel="preload"
             href="/fonts/BlenderPro/BlenderPro-Book.woff2"

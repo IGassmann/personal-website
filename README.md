@@ -14,9 +14,9 @@
 - Hosted on [Vercel](https://vercel.com/)
 - Adopts [Conventional Commits](https://www.conventionalcommits.org/)
 
-## Desgins
+## Designs
 
-The website and its design sytem has been designed on [Figma](http://figma.com/) and published on [Zeplin](https://zeplin.io/) for development handoff.
+The website and its design sytem have been designed on [Figma](http://figma.com/) and published on [Zeplin](https://zeplin.io/) for development handoff.
 
 - [Design System](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0)
 - Mockups

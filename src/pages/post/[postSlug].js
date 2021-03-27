@@ -1,28 +1,50 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import BlogHomeButton from '@/components/BlogHomeButton';
 import Post from '@/components/Post';
-import { getPostBySlug, getAllPostSlugs } from '@/lib/posts';
+import SingleColumnLayout from '@/layouts/SingleColumnLayout';
+import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const PostPage = ({ post, origin }) => {
   const router = useRouter()
 
+  const {
+    publishedAt,
+    tags,
+    summary,
+    ogImage,
+    title
+  } = post;
+
   return (
     <>
       <NextSeo
-        title={post.title}
-        description={post.summary}
+        title={title}
+        description={summary}
         openGraph={{
-          title: post.title,
+          title: title,
           url: `${origin}${router.asPath}`,
           type: 'article',
           article: {
-            publishedTime: post.publishedAt,
+            publishedTime: publishedAt,
             authors: [`${origin}/about`],
-            tags: post.tags,
-          }
+            tags: tags,
+          },
+          images: [
+            {
+              url: `${origin}${ogImage}`,
+              width: 1200,
+              height: 630,
+              alt: title,
+            },
+            {
+              url: `${origin}${ogImage}`,
+              width: 1200,
+              height: 600,
+              alt: title,
+            },
+          ],
         }}
       />
       <BlogHomeButton />
@@ -45,7 +67,6 @@ export async function getStaticProps({ params: { postSlug } }) {
     'publishedAt',
     'content',
     'tags',
-    'tagSlugs',
     'slug',
   ]);
 

@@ -41,13 +41,13 @@ export default {
     title: 'Igor Gassmann',
     images: [
       {
-        url: `${siteOrigin}/images/og-image.png`,
+        url: `${siteOrigin}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Igor Gassmann',
       },
       {
-        url: `${siteOrigin}/images/twitter-image.png`,
+        url: `${siteOrigin}/twitter-image.png`,
         width: 1200,
         height: 600,
         alt: 'Igor Gassmann',

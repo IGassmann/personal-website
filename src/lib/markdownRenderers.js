@@ -8,38 +8,37 @@ export const markdownRenderers = {
   code: ({language, value}) => {
     return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
   },
-  paragraph: paragraph => {
-    const { node } = paragraph;
-
-    const {
-      type,
-      value
-    } = node.children[0];
-
-    if (type === 'image') {
-      const image = node.children[0];
-
-      const imageWithDimensionsRegex = /^\d*x\d*$/;
-      const defaultDimensions = [640, 480];
-      const [width, height] =
-        typeof image.title === 'string' && image.title.match(imageWithDimensionsRegex)
-          ? image.title.split('x').map(string => parseInt(string))
-          : defaultDimensions;
-
+  leafDirective: ({ attributes, name }) => {
+    if (name === 'figma') {
       return (
-        <div className={styles.image}>
-          <Image src={image.url} alt={image.alt} height={height} width={width} />
-        </div>
+        <iframe
+          allowFullScreen
+          style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
+          height="480"
+          width="100%"
+          src={`https://www.figma.com/embed?embed_host=share&url=\\${attributes.url}`}
+        />
       );
     }
+  },
+  image: image => {
+    const imageWithDimensionsRegex = /^\d*x\d*$/;
+    const defaultDimensions = [640, 480];
+    const [width, height] =
+      typeof image.title === 'string' && image.title.match(imageWithDimensionsRegex)
+        ? image.title.split('x').map(string => parseInt(string))
+        : defaultDimensions;
 
-    const figmaEmbeddingLinkRegex = /https:\/\/([\w\.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/;
+    return (
+      <div className={styles.image}>
+        <Image src={image.url} alt={image.alt} height={height} width={width} />
+      </div>
+    );
+  },
+  paragraph: ({ children, node }) => {
+    if (node.children[0].type === 'image') return markdownRenderers.image(node.children[0]);
 
-    if (type === 'inlineCode' && value.match(figmaEmbeddingLinkRegex)) {
-      return <iframe style={{border: '1px solid rgba(0, 0, 0, 0.1)'}} allowFullScreen height="480" width="640" src={`https://www.figma.com/embed?embed_host=igassmann&url=\${figmaURL}`} />;
-    }
-
-    return <p>{paragraph.children}</p>;
+    return <p>{children}</p>;
   },
 }
 

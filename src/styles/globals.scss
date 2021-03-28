@@ -112,6 +112,17 @@ figcaption {
   text-align: center;
 }
 
+p code {
+  font-family: monospace;
+  background-color: variables.$color-primary-dark;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 4px;
+  line-height: 20px;
+}
+
 @include breakpoints.sm {
   body {
     font-size: variables.$typographic-desktop-body-text-font-size;

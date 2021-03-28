@@ -16,7 +16,7 @@ export const markdownRenderers = {
           style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
           height="480"
           width="100%"
-          src={`https://www.figma.com/embed?embed_host=share&url=\\${attributes.url}`}
+          src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
         />
       );
     }

@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <aside className={styles.sidebar}>
-      <Profile />
+      <Profile isHeading />
       <Menu menu={menu} />
       <SocialLinks socialLinks={socialLinks} />
     </aside>

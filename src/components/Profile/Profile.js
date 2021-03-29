@@ -7,12 +7,14 @@ import styles from './Profile.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Profile = ({ isInline }) => {
+const Profile = ({ isInline, isHeading }) => {
   const { profile } = useSiteMetadata();
   const isPageWide = useMediaQuery(`(min-width: ${styles.layoutBreakpointSmall})`)
 
   const inlineClass = { inline: isInline || !isPageWide };
   const imageSize = isInline ? 64 : 80;
+
+  const TitleTag = isHeading ? 'h1' : 'span'
 
   return (
     <div className={cx('profile', inlineClass)}>
@@ -28,11 +30,11 @@ const Profile = ({ isInline }) => {
         </a>
       </Link>
       <div className={cx('text', inlineClass)}>
-        <h1 className={cx('title', inlineClass)}>
+        <TitleTag className={cx('title', inlineClass)}>
           <Link href="/">
             <a>{profile.name}</a>
           </Link>
-        </h1>
+        </TitleTag>
         <p className={cx('subtitle', inlineClass)}>{profile.tagline}</p>
       </div>
     </div>

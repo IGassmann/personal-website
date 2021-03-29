@@ -19,3 +19,6 @@ node_modules/
 
 # Generated RSS file
 /public/rss.xml
+
+# Generated Sitemap file
+/public/sitemap.xml

@@ -31,5 +31,9 @@
     "react-syntax-highlighter": "^15.4.3",
     "remark-directive": "^1.0.1",
     "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "globby": "^11.0.3",
+    "sitemap": "^6.4.0"
   }
 }

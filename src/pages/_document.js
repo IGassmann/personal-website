@@ -66,7 +66,7 @@ class MyDocument extends Document {
           <link
             rel="alternate"
             type="application/rss+xml"
-            title="RSS feed for blog posts"
+            title="Igor Gassmann's Blog"
             href="/rss.xml"
           />
         </Head>

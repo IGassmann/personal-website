@@ -9,7 +9,7 @@ export default {
   profile: {
     name: 'Igor Gassmann',
     picture: '/images/profile-picture.jpg',
-    bio: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
+    tagline: 'Developing 👨‍💻 and deploying 📦 at startups 🚀 since 2017.',
     socialLinks: {
       email: 'igor@igassmann.me',
       rss: '/rss.xml',

@@ -33,7 +33,7 @@ const Profile = ({ isInline }) => {
             <a>{profile.name}</a>
           </Link>
         </h1>
-        <p className={cx('subtitle', inlineClass)}>{profile.bio}</p>
+        <p className={cx('subtitle', inlineClass)}>{profile.tagline}</p>
       </div>
     </div>
   );

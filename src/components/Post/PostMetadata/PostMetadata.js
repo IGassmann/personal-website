@@ -5,7 +5,9 @@ import styles from './PostMetadata.module.scss';
 
 const PostMetadata = ({ publishedAt, tags }) => (
   <div className={styles.postMetadata}>
-    <p className={styles.publishedDate}>{dayjs(publishedAt).format('D MMM YYYY')}</p>
+    <time className={styles.publishedDate} dateTime={publishedAt}>
+      {dayjs(publishedAt).format('D MMM YYYY')}
+    </time>
     {tags && <Tags tags={tags} />}
   </div>
 );

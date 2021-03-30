@@ -56,7 +56,7 @@ mainInterests:
 
 ## Introduction
 
-I'm a product and DevOps engineer with a passion for startups.
+I'm a Product and DevOps Engineer with a passion for startups.
 
 I started working 8 years ago at 16 after moving out from my parents’ house in Brazil to pursue a
 career in software engineering in Switzerland. There I’ve built web and mobile applications, and

@@ -1,8 +1,8 @@
-import styles from '@/components/Post/Post.module.scss';
 import Image from 'next/image';
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import styles from '@/components/Post/Post.module.scss';
 
 export const markdownRenderers = {
   code: ({language, value}) => {
@@ -13,9 +13,6 @@ export const markdownRenderers = {
       return (
         <iframe
           allowFullScreen
-          style={{border: '1px solid rgba(0, 0, 0, 0.1)'}}
-          height="480"
-          width="100%"
           src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
         />
       );

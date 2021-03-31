@@ -1,14 +1,20 @@
-import { usePlausible } from 'next-plausible/index';
-import React from 'react';
+import { usePlausible } from 'next-plausible';
+import React, { useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
+type PlausibleEvents = {
+  '404': { path: string }
+}
+
 const NotFoundPage = ({ origin }) => {
   const router = useRouter()
-  const plausible = usePlausible()
+  const plausible = usePlausible<PlausibleEvents>()
 
-  plausible('404',{ props: { path: router.asPath } });
+  useEffect(() => {
+    plausible('404',{ props: { path: router.asPath } });
+  })
 
   return (
     <>

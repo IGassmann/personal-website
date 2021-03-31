@@ -16,7 +16,6 @@ node_modules/
 # Vercel configuration
 /.vercel
 
-
 # Generated RSS file
 /public/rss.xml
 

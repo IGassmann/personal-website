@@ -2,7 +2,6 @@ import React, { Component, useEffect } from 'react';
 import { AppLayoutProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import DefaultLayout from '@/layouts/DefaultLayout';
-import GoogleTagManager from '@/components/GoogleTagManager/GoogleTagManager';
 import siteConfig from '@/site.config';
 import '@/styles/globals.scss';
 
@@ -25,12 +24,12 @@ const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
   });
 
   return (
-    <GoogleTagManager>
+    <>
       <DefaultSeo {...siteConfig} />
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </GoogleTagManager>
+    </>
   );
 };
 

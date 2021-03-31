@@ -51,19 +51,6 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <script async defer data-domain="igassmann.me" src="https://plausible.io/js/plausible.js"/>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
           <link
             rel="alternate"
             type="application/rss+xml"

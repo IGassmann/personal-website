@@ -50,6 +50,7 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <script async defer data-domain="igassmann.me" src="https://plausible.io/js/plausible.js"/>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
           <script
             dangerouslySetInnerHTML={{

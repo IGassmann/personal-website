@@ -1,4 +1,5 @@
 import React from 'react';
+import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import Work from '@/components/Work/Work';
@@ -23,7 +24,7 @@ const WorkPage = ({ origin }) => {
 
 export default WorkPage;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   return {

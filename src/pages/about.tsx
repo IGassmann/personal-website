@@ -1,7 +1,8 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import * as matter from 'gray-matter';
+import matter from 'gray-matter';
 import { join } from 'path';
 import fs from 'fs';
 import About from '@/components/About/About';
@@ -26,7 +27,7 @@ const AboutPage = ({ about, origin }) => {
 
 export default AboutPage;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   const aboutPath = join(process.cwd(), 'src', 'content', 'about.md');

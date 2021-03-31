@@ -1,5 +1,6 @@
 import React from 'react';
 import fs from 'fs';
+import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import Pagination from '@/components/Pagination';
@@ -31,9 +32,9 @@ const BlogPage = ({ posts, currentPage, numberOfPages, origin }) => {
 
 export default BlogPage;
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const pageIndexParam = params?.blogPageIndex;
-  const pageIndex = parseInt(pageIndexParam || '0')
+  const pageIndex = Number(pageIndexParam || '0')
 
   const { default: { postsPerPage, origin } } = await import('@/site.config')
 

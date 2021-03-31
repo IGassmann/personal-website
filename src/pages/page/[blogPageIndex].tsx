@@ -1,12 +1,9 @@
 import React from 'react';
-import { getStaticProps } from '@/pages';
-import BlogPage from '@/pages';
+import { GetStaticPaths } from 'next';
 import { getAllPosts } from '@/lib/posts';
+export * from '@/pages';
 
-export default BlogPage;
-export { getStaticProps }
-
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { default: { postsPerPage } } = await import('@/site.config')
 
   const posts = getAllPosts(['slug']);

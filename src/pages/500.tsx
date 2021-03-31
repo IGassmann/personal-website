@@ -1,29 +1,30 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-const NotFoundPage = ({ origin }) => {
+const ServerErrorPage = ({ origin }) => {
   const router = useRouter()
 
   return (
     <>
       <NextSeo
-        title='Not Found'
-        description="The page doesn't exist."
+        title='Server Error'
+        description="Something went wrong."
         openGraph={{
-          title: 'Not Found',
+          title: 'Server Error',
           url: `${origin}${router.asPath}`,
         }}
       />
-      <h1>Not Found</h1>
-      <p>Nothing to see here. Move along.</p>
+      <h1>Server Error</h1>
+      <p>Oops, somewthing went wrong.</p>
     </>
   );
 };
 
-export default NotFoundPage;
+export default ServerErrorPage;
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   return {

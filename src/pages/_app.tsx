@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { Component, useEffect } from 'react';
+import { AppLayoutProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import GoogleTagManager from '@/components/GoogleTagManager/GoogleTagManager';
 import siteConfig from '@/site.config';
 import '@/styles/globals.scss';
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
   const Layout = Component.Layout || DefaultLayout;
 
   useEffect(() => {
@@ -31,4 +32,6 @@ export default function MyApp({ Component, pageProps }) {
       </Layout>
     </GoogleTagManager>
   );
-}
+};
+
+export default MyApp;

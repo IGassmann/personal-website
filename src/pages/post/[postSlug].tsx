@@ -1,10 +1,11 @@
+import React from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 import BlogHomeButton from '@/components/BlogHomeButton';
 import Post from '@/components/Post';
 import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
-import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
-import React from 'react';
 
 const PostPage = ({ post, origin }) => {
   const router = useRouter()
@@ -57,7 +58,7 @@ PostPage.Layout = SingleColumnLayout;
 
 export default PostPage;
 
-export async function getStaticProps({ params: { postSlug } }) {
+export const getStaticProps: GetStaticProps = async ({ params: { postSlug } }) => {
   const { default: { origin } } = await import('@/site.config')
 
   const post = await getPostBySlug(postSlug, [
@@ -78,7 +79,7 @@ export async function getStaticProps({ params: { postSlug } }) {
   };
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const postSlugs = getAllPostSlugs();
 
   return {

@@ -1,6 +1,7 @@
 import React, { Component, useEffect } from 'react';
 import { AppLayoutProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import PlausibleProvider from 'next-plausible';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import siteConfig from '@/site.config';
 import '@/styles/globals.scss';
@@ -26,9 +27,11 @@ const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
   return (
     <>
       <DefaultSeo {...siteConfig} />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <PlausibleProvider domain="igassmann.me">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </PlausibleProvider>
     </>
   );
 };

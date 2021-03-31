@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { GA_MEASUREMENT_ID } from '@/lib/gtag'
 
 class MyDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
@@ -50,7 +49,6 @@ class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
-          <script async defer data-domain="igassmann.me" src="https://plausible.io/js/plausible.js"/>
           <link
             rel="alternate"
             type="application/rss+xml"

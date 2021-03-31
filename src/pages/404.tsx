@@ -1,3 +1,4 @@
+import { usePlausible } from 'next-plausible/index';
 import React from 'react';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
@@ -5,6 +6,9 @@ import { NextSeo } from 'next-seo';
 
 const NotFoundPage = ({ origin }) => {
   const router = useRouter()
+  const plausible = usePlausible()
+
+  plausible('404',{ props: { path: router.asPath } });
 
   return (
     <>

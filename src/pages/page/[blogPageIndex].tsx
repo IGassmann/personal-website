@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticPaths } from 'next';
 import { getAllPosts } from '@/lib/posts';
-export * from '@/pages';
+export { default, getStaticProps } from '@/pages';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { default: { postsPerPage } } = await import('@/site.config')

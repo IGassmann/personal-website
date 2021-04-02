@@ -31,6 +31,10 @@ on [Zeplin](https://zeplin.io/) for development handoff.
   - [Mobile](https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=78%3A327&viewport=-893%2C509%2C0.2890481948852539&scaling=scale-down&page-id=78%3A140)
 - [Moodboard](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=270%3A12)
 
+## Analytics
+
+The website's analytics are publicly available at
+[igassmann.me/analytics](https://igassmann.me/analytics).
 
 ## Future Improvements
 

@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
   return (
     <>
       <DefaultSeo {...siteConfig} />
-      <PlausibleProvider domain="igassmann.me" customDomain="https://stats.igassmann.me">
+      <PlausibleProvider domain="igassmann.me" customDomain="https://stats.igassmann.me" trackOutboundLinks>
         <Layout>
           <Component {...pageProps} />
         </Layout>

@@ -10,7 +10,7 @@ skills:
       url: https://reactjs.org/
     - name: Next.js
       iconPath: /images/skills/nextjs.png
-      url: http://nextjs.org/
+      url: https://nextjs.org/
     - name: Node.js
       iconPath: /images/skills/nodejs.png
       url: https://nodejs.org/

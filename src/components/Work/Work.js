@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Work.module.scss';
 
-const About = () => {
+const Work = () => {
   return (
     <div className={styles.work}>
       <Link href='https://odeon.tv/'>
@@ -55,4 +55,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Work;

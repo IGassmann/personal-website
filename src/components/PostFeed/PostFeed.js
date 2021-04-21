@@ -1,6 +1,5 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import kebabCase from 'lodash/kebabCase';
 import Link from 'next/link';
 import styles from './PostFeed.module.scss';
 
@@ -12,20 +11,14 @@ const PostFeed = ({ posts }) => (
           <time className={styles.postTime} dateTime={publishedAt}>
             {dayjs(publishedAt).format('MMMM YYYY')}
           </time>
-          { category &&
-            <Link href={`/category/${kebabCase(category)}`}>
-              <a>{category}</a>
-            </Link>
-          }
+          { category && <span>{category}</span>}
         </div>
         <h2 className={styles.postTitle}>
           <Link href={`/post/${slug}`} prefetch={false}>
             <a className={styles.postTitleLink}>{title}</a>
           </Link>
         </h2>
-        { summary &&
-          <p className={styles.postSummary}>{summary}</p>
-        }
+        { summary && <p className={styles.postSummary}>{summary}</p>}
       </div>
     ))}
   </div>

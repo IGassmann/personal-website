@@ -4,9 +4,14 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import styles from '@/components/Post/Post.module.scss';
 
-export const markdownRenderers = {
-  code: ({language, value}) => {
-    return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
+export const markdownComponents = {
+  code: ({node, inline, className, children, ...props}) => {
+    const match = /language-(\w+)/.exec(className || '')
+    return !inline && match ? (
+      <SyntaxHighlighter style={vscDarkPlus} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
+    ) : (
+      <code className={className} {...props} />
+    )
   },
   leafDirective: ({ attributes, name }) => {
     if (name === 'figma') {
@@ -30,25 +35,25 @@ export const markdownRenderers = {
       );
     }
   },
-  image: image => {
+  img: ({ title, alt, src}) => {
     const imageWithDimensionsRegex = /^\d*x\d*$/;
     const defaultDimensions = [640, 480];
     const [width, height] =
-      typeof image.title === 'string' && image.title.match(imageWithDimensionsRegex)
-        ? image.title.split('x').map(string => parseInt(string))
+      typeof title === 'string' && title?.match(imageWithDimensionsRegex)
+        ? title.split('x').map(string => parseInt(string))
         : defaultDimensions;
 
     return (
       <div className={styles.image}>
-        <Image src={image.url} alt={image.alt} height={height} width={width} />
+        <Image src={src} alt={alt} height={height} width={width} />
       </div>
     );
   },
-  paragraph: ({ children, node }) => {
-    if (node.children[0].type === 'image') return markdownRenderers.image(node.children[0]);
+  p: ({children, node }) => {
+    if (node.children[0].tagName === 'img') return markdownComponents.img(children[0].props);
 
     return <p>{children}</p>;
   },
 }
 
-export default markdownRenderers;
+export default markdownComponents;

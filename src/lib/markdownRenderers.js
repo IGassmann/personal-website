@@ -12,9 +12,21 @@ export const markdownRenderers = {
     if (name === 'figma') {
       return (
         <iframe
+          className={styles.figmaEmbed}
           allowFullScreen
           src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
         />
+      );
+    }
+    if (name === 'youtube-playlist') {
+      return (
+        <div className={styles.youtubePlaylistEmbedContainer}>
+          <iframe
+            allowFullScreen
+            src={`https://www.youtube-nocookie.com/embed/videoseries?list=${attributes.id}`}
+            allow="autoplay; encrypted-media"
+          />
+        </div>
       );
     }
   },

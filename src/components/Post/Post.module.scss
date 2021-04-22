@@ -33,10 +33,27 @@
     margin: auto;
   }
 
-  iframe {
+  .figmaEmbed {
     border: none;
     width: 100%;
     height: 480px;
+  }
+
+  .youtubePlaylistEmbedContainer {
+    position: relative;
+    height: 0;
+    width: 1px;
+    min-width: 100%;
+    padding-top: 100% / (16 / 9);
+
+    > :first-child {
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   & li {

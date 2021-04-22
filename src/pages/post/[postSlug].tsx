@@ -32,7 +32,7 @@ const PostPage = ({ post, origin }) => {
             authors: [`${origin}/about`],
             tags: tags,
           },
-          images: [
+          ...(ogImage && { images: [
             {
               url: `${origin}${ogImage}`,
               width: 1200,
@@ -45,7 +45,7 @@ const PostPage = ({ post, origin }) => {
               height: 600,
               alt: title,
             },
-          ],
+          ]})
         }}
       />
       <BlogHomeButton />

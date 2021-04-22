@@ -1,4 +1,5 @@
 module.exports = {
+  reactStrictMode: true,
   distDir: './dist/',
   webpack: (config, { isServer }) => {
     if (isServer) {

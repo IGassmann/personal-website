@@ -18,9 +18,9 @@ I shared my experience with the people at [Praxis](https://discoverpraxis.com/) 
 [Crash](https://crash.co/), and they persuaded me to keep trying until I hadn't a clear negative
 answer. They also suggested I record a video.
 
-So I started drafting a script and made sure to follow the[tips from Crash to make a great video pitch](https://crash.co/content/how-to-make-a-great-video-pitch/).
-After two days of work, the video was ready. But it wasn’t enough for showing that I could do the
-job they required.
+So I started drafting a script and made sure to follow the [tips from Crash to make a great 
+video pitch](https://crash.co/content/how-to-make-a-great-video-pitch/). After two days of work, the
+video was ready. But it wasn’t enough for showing that I could do the job they required.
 
 I wanted to prove that I could easily learn their tech stack and follow their coding style. So I
 started dissecting [their website](https://usestir.com/) to uncover what technologies they used, how
@@ -43,7 +43,7 @@ No need to say that this time I got a reply. However, since they only hired in t
 to get the job. But actions like such never go unnoticed. They help you
 [build your brand](https://igassmann.me/post/new-brand) and show how driven you are.
 
-Although I didn’t get the job, the website helped me being accepted into
+Although I didn’t get the job, the website helped me to be accepted into
 [On Deck First 50 Fellowship](https://www.beondeck.com/first-50) which I’m sure will help me get my
 next dream job. I’m super excited to be joining the On Deck community. I’ve seen amazing talents
 accelerate their careers with their programs. Stir’s founders themselves have

@@ -1,27 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import classNames from 'classnames/bind';
 import styles from './Pagination.module.scss';
 
-const cx = classNames.bind(styles);
-
 const Pagination = ({ currentPage, numberOfPages }) => {
-  const hasPreviousPage = currentPage !== 0;
-  const hasNextPage = currentPage + 1 !== numberOfPages;
+  const hasPreviousPage = currentPage > 0;
+  const hasNextPage = currentPage + 1 < numberOfPages;
   const previousPagePath = currentPage === 1 ? '/' : `/page/${currentPage - 1}`
   const nextPagePath = `/page/${currentPage + 1}`
 
   return (
     <div className={styles.pagination}>
       <div>
-        <Link rel="prev" href={previousPagePath}>
-          <a className={cx('link', {disable: !hasPreviousPage})}>← PREV</a>
-        </Link>
+        {hasPreviousPage ?
+          <Link rel="prev" href={previousPagePath}>
+            <a className={styles.link}>← PREV</a>
+          </Link>
+          :
+          <span className={`${styles.link} ${styles.disable}`}>← PREV</span>
+        }
       </div>
       <div>
-        <Link rel="next" href={nextPagePath}>
-          <a className={cx('link', {disable: !hasNextPage})}>NEXT →</a>
-        </Link>
+        {hasNextPage ?
+          <Link rel="next" href={nextPagePath}>
+            <a className={styles.link}>NEXT →</a>
+          </Link>
+          :
+          <span className={`${styles.link} ${styles.disable}`}>NEXT →</span>
+        }
       </div>
     </div>
   );

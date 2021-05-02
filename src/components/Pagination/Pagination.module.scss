@@ -11,6 +11,7 @@
   font-weight: bold;
 
   &.disable {
+    cursor: not-allowed;
     pointer-events: none;
     color: variables.$color-secondary-dark;
   }

@@ -57,7 +57,7 @@ posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) =>
     description: summary,
     content: markdownProcessor.processSync(content).toString(),
     date: new Date(publishedAt),
-    ...(tags && { category: tags.map(tag => ({ name: tag }))}),
+    ...(tags && { category: tags.map(tag => ({ name: tag, term: tag }))}),
     ...(ogImage && { image: `${origin}${ogImage}` }),
     author: [{
         name: profile.name,

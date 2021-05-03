@@ -55,6 +55,12 @@ class MyDocument extends Document {
             title="Igor Gassmann's Blog"
             href="/rss.xml"
           />
+          <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="Igor Gassmann's Blog"
+            href="/atom.xml"
+          />
         </Head>
         <body>
         <Main />

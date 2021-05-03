@@ -1,12 +1,10 @@
 import React from 'react';
-import fs from 'fs';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import Pagination from '@/components/Pagination';
 import PostFeed from '@/components/PostFeed';
 import { getAllPosts } from '@/lib/posts';
-import generateRSS from '@/lib/generateRSS';
 
 const BlogPage = ({ posts, currentPage, numberOfPages, origin }) => {
   const router = useRouter()
@@ -52,9 +50,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     pageIndex * postsPerPage,
     (pageIndex + 1) * postsPerPage
   )
-
-  const rss = generateRSS(posts);
-  fs.writeFileSync('./public/rss.xml', rss);
 
   return {
     props: {

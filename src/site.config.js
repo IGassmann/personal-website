@@ -59,4 +59,8 @@ export default {
     site: '@i_gassmann',
     cardType: 'summary_large_image',
   },
+  syndicationFeed: {
+    title: "Igor Gassmann's Blog",
+    description: 'Blog posts of a curious engineer.'
+  }
 };

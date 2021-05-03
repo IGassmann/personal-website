@@ -15,12 +15,16 @@
   "main": "n/a",
   "scripts": {
     "dev": "next dev",
+    "build:sitemap": "ts-node ./build/generateSitemap.ts",
+    "build:feeds": "ts-node ./build/generateFeeds.ts",
+    "prebuild": "yarn build:sitemap & yarn build:feeds",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "dayjs": "^1.10.4",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next": "^10.2.0",
@@ -39,6 +43,7 @@
     "globby": "^11.0.3",
     "next-secure-headers": "^2.2.0",
     "sitemap": "^7.0.0",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   }
 }

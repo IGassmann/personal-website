@@ -1,1 +1,0 @@
-module.exports = process.env.NODE_ENV === 'production' ? `https://igassmann.me` : 'http://localhost:3000';

@@ -16,8 +16,9 @@ node_modules/
 # Vercel configuration
 /.vercel
 
-# Generated RSS file
+# Generated syndication feed files
 /public/rss.xml
+/public/atom.xml
 
-# Generated Sitemap file
+# Generated sitemap file
 /public/sitemap.xml

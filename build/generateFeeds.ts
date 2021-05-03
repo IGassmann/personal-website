@@ -1,7 +1,12 @@
 import { Feed } from "feed";
 import fs from 'fs';
 import { getAllPosts } from '../src/lib/posts';
+import unified from 'unified';
+import markdown from 'remark-parse';
 import siteConfig from '../src/site.config';
+import remark2rehype from 'remark-rehype';
+import format from 'rehype-format';
+import html from 'rehype-stringify';
 
 const posts = getAllPosts([
   'title',
@@ -38,12 +43,19 @@ const feed = new Feed({
   },
 });
 
+
+const markdownProcessor = unified()
+  .use(markdown)
+  .use(remark2rehype)
+  .use(format)
+  .use(html);
+
 posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) => {
   feed.addItem({
     title: title,
     link: `${origin}/post/${slug}`,
     description: summary,
-    content: content,
+    content: markdownProcessor.processSync(content).toString(),
     date: new Date(publishedAt),
     ...(tags && { category: tags.map(tag => ({ name: tag }))}),
     ...(ogImage && { image: `${origin}${ogImage}` }),

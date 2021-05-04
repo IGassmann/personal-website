@@ -33,7 +33,6 @@ const feed = new Feed({
   favicon: `${origin}/icon.png`,
   copyright: 'Unlicense',
   updated: new Date(posts[0].publishedAt),
-  generator: defaultTitle,
   author: {
     name: profile.name,
     email: profile.socialLinks.email,

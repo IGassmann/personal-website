@@ -46,7 +46,7 @@ const feed = new Feed({
 });
 
 const relativeToAbsolute = url => {
-  if (url.host === null) return `${origin}${url.path}?ref=SyndicationFeed`
+  if (url.host === null) return `${origin}${url.path}?source=SyndicationFeed`
 };
 
 const buildKeepReadingCTA = (postURL) => `
@@ -66,7 +66,7 @@ const markdownProcessor = unified()
 posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) => {
 
   const postURL = `${origin}/post/${slug}`;
-  const trackedPostURL = `${postURL}?ref=SyndicationFeed`;
+  const trackedPostURL = `${postURL}?source=SyndicationFeed`;
   const keepReadingCTA = buildKeepReadingCTA(trackedPostURL)
   const itemContent = markdownProcessor.processSync(content).toString().concat(keepReadingCTA)
 

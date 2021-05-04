@@ -50,11 +50,6 @@ export default {
         width: 630,
         height: 630,
       },
-      {
-        url: `${siteOrigin}/twitter-image.png`,
-        width: 1200,
-        height: 600,
-      },
     ]
   },
   twitter: {

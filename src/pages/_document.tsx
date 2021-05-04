@@ -10,8 +10,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="icon" type="image/svg+xml" href="/icon.svg" />
           <link rel="icon" sizes="192x192" href="/icon.png" />
-          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="apple-touch-icon" href="/icon.png" />
           <meta name="theme-color" content="#000037" />
           <link
             rel="preload"

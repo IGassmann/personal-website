@@ -1,12 +1,14 @@
 import { Feed } from "feed";
 import fs from 'fs';
-import { getAllPosts } from '../src/lib/posts';
 import unified from 'unified';
 import markdown from 'remark-parse';
 import siteConfig from '../src/site.config';
 import remark2rehype from 'remark-rehype';
+import rehypeTruncate from 'rehype-truncate';
+import urls from 'rehype-urls';
 import format from 'rehype-format';
 import html from 'rehype-stringify';
+import { getAllPosts } from '../src/lib/posts';
 
 const posts = getAllPosts([
   'title',
@@ -43,19 +45,37 @@ const feed = new Feed({
   },
 });
 
+const relativeToAbsolute = url => {
+  if (url.host === null) return `${origin}${url.path}?ref=SyndicationFeed`
+};
+
+const buildKeepReadingCTA = (postURL) => `
+<div style="margin-top: 50px; font-style: italic;">
+  <strong><a href="${postURL}">Keep reading</a></strong>
+  <br/><br/>
+</div>`
 
 const markdownProcessor = unified()
   .use(markdown)
   .use(remark2rehype)
+  .use(rehypeTruncate, { maxChars: 250, ignoreTags: ['ul', 'h1', 'h2'] })
+  .use(urls, relativeToAbsolute)
   .use(format)
   .use(html);
 
 posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) => {
+
+  const postURL = `${origin}/post/${slug}`;
+  const trackedPostURL = `${postURL}?ref=SyndicationFeed`;
+  const keepReadingCTA = buildKeepReadingCTA(trackedPostURL)
+  const itemContent = markdownProcessor.processSync(content).toString().concat(keepReadingCTA)
+
   feed.addItem({
     title: title,
-    link: `${origin}/post/${slug}`,
+    link: trackedPostURL,
+    id: postURL,
     description: summary,
-    content: markdownProcessor.processSync(content).toString(),
+    content: itemContent,
     date: new Date(publishedAt),
     ...(tags && { category: tags.map(tag => ({ name: tag, term: tag }))}),
     ...(ogImage && { image: `${origin}${ogImage}` }),

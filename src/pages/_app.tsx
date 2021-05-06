@@ -5,6 +5,7 @@ import PlausibleProvider from 'next-plausible';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import siteConfig from '@/site.config';
 import '@/styles/globals.scss';
+// import 'tailwindcss/tailwind.css'
 
 const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
   const Layout = Component.Layout || DefaultLayout;

@@ -3,9 +3,9 @@
 
 .blogHomeButton {
   display: block;
-  max-width: 90px;
+  width: fit-content;
   height: variables.$button-height;
-  padding: 0 16px;
+  padding: 0 24px;
   line-height: variables.$button-height;
   text-align: center;
   color: variables.$button-text-color;

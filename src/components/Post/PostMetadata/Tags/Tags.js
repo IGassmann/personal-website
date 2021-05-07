@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './Tags.module.scss';
 
 const Tags = ({ tags }) => (
   <div>
-    <ul className={styles.tagList}>
+    <ul className="m-0 -mx-s p-0 pt-l">
       {tags && tags.map((tag, index) => (
-        <li className={styles.tagListItem} key={index}>#{tag}</li>
+        <li className="inline px-s text-secondary" key={index}>#{tag}</li>
       ))}
     </ul>
   </div>

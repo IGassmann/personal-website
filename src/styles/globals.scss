@@ -11,127 +11,40 @@
 @layer base {
   @include meta.load-css('./fonts.scss');
 
-  body {
-    margin: 0;
-    font-family: variables.$typographic-font-family;
-    font-weight: 400;
-    color: variables.$typographic-body-text-font-color;
-    background-color: variables.$color-background;
-    line-height: variables.$typographic-body-text-line-height;
-    font-size: variables.$typographic-body-text-font-size;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    color: variables.$typographic-heading-font-color;
-    font-weight: 500;
+    @apply text-primary font-medium;
   }
 
   h1 {
-    font-size: variables.$typographic-heading-1-font-size;
-    line-height: variables.$typographic-heading-1-line-height;
+    @apply text-h1;
   }
 
   h2 {
-    font-size: 32px;
-    line-height: 40px;
-    margin: 16px 0;
+    @apply text-h2 my-l;
   }
 
   h3, h4, h5, h6 {
-    font-size: variables.$typographic-heading-3-font-size;
-    line-height: variables.$typographic-heading-3-line-height;
-    margin: 8px 0;
-  }
-
-  img {
-    border: 0;
-    max-width: 100%;
-    display: block;
-    margin: inherit;
-  }
-
-  hr {
-    border: 0;
-    color: variables.$color-body-text;
-    display: block;
-    height: 26px;
-    margin: 48px auto;
-    background-size: 100% 26px;
-    background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, variables.$color-body-text 11px, variables.$color-body-text 15px, transparent 15px, transparent 26px);
-    width: 100px;
+    @apply text-h3 my-m;
   }
 
   a {
-    color: variables.$typographic-link-font-color;
-    text-decoration: none;
-
-    &:hover {
-      color: variables.$typographic-link-hover-font-color;
-    }
-
+    @apply text-secondary hover:text-primary;
   }
 
   b,
   strong {
-    font-weight: 600;
-    color: variables.$color-primary
+    @apply text-primary;
   }
 
   ul {
-    margin-block-start: 16px;
-    margin-block-end: 16px;
-    list-style: none;
-    padding-inline-start: 32px;
+    @apply my-l pl-xxl;
 
     ul {
-      margin: 0;
+      @apply m-0;
     }
   }
 
   p {
-    line-height: variables.$typographic-body-text-line-height;
-    margin: 24px 0;
-  }
-
-  blockquote {
-    padding: 0;
-    font-style: italic;
-    text-align: center;
-  }
-
-  figure {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  figcaption {
-    font-style: italic;
-    margin-bottom: 0;
-    text-align: center;
-  }
-
-  p code {
-    font-family: monospace;
-    background-color: variables.$color-primary-dark;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-size: 16px;
-    display: inline-block;
-    border-radius: 4px;
-    line-height: 20px;
-  }
-
-  @include breakpoints.sm {
-    body {
-      font-size: variables.$typographic-desktop-body-text-font-size;
-      font-weight: 500;
-    }
+    @apply my-xl;
   }
 }

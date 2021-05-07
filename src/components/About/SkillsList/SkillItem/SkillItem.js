@@ -10,7 +10,7 @@ const SkillItem = ({ skill: { iconPath, name, url, }, }) => (
         height={16}
         alt={name}
       />
-      <span className="ml-m text-body-text">{name}</span>
+      <span className="ml-m text-body-text-color">{name}</span>
     </a>
   </li>
 );

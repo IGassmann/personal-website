@@ -1,12 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Menu.module.scss';
 
 const Menu = ({ menu }) => (
-  <nav className={styles.menu}>
-    <ul className={styles.list}>
+  <nav>
+    <ul className="p-0 my-xl">
       {menu.map((item) => (
-        <li className={styles.listItem} key={item.path}>
+        <li className="my-l sm:my-m" key={item.path}>
           <Link href={item.path}>
             <a>{item.label}</a>
           </Link>

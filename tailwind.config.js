@@ -43,4 +43,9 @@ module.exports = {
       h1: ['48px', { lineHeight: '56px' }],
     },
   },
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    }
+  }
 }

@@ -1,24 +1,23 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import styles from './PostFeed.module.scss';
 
 const PostFeed = ({ posts }) => (
-  <div className={styles.postFeed}>
+  <div className="flex flex-col">
     {posts.map(({ category, publishedAt, summary, slug, title }) => (
-      <div className={styles.postPreview} key={slug}>
-        <div className={styles.postMetadata}>
-          <time className={styles.postTime} dateTime={publishedAt}>
+      <div className="mb-xxxl" key={slug}>
+        <div className="text-[18px]">
+          <time className="mr-m text-body-text-color opacity-90" dateTime={publishedAt}>
             {dayjs(publishedAt).format('MMMM YYYY')}
           </time>
           { category && <span>{category}</span>}
         </div>
-        <h2 className={styles.postTitle}>
+        <h2 className="m-0">
           <Link href={`/post/${slug}`} prefetch={false}>
-            <a className={styles.postTitleLink}>{title}</a>
+            <a className="text-primary hover:border-b">{title}</a>
           </Link>
         </h2>
-        { summary && <p className={styles.postSummary}>{summary}</p>}
+        { summary && <p className="mt-s">{summary}</p>}
       </div>
     ))}
   </div>

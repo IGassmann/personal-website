@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Pagination.module.scss';
 
 const Pagination = ({ currentPage, numberOfPages }) => {
   const hasPreviousPage = currentPage > 0;
@@ -9,23 +8,23 @@ const Pagination = ({ currentPage, numberOfPages }) => {
   const nextPagePath = `/page/${currentPage + 1}`
 
   return (
-    <div className={styles.pagination}>
+    <div className="flex justify-between">
       <div>
         {hasPreviousPage ?
           <Link rel="prev" href={previousPagePath}>
-            <a className={styles.link}>← PREV</a>
+            <a className="text-[26px] font-bold">← PREV</a>
           </Link>
           :
-          <span className={`${styles.link} ${styles.disable}`}>← PREV</span>
+          <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">← PREV</span>
         }
       </div>
       <div>
         {hasNextPage ?
           <Link rel="next" href={nextPagePath}>
-            <a className={styles.link}>NEXT →</a>
+            <a className="text-[26px] font-bold">NEXT →</a>
           </Link>
           :
-          <span className={`${styles.link} ${styles.disable}`}>NEXT →</span>
+          <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">NEXT →</span>
         }
       </div>
     </div>

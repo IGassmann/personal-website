@@ -2,15 +2,13 @@ import React from 'react';
 import Icon from '@/components/Icon';
 import { getContactHref } from '@/lib/getContactHref';
 import { getIcon } from '@/lib/getIcon';
-import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ socialLinks }) => (
   <div>
-    <ul className={styles.iconList}>
+    <ul className="flex p-0 space-x-[16px]">
       {Object.keys(socialLinks).map((name) => (
-        <li className={styles.listItem} key={name}>
+        <li className="flex items-center justify-center w-[42px] h-[42px] border border-secondary-dark rounded-[20px]" key={name}>
           <a
-            className={styles.link}
             href={getContactHref(name, socialLinks[name])}
             rel="noopener noreferrer"
             target="_blank"

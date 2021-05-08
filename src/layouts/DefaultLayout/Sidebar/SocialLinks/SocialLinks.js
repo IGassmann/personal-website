@@ -8,11 +8,7 @@ const SocialLinks = ({ socialLinks }) => (
     <ul className="flex p-0 space-x-[16px]">
       {Object.keys(socialLinks).map((name) => (
         <li className="flex items-center justify-center w-[42px] h-[42px] border border-secondary-dark rounded-[20px]" key={name}>
-          <a
-            href={getContactHref(name, socialLinks[name])}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+          <a href={getContactHref(name, socialLinks[name])}>
             <Icon icon={getIcon(name)} />
           </a>
         </li>

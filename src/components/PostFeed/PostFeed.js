@@ -7,7 +7,7 @@ const PostFeed = ({ posts }) => (
     {posts.map(({ category, publishedAt, summary, slug, title }) => (
       <div className="mb-xxxl" key={slug}>
         <div className="text-[18px]">
-          <time className="mr-m text-body-text-color opacity-90" dateTime={publishedAt}>
+          <time className="mr-m text-body-text-color text-opacity-80" dateTime={publishedAt}>
             {dayjs(publishedAt).format('MMMM YYYY')}
           </time>
           { category && <span>{category}</span>}

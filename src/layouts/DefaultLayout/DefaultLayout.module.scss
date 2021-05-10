@@ -10,8 +10,8 @@
 @include breakpoints.sm {
     .layout {
         display: grid;
-        grid-template-columns: 275px 1fr;
-        gap: 40px;
+        grid-template-columns: 295px 1fr;
+        gap: 20px;
         padding: 0 32px;
     }
 }

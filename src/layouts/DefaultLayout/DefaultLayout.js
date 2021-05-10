@@ -1,9 +1,8 @@
 import React from 'react';
 import Sidebar from '@/layouts/DefaultLayout/Sidebar';
-import styles from './DefaultLayout.module.scss';
 
 const DefaultLayout = ({ children }) => (
-  <div className={styles.layout}>
+  <div className="max-w-[1019px] my-xxl mx-auto px-l sm:grid sm:grid-cols-[295px,1fr] sm:gap-[20px] sm:px-xxl">
     <Sidebar/>
     <main>
       {children}

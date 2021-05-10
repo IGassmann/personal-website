@@ -8,7 +8,7 @@ const Sidebar = () => {
   const { profile: { socialLinks }, menu } = useSiteMetadata();
 
   return (
-    <aside className="relative mb-xxxl sm:border-r border-secondary">
+    <aside className="relative mb-xxxl sm:pr-[20px] sm:border-r sm:border-secondary ">
       <Profile isHeading />
       <Menu menu={menu} />
       <SocialLinks socialLinks={socialLinks} />

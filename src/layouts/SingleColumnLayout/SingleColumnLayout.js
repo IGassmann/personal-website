@@ -1,9 +1,8 @@
 import React from 'react';
 import Footer from './Footer';
-import styles from './SingleColumnLayout.module.scss';
 
 const SingleColumnLayout = ({ children }) => (
-  <div className={styles.layout}>
+  <div className="max-w-[1019px] my-xxl mx-auto px-l sm:px-xxl">
     <main>
       {children}
     </main>

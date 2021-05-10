@@ -1,8 +1,0 @@
-@use 'styles/variables';
-
-.footer {
-    max-width: variables.$layout-single-column-width;
-    border-top: 1px solid variables.$color-primary;
-    margin: 0 auto;
-    padding-top: 32px;
-}

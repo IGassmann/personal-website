@@ -1,49 +1,48 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from './Work.module.scss';
 
-const Work = () => {
-  return (
-    <div className={styles.work}>
-      <a href='https://odeon.tv/' className={styles.workCard}>
-        <Image src='/images/work/odeon.png' layout='fill' alt='Odeon' className={styles.image}
-        />
-        <div className={styles.overlay}>
-          <div className={styles.overlayText}>
-            <h2>Odeon</h2>
-            <p>Video Platform</p>
-          </div>
-        </div>
-      </a>
-      <a href='https://www.athem.fr/' className={styles.workCard}>
-        <Image src='/images/work/athem.png' layout='fill' alt='Athem' className={styles.image} />
-        <div className={styles.overlay}>
-          <div className={styles.overlayText}>
-            <h2>Athem</h2>
-            <p>Creative Website</p>
-          </div>
-        </div>
-      </a>
-      <a href='https://original.works/' className={styles.workCard}>
-        <Image src='/images/work/original-works.png' layout='fill' alt='Original Works' className={styles.image}/>
-        <div className={styles.overlay}>
-          <div className={styles.overlayText}>
-            <h2>Original Works</h2>
-            <p>Marketing Website</p>
-          </div>
-        </div>
-      </a>
-      <a href='https://github.com/lbryio/lbry-desktop' className={styles.workCard}>
-        <Image src='/images/work/lbry.png' layout='fill' alt='LBRY' className={styles.image}/>
-        <div className={styles.overlay}>
-          <div className={styles.overlayText}>
-            <h2>LBRY</h2>
-            <p>Electron App</p>
-          </div>
-        </div>
-      </a>
+const workCards = [
+  {
+    url: 'https://odeon.tv/',
+    imageSrc: '/images/work/odeon.png',
+    title: 'Odeon',
+    subtitle: 'Video Platform',
+  },
+  {
+    url: 'https://www.athem.fr/',
+    imageSrc: '/images/work/athem.png',
+    title: 'Athem',
+    subtitle: 'Creative Website',
+  },
+  {
+    url: 'https://original.works/',
+    imageSrc: '/images/work/original-works.png',
+    title: 'Original Works',
+    subtitle: 'Marketing Website',
+  },
+  {
+    url: 'https://github.com/lbryio/lbry-desktop',
+    imageSrc: '/images/work/lbry.png',
+    title: 'LBRY',
+    subtitle: 'Electron App',
+  },
+]
+
+const Work = () => (
+    <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
+      {workCards.map(({ imageSrc, subtitle, title, url }) => (
+          <a href={url} className="relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]">
+            <Image src={imageSrc} layout="fill" objectFit="cover" alt={title} className="opacity-90"/>
+            <div
+              className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out hover:opacity-90 active:opacity-100">
+              <div className="absolute left-[16px] bottom-[16px]">
+                <h2 className="m-0">{title}</h2>
+                <p className="m-0 text-body-text-color">{subtitle}</p>
+              </div>
+            </div>
+          </a>
+      ))}
     </div>
   );
-};
 
 export default Work;

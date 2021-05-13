@@ -14,7 +14,7 @@ const PostFeed = ({ posts }) => (
         </div>
         <h2 className="m-0">
           <Link href={`/post/${slug}`} prefetch={false}>
-            <a className="text-primary hover:border-b">{title}</a>
+            <a className="text-primary hover:border-b focus:border-b">{title}</a>
           </Link>
         </h2>
         { summary && <p className="mt-s">{summary}</p>}

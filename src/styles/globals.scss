@@ -28,7 +28,7 @@
   }
 
   a {
-    @apply text-secondary hover:text-primary;
+    @apply text-secondary hover:text-primary focus:text-primary;
   }
 
   b,

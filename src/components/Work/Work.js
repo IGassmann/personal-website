@@ -30,8 +30,8 @@ const workCards = [
 
 const Work = () => (
     <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
-      {workCards.map(({ imageSrc, subtitle, title, url }) => (
-          <a href={url} className="relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]">
+      {workCards.map(({ imageSrc, subtitle, title, url }, index) => (
+        <a href={url} key={index} className="group relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]">
             <Image src={imageSrc} layout="fill" objectFit="cover" alt={title} className="opacity-90"/>
             <div
               className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">

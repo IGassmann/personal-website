@@ -4,7 +4,7 @@ import InterestItem from './InterestItem';
 const MainInterestsList = ({ mainInterests }) => (
   <>
     <h2>Main Interests</h2>
-    <ul>
+    <ul className="p-0">
       {mainInterests.map(interest => <InterestItem interest={interest} key={interest}/>)}
     </ul>
   </>

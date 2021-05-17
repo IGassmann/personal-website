@@ -3,13 +3,12 @@ import ReactMarkdown from 'react-markdown';
 import directive from 'remark-directive';
 import markdownRenderers from '@/lib/markdownRenderers';
 import PostMetadata from './PostMetadata';
-import styles from './Post.module.scss';
 
 const Post = ({ post }) => (
-  <article className={styles.post}>
-    <h1 className={styles.title}>{post.title}</h1>
+  <article className="max-w-[945px] px-[15px] mt-xxl mx-auto sm:p-0 sm:max-w-[640px] md:-mt-xxl">
+    <h1 className="text-[36px] leading-[48px] sm:text-[48px]">{post.title}</h1>
     <PostMetadata publishedAt={post.publishedAt} tags={post.tags}/>
-    <ReactMarkdown plugins={[directive]} className={styles.body} renderers={markdownRenderers} children={post.content} />
+    <ReactMarkdown plugins={[directive]} className="mb-xxl prose" renderers={markdownRenderers} children={post.content} />
   </article>
 );
 

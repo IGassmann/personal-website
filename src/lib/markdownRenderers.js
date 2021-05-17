@@ -2,7 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import styles from '@/components/Post/Post.module.scss';
 
 export const markdownRenderers = {
   code: ({language, value}) => {
@@ -11,16 +10,18 @@ export const markdownRenderers = {
   leafDirective: ({ attributes, name }) => {
     if (name === 'figma') {
       return (
-        <iframe
-          className={styles.figmaEmbed}
-          allowFullScreen
-          src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
-        />
+        <div className="aspect-w-3 aspect-h-4">
+          <iframe
+            className="border-0"
+            allowFullScreen
+            src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
+          />
+        </div>
       );
     }
     if (name === 'youtube-playlist') {
       return (
-        <div className={styles.youtubePlaylistEmbedContainer}>
+        <div className="aspect-w-16 aspect-h-9">
           <iframe
             allowFullScreen
             src={`https://www.youtube-nocookie.com/embed/videoseries?list=${attributes.id}`}
@@ -39,7 +40,7 @@ export const markdownRenderers = {
         : defaultDimensions;
 
     return (
-      <div className={styles.image}>
+      <div className="w-max max-w-full mx-auto">
         <Image src={image.url} alt={image.alt} height={height} width={width} />
       </div>
     );
@@ -49,6 +50,17 @@ export const markdownRenderers = {
 
     return <p>{children}</p>;
   },
+  listItem: ({ children }) => (
+      <>
+        <li>{children}</li>
+        <style jsx>{`
+          li:before {
+            content: "-";
+            padding-right: 8px;
+          }
+      `}</style>
+      </>
+  ),
 }
 
 export default markdownRenderers;

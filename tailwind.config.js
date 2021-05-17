@@ -47,5 +47,8 @@ module.exports = {
     extend: {
       borderWidth: ['hover', 'focus'],
     }
-  }
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

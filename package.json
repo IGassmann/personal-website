@@ -22,6 +22,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "classnames": "^2.3.1",
     "dayjs": "^1.10.4",
     "feed": "^4.2.2",

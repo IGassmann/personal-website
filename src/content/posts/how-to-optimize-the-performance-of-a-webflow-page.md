@@ -20,7 +20,7 @@ Image elements have better optimization capabilities than background images. For
 
 Image size is often what slows down the load time the most. That’s why it’s important to compress and correctly size them.
 
-There are many tools to resize and compress images, however, none of them were good at optimizing images just by handing an URL of a page. That’s why I built a CLI tool named [`web-img-optimizer`](https://github.com/IGassmann/web-img-optimizer) that makes it easy  and that works with PNG, JPEG, SVG, and GIF files. You just need to pass the URL of a page you want to optimize and it will download, resize and compress all images that are loaded by an image element.
+There are many tools to resize and compress images, however, none of them were good at optimizing images just by handing an URL of a page. That’s why I built a CLI tool named [web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) that makes it easy  and that works with PNG, JPEG, SVG, and GIF files. You just need to pass the URL of a page you want to optimize and it will download, resize and compress all images that are loaded by an image element.
 
 ```bash
 wio optimize https://webflow.com/
@@ -51,7 +51,7 @@ If the [largest visible element within the viewport (LCP)](https://web.dev/lcp/)
 <link rel="preload" as="image" href="https://assets.website-files.com/...hero.png" imagesrcset="https://assets.website-files.com/...hero-p-800.png 800w, https://assets.website-files.com/...hero.png 1400w" imagesizes="(max-width: 479px) 100vw, (max-width: 767px) 100, (max-width: 991px) 600px, 55vw">
 ```
 
-[`web-img-optimizer`](https://github.com/IGassmann/web-img-optimizer) can automatically identify the [LCP](https://web.dev/lcp/) image of a page and generate the [preload tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload) that you should add to the top of the [head tag in your page’s settings](https://university.webflow.com/lesson/custom-code-in-the-head-and-body-tags#inside-%3C-head-%3E-tag).
+[web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) can automatically identify the [LCP](https://web.dev/lcp/) image of a page and generate the [preload tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload) that you should add to the top of the [head tag in your page’s settings](https://university.webflow.com/lesson/custom-code-in-the-head-and-body-tags#inside-%3C-head-%3E-tag).
 
 ```bash
 wio preload https://webflow.com/
@@ -67,7 +67,7 @@ You also need to declare the image elements’ width and height, otherwise, lazy
 
 The issue is that before the images are loaded, their height on the page is unknown. The browser needs to download the image, observe its aspect ratio, and calculate its height. Before this, all the images have a height of 1px. Since all images have a height of 1px, they are all considered as "within the viewport" and are immediately loaded.
 
-To counter that, you need to indicate the images’ width and height values. [`web-img-optimizer`](https://github.com/IGassmann/web-img-optimizer) can list all the width and height values for a page’s image elements with the following command:
+To counter that, you need to indicate the images’ width and height values. [web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) can list all the width and height values for a page’s image elements with the following command:
 
 ```bash
 wio dimensions https://webflow.com/

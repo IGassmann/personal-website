@@ -42,7 +42,7 @@ Improve the page load speed by adding the following to the top of the [head tag 
 Further reading: [Preconnect to required origins
 ](https://web.dev/uses-rel-preconnect/)
 
-# 4. Preload Image
+# 4. Preload LCP Image
 
 Preload allows you to inform the browser about critical resources you want to load as soon as possible. Preload can be a **game-changer** for improving your page speed.
 

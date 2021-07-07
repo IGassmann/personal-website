@@ -30,7 +30,8 @@ Then you just need to upload the new images into your assets and [replace the im
 
 # 3. Preconnect to assets’ origin
 
-Webflow serves uploaded assets such as images and fonts from the domain `assets.website-files.com`. For loading the assets, the browser needs to make an extra connection to that domain. A [preconnect tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preconnect) informs the browser that your page intends to establish a connection to another origin, and that you'd like the process to start as soon as possible.
+Webflow serves uploaded assets such as images and fonts from the domain *assets.website-files.com*. For loading the assets, the browser needs to make an extra connection to that domain. A 
+[preconnect tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preconnect) informs the browser that your page intends to establish a connection to another origin, and that you'd like the process to start as soon as possible.
 
 Improve the page load speed by adding the following to the top of the [head tag in your project’s settings](https://university.webflow.com/lesson/custom-code-in-the-head-and-body-tags#head-code).
 
@@ -75,7 +76,8 @@ wio dimensions https://webflow.com/
 
 You only need then to update your images’ height and width on your [image elements’ settings](https://university.webflow.com/lesson/image#edit-image-settings).
 
-It’s also important that you have either height or width set explicitly as `Auto` in your [image’s style settings](https://university.webflow.com/lesson/style-panel-overview) so that the image resizes without breaking its aspect ratio.
+It’s also important that you have either height or width set explicitly as **Auto** in your 
+[image’s style settings](https://university.webflow.com/lesson/style-panel-overview) so that the image resizes without breaking its aspect ratio.
 
 # Further Optimizations
 

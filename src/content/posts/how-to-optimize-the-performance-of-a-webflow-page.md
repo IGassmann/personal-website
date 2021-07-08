@@ -81,8 +81,6 @@ It’s also important that you have either height or width set explicitly as **A
 
 # Further Optimizations
 
-If there’s enough demand for the following optimizations, I will post a new blog post covering them. Tweet me [@i_gassmann](https://twitter.com/I_Gassmann) to let me know if you want to see me cover these topics.
-
 - Remove unused [styles](https://university.webflow.com/lesson/style-manager#deleting-all-unused-styles-in-the-style-manager)
   and [interactions](https://webflow.com/feature/clean-up-unused-interactions)
 - Optimize fonts
@@ -93,3 +91,5 @@ If there’s enough demand for the following optimizations, I will post a new bl
   - Audit and remove unused scripts
   - Migrate scripts to Segment when available as a [cloud-mode destination](https://segment.com/docs/connections/destinations/#connection-modes)
 - Remove unused [pages](https://university.webflow.com/lesson/pages-panel#deleting-pages) and [symbols](https://university.webflow.com/lesson/symbols#delete-a-symbol)
+
+If there’s enough demand for the following optimizations, I will post a new blog post covering them. Tweet me [@i_gassmann](https://twitter.com/I_Gassmann) to let me know if you want to see me cover these topics.

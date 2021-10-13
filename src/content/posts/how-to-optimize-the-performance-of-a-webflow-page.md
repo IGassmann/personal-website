@@ -20,7 +20,7 @@ Image elements have better optimization capabilities than background images. For
 
 Image size is often what slows down the load time the most. That’s why it’s important to compress and correctly size them.
 
-There are many tools to resize and compress images, however, none of them were good at optimizing images just by handing an URL of a page. That’s why I built a CLI tool named [web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) that makes it easy  and that works with PNG, JPEG, SVG, and GIF files. You just need to pass the URL of a page you want to optimize and it will download, resize and compress all images that are loaded by an image element.
+There are many tools to resize and compress images, however, none of them were good at optimizing images just by handing an URL of a page. That’s why I built a CLI tool named [web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) that makes it easy  and that works with PNG, JPEG, SVG, and GIF files. You just need to pass the URL of a page you want to optimize and it will download, resize and compress all images that are loaded by image elements.
 
 ```bash
 wio optimize https://webflow.com/
@@ -68,13 +68,7 @@ You also need to declare the image elements’ width and height, otherwise, lazy
 
 The issue is that before the images are loaded, their height on the page is unknown. The browser needs to download the image, observe its aspect ratio, and calculate its height. Before this, all the images have a height of 1px. Since all images have a height of 1px, they are all considered as "within the viewport" and are immediately loaded.
 
-To counter that, you need to indicate the images’ width and height values. [web-img-optimizer](https://github.com/IGassmann/web-img-optimizer) can list all the width and height values for a page’s image elements with the following command:
-
-```bash
-wio dimensions https://webflow.com/
-```
-
-You only need then to update your images’ height and width on your [image elements’ settings](https://university.webflow.com/lesson/image#edit-image-settings).
+To counter that, you need to set the images’ width and height values to the dimensions of the uploaded asset on your [image elements’ settings](https://university.webflow.com/lesson/image#edit-image-settings).
 
 It’s also important that you have either height or width set explicitly as **Auto** in your 
 [image’s style settings](https://university.webflow.com/lesson/style-panel-overview) so that the image resizes without breaking its aspect ratio.
@@ -86,7 +80,6 @@ It’s also important that you have either height or width set explicitly as **A
 - Optimize fonts
   - [Use custom fonts](https://university.webflow.com/lesson/custom-fonts) over Google or Adobe fonts.
   - Use a [variable font](https://web.dev/variable-fonts/)
-  - [Preload fonts](https://web.dev/codelab-preload-web-fonts/)
 - Optimize third-party scripts
   - Audit and remove unused scripts
   - Migrate scripts to Segment when available as a [cloud-mode destination](https://segment.com/docs/connections/destinations/#connection-modes)

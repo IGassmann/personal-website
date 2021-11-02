@@ -2,13 +2,13 @@ import { Feed } from "feed";
 import fs from 'fs';
 import unified from 'unified';
 import markdown from 'remark-parse';
-import siteConfig from '../src/site.config';
+import siteConfig from '../src/site.config.js';
 import remark2rehype from 'remark-rehype';
 import rehypeTruncate from 'rehype-truncate';
 import urls from 'rehype-urls';
 import format from 'rehype-format';
 import html from 'rehype-stringify';
-import { getAllPosts } from '../src/lib/posts';
+import { getAllPosts } from '../src/lib/posts.js';
 
 const posts = getAllPosts([
   'title',

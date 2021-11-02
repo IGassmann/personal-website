@@ -1,8 +1,8 @@
 import { createWriteStream } from 'fs';
-import globby from 'globby';
+import { globbySync } from 'globby';
 import { SitemapStream } from 'sitemap';
-import siteConfig from '../src/site.config'
-import { getAllPostSlugs } from '../src/lib/posts'
+import siteConfig from '../src/site.config.js'
+import { getAllPostSlugs } from '../src/lib/posts.js'
 
 const sitemap = new SitemapStream({
   hostname: siteConfig.origin,
@@ -12,7 +12,7 @@ const sitemap = new SitemapStream({
 const writeStream = createWriteStream('./public/sitemap.xml');
 sitemap.pipe(writeStream);
 
-const pagePaths = globby.sync([
+const pagePaths = globbySync([
   'src/pages/**/*.js',
   '!src/pages/_*.js',
   '!src/pages/**/\\[*\\].js',

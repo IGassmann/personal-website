@@ -1,8 +1,9 @@
 {
   "ts-node": {
     "transpileOnly": true,
-    "compilerOptions": {
-      "module": "CommonJS",
+    "moduleTypes": {
+      "scripts/**/*": "esm",
+      "src/**/*": "esm"
     }
   },
   "compilerOptions": {

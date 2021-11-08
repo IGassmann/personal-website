@@ -2,24 +2,15 @@ import { Feed } from "feed";
 import fs from 'fs';
 import unified from 'unified';
 import markdown from 'remark-parse';
-import siteConfig from '../src/site.config.js';
 import remark2rehype from 'remark-rehype';
 import rehypeTruncate from 'rehype-truncate';
 import urls from 'rehype-urls';
 import format from 'rehype-format';
 import html from 'rehype-stringify';
+import siteConfig from '../src/site.config.js';
 import { getAllPosts } from '../src/lib/posts.js';
 
-const posts = getAllPosts([
-  'title',
-  'summary',
-  'ogImage',
-  'publishedAt',
-  'content',
-  'tags',
-  'slug',
-  'content',
-]);
+const posts = getAllPosts();
 
 const { openGraph, syndicationFeed, profile, origin, defaultTitle } = siteConfig;
 
@@ -44,11 +35,11 @@ const feed = new Feed({
   },
 });
 
-const relativeToAbsolute = url => {
+const relativeToAbsolute = (url: { host?: string; path?: string; }) => {
   if (url.host === null) return `${origin}${url.path}?source=Syndication+Feed`
 };
 
-const buildKeepReadingCTA = (postURL) => `
+const buildKeepReadingCTA = (postURL: string) => `
 <div style="margin-top: 50px; font-style: italic;">
   <strong><a href="${postURL}">Keep reading</a></strong>
   <br/><br/>

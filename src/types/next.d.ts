@@ -1,15 +1,15 @@
-import type { NextComponentType, NextPageContext, NextLayoutComponentType } from 'next';
+import type { NextPage, NextPageWithLayout } from 'next';
 import type { AppProps } from 'next/app';
-import { ElementType } from 'react';
+import type { VFC } from 'react';
 
 declare module 'next' {
-  type NextLayoutComponentType<P = {}> = NextComponentType<NextPageContext, any, P> & {
-    Layout?: ElementType;
-  };
+  type NextPageWithLayout<Props = {}, InitialProps = Props> = NextPage<Props, InitialProps> & {
+    Layout?: VFC
+  }
 }
 
 declare module 'next/app' {
-  type AppLayoutProps<P = {}> = AppProps & {
-    Component: NextLayoutComponentType;
-  };
+  type AppPropsWithLayout = AppProps & {
+    Component: NextPageWithLayout
+  }
 }

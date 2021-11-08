@@ -1,13 +1,20 @@
+import Post from '@/types/Post';
+import { ParsedUrlQuery } from 'querystring';
 import React from 'react';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage, NextPageWithLayout } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import BlogHomeButton from '@/components/BlogHomeButton';
-import Post from '@/components/Post';
+import PostMetadata from 'components/Post/PostMetadata';
 import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 
-const PostPage = ({ post, origin }) => {
+type PostPageProps = {
+  origin: string
+  post: Post
+}
+
+const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
   const router = useRouter()
 
   const {
@@ -49,7 +56,7 @@ const PostPage = ({ post, origin }) => {
         }}
       />
       <BlogHomeButton />
-      <Post post={post} />
+      <PostMetadata publishedAt={publishedAt} tags={tags} />
     </>
   );
 }
@@ -58,34 +65,30 @@ PostPage.Layout = SingleColumnLayout;
 
 export default PostPage;
 
-export const getStaticProps: GetStaticProps = async ({ params: { postSlug } }) => {
+interface StaticPathParams extends ParsedUrlQuery {
+  postSlug: string,
+}
+
+export const getStaticProps: GetStaticProps<PostPageProps, StaticPathParams> = async ({ params }) => {
   const { default: { origin } } = await import('@/site.config')
 
-  const post = await getPostBySlug(postSlug, [
-    'title',
-    'summary',
-    'ogImage',
-    'publishedAt',
-    'content',
-    'tags',
-    'slug',
-  ]);
+  const post = getPostBySlug(params!.postSlug);
 
   return {
     props: {
-      post: post,
+      post,
       origin,
     },
   };
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<StaticPathParams> = async () => {
   const postSlugs = getAllPostSlugs();
 
   return {
     paths: postSlugs.map(postSlug => ({
       params: {
-        postSlug: postSlug,
+        postSlug,
       },
     })),
     fallback: false,

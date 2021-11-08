@@ -1,5 +1,5 @@
-import React, { Component, useEffect } from 'react';
-import { AppLayoutProps } from 'next/app';
+import { Component, useEffect } from 'react';
+import type { AppPropsWithLayout } from 'next/app'
 import { DefaultSeo } from 'next-seo';
 import PlausibleProvider from 'next-plausible';
 import DefaultLayout from '@/layouts/DefaultLayout';
@@ -7,8 +7,8 @@ import siteConfig from '@/site.config';
 import '@/styles/globals.scss';
 // import 'tailwindcss/tailwind.css'
 
-const MyApp = ({ Component, pageProps }: AppLayoutProps) => {
-  const Layout = Component.Layout || DefaultLayout;
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const Layout = Component.Layout ?? DefaultLayout;
 
   useEffect(() => {
     if ('caches' in window) {

@@ -1,6 +1,6 @@
 import { usePlausible } from 'next-plausible';
 import React, { useEffect } from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
@@ -8,7 +8,11 @@ type PlausibleEvents = {
   '404': { path: string }
 }
 
-const NotFoundPage = ({ origin }) => {
+type NotFoundPageProps = {
+  origin: string
+}
+
+const NotFoundPage: NextPage<NotFoundPageProps> = ({ origin }) => {
   const router = useRouter()
   const plausible = usePlausible<PlausibleEvents>()
 
@@ -34,7 +38,7 @@ const NotFoundPage = ({ origin }) => {
 
 export default NotFoundPage;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<NotFoundPageProps> = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   return {

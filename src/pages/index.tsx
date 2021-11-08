@@ -1,12 +1,21 @@
+import Post from '@/types/Post';
+import { ParsedUrlQuery } from 'querystring';
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import Pagination from '@/components/Pagination';
 import PostFeed from '@/components/PostFeed';
 import { getAllPosts } from '@/lib/posts';
 
-const BlogPage = ({ posts, currentPage, numberOfPages, origin }) => {
+type BlogPageProps = {
+  origin: string
+  posts: Post[]
+  currentPage: number
+  numberOfPages: number
+}
+
+const BlogPage: NextPage<BlogPageProps> = ({ origin, posts, currentPage, numberOfPages }) => {
   const router = useRouter()
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage}` : '';
 
@@ -30,19 +39,17 @@ const BlogPage = ({ posts, currentPage, numberOfPages, origin }) => {
 
 export default BlogPage;
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+interface StaticPathParams extends ParsedUrlQuery {
+  blogPageIndex: string,
+}
+
+export const getStaticProps: GetStaticProps<BlogPageProps, StaticPathParams> = async ({ params }) => {
   const pageIndexParam = params?.blogPageIndex;
-  const pageIndex = Number(pageIndexParam || '0')
+  const pageIndex = Number(pageIndexParam ?? '0')
 
   const { default: { postsPerPage, origin } } = await import('@/site.config')
 
-  const posts = getAllPosts([
-    'title',
-    'summary',
-    'category',
-    'publishedAt',
-    'slug',
-  ]);
+  const posts = getAllPosts();
 
   // For pagination and ordering
   const numberOfPages = Math.ceil(posts.length / postsPerPage)

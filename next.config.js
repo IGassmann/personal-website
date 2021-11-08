@@ -1,7 +1,12 @@
+// @ts-check
+
 const { createSecureHeaders } = require("next-secure-headers");
 const defaultSrcCSPDirectives = ["'self'", "https://igassmann.me", "https://*.igassmann.me"]
 
-module.exports = {
+/**
+ * @type {import('next').NextConfig}
+ **/
+const nextConfig = {
   reactStrictMode: true,
   distDir: './dist/',
   async headers() {
@@ -21,4 +26,6 @@ module.exports = {
       }),
     }];
   },
-};
+}
+
+module.exports = nextConfig

@@ -1,9 +1,13 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-const ServerErrorPage = ({ origin }) => {
+type ServerErrorPageProps = {
+  origin: string
+}
+
+const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
   const router = useRouter()
 
   return (
@@ -24,7 +28,7 @@ const ServerErrorPage = ({ origin }) => {
 
 export default ServerErrorPage;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<ServerErrorPageProps> = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   return {

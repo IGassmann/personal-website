@@ -1,13 +1,18 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import matter from 'gray-matter';
 import { join } from 'path';
 import fs from 'fs';
-import About from '@/components/About/About';
+import About from '@/components/About';
 
-const AboutPage = ({ about, origin }) => {
+type AboutPageProps = {
+  origin: string
+  about: React.ComponentPropsWithoutRef<typeof About>
+};
+
+const AboutPage: NextPage<AboutPageProps> = ({ origin, about }) => {
   const router = useRouter()
 
   return (
@@ -20,27 +25,29 @@ const AboutPage = ({ about, origin }) => {
           title: about.title
         }}
       />
-      <About about={about} />
+      <About {...about} />
     </>
   );
 };
 
 export default AboutPage;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
   const { default: { origin } } = await import('@/site.config')
 
   const aboutPath = join(process.cwd(), 'src', 'content', 'about.md');
-  const fileContent = fs.readFileSync(aboutPath, 'utf8');
-  const { content, data } = matter(fileContent);
+  const file = fs.readFileSync(aboutPath, 'utf8');
+  const parsedFile = matter(file);
+  const metadata: { [key: string]: unknown } = parsedFile.data;
+  const content = parsedFile.content;
 
   return {
     props: {
       origin,
       about: {
-        ...data,
+        ...metadata,
         content,
-      },
+      } as React.ComponentPropsWithoutRef<typeof About>,
     },
   };
 }

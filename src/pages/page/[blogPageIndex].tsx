@@ -1,14 +1,19 @@
+import { ParsedUrlQuery } from 'querystring';
 import React from 'react';
 import { GetStaticPaths } from 'next';
-import { getAllPosts } from '@/lib/posts';
+import { getAllPostSlugs } from '@/lib/posts';
 export { default, getStaticProps } from '@/pages';
 
-export const getStaticPaths: GetStaticPaths = async () => {
+interface StaticPathParams extends ParsedUrlQuery {
+  blogPageIndex: string,
+}
+
+export const getStaticPaths: GetStaticPaths<StaticPathParams> = async () => {
   const { default: { postsPerPage } } = await import('@/site.config')
 
-  const posts = getAllPosts(['slug']);
+  const postSlugs = getAllPostSlugs();
 
-  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+  const numberOfPages = Math.ceil(postSlugs.length / postsPerPage)
 
   let pagePaths = [];
   for (let index = 1; index < numberOfPages; index++) {

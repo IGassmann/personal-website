@@ -1,17 +1,17 @@
-import Post from '@/types/Post';
 import { ParsedUrlQuery } from 'querystring';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage, NextPageWithLayout } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import BlogHomeButton from '@/components/BlogHomeButton';
-import PostMetadata from 'components/Post/PostMetadata';
+import type PostType from '@/types/Post';
 import SingleColumnLayout from '@/layouts/SingleColumnLayout';
+import BlogHomeButton from '@/components/BlogHomeButton';
+import Post from '@/components/Post';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 
 type PostPageProps = {
   origin: string
-  post: Post
+  post: PostType
 }
 
 const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
@@ -56,7 +56,7 @@ const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
         }}
       />
       <BlogHomeButton />
-      <PostMetadata publishedAt={publishedAt} tags={tags} />
+      <Post post={post} />
     </>
   );
 }

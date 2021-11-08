@@ -39,7 +39,7 @@ The website's analytics are publicly available at
 ## Future Improvements
 
 - [x] Migrate to [Tailwind CSS](https://tailwindcss.com/)
-- [ ] Migrate to [TypeScript](https://www.typescriptlang.org/)
+- [x] Migrate to [TypeScript](https://www.typescriptlang.org/)
 - [ ] Set up [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [commitlint](https://commitlint.js.org/#/), and [lint-staged](https://github.com/okonet/lint-staged)
 - [ ] Set up [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/)
 - [ ] Add tests

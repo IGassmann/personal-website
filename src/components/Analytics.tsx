@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const Analytics: React.VFC = () => (
   <>
     <iframe
+      title="Analytics dashboard"
       plausible-embed
       src="https://plausible.io/share/igassmann.me?auth=d1GNfDh72M25z1HHp8vqF&amp;embed=true&amp;theme=dark&amp;background=transparent"
       loading="lazy"
@@ -10,6 +11,6 @@ const Analytics: React.VFC = () => (
     />
     <script async src="https://stats.igassmann.me/js/embed.host.js" />
   </>
-)
+);
 
-export default Analytics
+export default Analytics;

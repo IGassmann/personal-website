@@ -1,11 +1,11 @@
-import React from 'react'
-import Icon from '@/components/Icon'
-import { getContactHref } from '@/lib/getContactHref'
-import { getIcon } from '@/lib/getIcon'
+import React from 'react';
+import Icon from '@/components/Icon';
+import getContactHref from '@/lib/getContactHref';
+import getIcon from '@/lib/getIcon';
 
 type SocialLinksProps = {
-  socialLinks: Record<string, string>
-}
+  socialLinks: Record<string, string>;
+};
 
 const SocialLinks: React.VFC<SocialLinksProps> = ({ socialLinks }) => (
   <div>
@@ -22,6 +22,6 @@ const SocialLinks: React.VFC<SocialLinksProps> = ({ socialLinks }) => (
       ))}
     </ul>
   </div>
-)
+);
 
-export default SocialLinks
+export default SocialLinks;

@@ -1,23 +1,23 @@
-import { ParsedUrlQuery } from 'querystring'
-import React from 'react'
-import { GetStaticPaths, GetStaticProps, NextPage, NextPageWithLayout } from 'next'
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
-import type PostType from '@/types/Post'
-import SingleColumnLayout from '@/layouts/SingleColumnLayout'
-import BlogHomeButton from '@/components/BlogHomeButton'
-import Post from '@/components/Post'
-import { getAllPostSlugs, getPostBySlug } from '@/lib/posts'
+import { ParsedUrlQuery } from 'querystring';
+import React from 'react';
+import { GetStaticPaths, GetStaticProps, NextPageWithLayout } from 'next';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+import type PostType from '@/types/Post';
+import SingleColumnLayout from '@/layouts/SingleColumnLayout';
+import BlogHomeButton from '@/components/BlogHomeButton';
+import Post from '@/components/Post';
+import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 
 type PostPageProps = {
-  origin: string
-  post: PostType
-}
+  origin: string;
+  post: PostType;
+};
 
 const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
-  const router = useRouter()
+  const router = useRouter();
 
-  const { publishedAt, tags, summary, ogImage, title } = post
+  const { publishedAt, tags, summary, ogImage, title } = post;
 
   return (
     <>
@@ -25,13 +25,13 @@ const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
         title={title}
         description={summary}
         openGraph={{
-          title: title,
+          title,
           url: `${origin}${router.asPath}`,
           type: 'article',
           article: {
             publishedTime: publishedAt,
             authors: [`${origin}/about`],
-            tags: tags,
+            tags,
           },
           ...(ogImage && {
             images: [
@@ -54,15 +54,15 @@ const PostPage: NextPageWithLayout<PostPageProps> = ({ post, origin }) => {
       <BlogHomeButton />
       <Post post={post} />
     </>
-  )
-}
+  );
+};
 
-PostPage.Layout = SingleColumnLayout
+PostPage.Layout = SingleColumnLayout;
 
-export default PostPage
+export default PostPage;
 
 interface StaticPathParams extends ParsedUrlQuery {
-  postSlug: string
+  postSlug: string;
 }
 
 export const getStaticProps: GetStaticProps<PostPageProps, StaticPathParams> = async ({
@@ -70,20 +70,20 @@ export const getStaticProps: GetStaticProps<PostPageProps, StaticPathParams> = a
 }) => {
   const {
     default: { origin },
-  } = await import('@/site.config')
+  } = await import('@/site.config');
 
-  const post = getPostBySlug(params!.postSlug)
+  const post = getPostBySlug(params!.postSlug);
 
   return {
     props: {
       post,
       origin,
     },
-  }
-}
+  };
+};
 
 export const getStaticPaths: GetStaticPaths<StaticPathParams> = async () => {
-  const postSlugs = getAllPostSlugs()
+  const postSlugs = getAllPostSlugs();
 
   return {
     paths: postSlugs.map((postSlug) => ({
@@ -92,5 +92,5 @@ export const getStaticPaths: GetStaticPaths<StaticPathParams> = async () => {
       },
     })),
     fallback: false,
-  }
-}
+  };
+};

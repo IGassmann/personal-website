@@ -158,9 +158,9 @@ leafDirective: ({ attributes, name }) => {
         allowFullScreen
         src={`https://www.figma.com/embed?embed_host=share&url=${attributes.url}`}
       />
-    )
+    );
   }
-}
+};
 ```
 
 In a couple of days, I was able to fully implement the website and deploy it on

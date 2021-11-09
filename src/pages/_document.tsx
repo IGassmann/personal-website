@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
-    const initialProps = await Document.getInitialProps(context)
-    return { ...initialProps }
+    const initialProps = await Document.getInitialProps(context);
+    return { ...initialProps };
   }
 
   render() {
@@ -71,8 +71,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default MyDocument
+export default MyDocument;

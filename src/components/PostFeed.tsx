@@ -1,11 +1,11 @@
-import React from 'react'
-import dayjs from 'dayjs'
-import Link from 'next/link'
-import Post from '@/types/Post'
+import React from 'react';
+import dayjs from 'dayjs';
+import Link from 'next/link';
+import Post from '@/types/Post';
 
 type PostFeedProps = {
-  posts: Post[]
-}
+  posts: Post[];
+};
 
 const PostFeed: React.VFC<PostFeedProps> = ({ posts }) => (
   <div className="flex flex-col">
@@ -26,6 +26,6 @@ const PostFeed: React.VFC<PostFeedProps> = ({ posts }) => (
       </div>
     ))}
   </div>
-)
+);
 
-export default PostFeed
+export default PostFeed;

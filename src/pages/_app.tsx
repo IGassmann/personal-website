@@ -1,28 +1,17 @@
-import { Component, useEffect } from 'react'
-import type { AppPropsWithLayout } from 'next/app'
-import { DefaultSeo } from 'next-seo'
-import PlausibleProvider from 'next-plausible'
-import DefaultLayout from '@/layouts/DefaultLayout'
-import siteConfig from '@/site.config'
-import '@/styles/globals.scss'
-// import 'tailwindcss/tailwind.css'
+import { NextPageWithLayout } from 'next';
+import { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
+import PlausibleProvider from 'next-plausible';
+import DefaultLayout from '@/layouts/DefaultLayout';
+import siteConfig from '@/site.config';
+import '@/styles/globals.scss';
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
 
 const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
-  const Layout = Component.Layout ?? DefaultLayout
-
-  useEffect(() => {
-    if ('caches' in window) {
-      caches.keys().then((keys) => {
-        return Promise.all(keys.map((key) => caches.delete(key)))
-      })
-    }
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready.then((registration) => {
-        registration.unregister()
-      })
-    }
-  })
+  const Layout = Component.Layout ?? DefaultLayout;
 
   return (
     <>
@@ -37,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
         </Layout>
       </PlausibleProvider>
     </>
-  )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;

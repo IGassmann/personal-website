@@ -1,5 +1,5 @@
 const siteOrigin =
-  process.env.NODE_ENV === 'production' ? `https://igassmann.me` : 'http://localhost:3000'
+  process.env.NODE_ENV === 'production' ? `https://igassmann.me` : 'http://localhost:3000';
 
 const siteConfig = {
   defaultTitle: 'Igor Gassmann',
@@ -65,6 +65,6 @@ const siteConfig = {
     title: "Igor Gassmann's Blog",
     description: 'Blog posts of a curious engineer.',
   },
-}
+};
 
-export default siteConfig
+export default siteConfig;

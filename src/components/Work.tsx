@@ -1,5 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
 const Work: React.VFC = () => {
   const workCards = [
@@ -27,14 +27,14 @@ const Work: React.VFC = () => {
       title: 'LBRY',
       subtitle: 'Electron App',
     },
-  ]
+  ];
 
   return (
     <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
-      {workCards.map(({ imageSrc, subtitle, title, url }, index) => (
+      {workCards.map(({ imageSrc, subtitle, title, url }) => (
         <a
           href={url}
-          key={index}
+          key={title}
           className="group relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]"
         >
           <Image
@@ -53,7 +53,7 @@ const Work: React.VFC = () => {
         </a>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

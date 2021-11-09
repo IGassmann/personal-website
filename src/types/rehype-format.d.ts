@@ -1,1 +1,1 @@
-declare module 'rehype-format'
+declare module 'rehype-format';

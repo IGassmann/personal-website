@@ -1,1 +1,1 @@
-declare module 'rehype-urls'
+declare module 'rehype-urls';

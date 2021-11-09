@@ -1,1 +1,1 @@
-declare module 'rehype-truncate'
+declare module 'rehype-truncate';

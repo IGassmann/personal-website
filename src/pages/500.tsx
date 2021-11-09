@@ -1,14 +1,14 @@
-import React from 'react'
-import { GetStaticProps, NextPage } from 'next'
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import React from 'react';
+import { GetStaticProps, NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 type ServerErrorPageProps = {
-  origin: string
-}
+  origin: string;
+};
 
 const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <>
@@ -23,19 +23,19 @@ const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
       <h1>Server Error</h1>
       <p>Oops, somewthing went wrong.</p>
     </>
-  )
-}
+  );
+};
 
-export default ServerErrorPage
+export default ServerErrorPage;
 
 export const getStaticProps: GetStaticProps<ServerErrorPageProps> = async () => {
   const {
     default: { origin },
-  } = await import('@/site.config')
+  } = await import('@/site.config');
 
   return {
     props: {
       origin,
     },
-  }
-}
+  };
+};

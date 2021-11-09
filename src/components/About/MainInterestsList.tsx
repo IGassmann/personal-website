@@ -1,9 +1,9 @@
-import React from 'react'
-import InterestItem from '@/components/About/InterestItem'
+import React from 'react';
+import InterestItem from '@/components/About/InterestItem';
 
 type MainInterestsListProps = {
-  mainInterests: string[]
-}
+  mainInterests: string[];
+};
 
 const MainInterestsList: React.VFC<MainInterestsListProps> = ({ mainInterests }) => (
   <>
@@ -14,6 +14,6 @@ const MainInterestsList: React.VFC<MainInterestsListProps> = ({ mainInterests })
       ))}
     </ul>
   </>
-)
+);
 
-export default MainInterestsList
+export default MainInterestsList;

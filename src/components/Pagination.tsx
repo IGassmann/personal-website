@@ -1,16 +1,16 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 type PaginationProps = {
-  currentPage: number
-  numberOfPages: number
-}
+  currentPage: number;
+  numberOfPages: number;
+};
 
 const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) => {
-  const hasPreviousPage = currentPage > 0
-  const hasNextPage = currentPage + 1 < numberOfPages
-  const previousPagePath = currentPage === 1 ? '/' : `/page/${currentPage - 1}`
-  const nextPagePath = `/page/${currentPage + 1}`
+  const hasPreviousPage = currentPage > 0;
+  const hasNextPage = currentPage + 1 < numberOfPages;
+  const previousPagePath = currentPage === 1 ? '/' : `/page/${currentPage - 1}`;
+  const nextPagePath = `/page/${currentPage + 1}`;
 
   return (
     <div className="flex justify-between">
@@ -41,7 +41,7 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Pagination
+export default Pagination;

@@ -1,18 +1,18 @@
-import { Feed } from 'feed'
-import fs from 'fs'
-import unified from 'unified'
-import markdown from 'remark-parse'
-import remark2rehype from 'remark-rehype'
-import rehypeTruncate from 'rehype-truncate'
-import urls from 'rehype-urls'
-import format from 'rehype-format'
-import html from 'rehype-stringify'
-import siteConfig from '../src/site.config.js'
-import { getAllPosts } from '../src/lib/posts.js'
+import { Feed } from 'feed';
+import fs from 'fs';
+import unified from 'unified';
+import markdown from 'remark-parse';
+import remark2rehype from 'remark-rehype';
+import rehypeTruncate from 'rehype-truncate';
+import urls from 'rehype-urls';
+import format from 'rehype-format';
+import html from 'rehype-stringify';
+import siteConfig from '../src/site.config.js';
+import { getAllPosts } from '../src/lib/posts.js';
 
-const posts = getAllPosts()
+const posts = getAllPosts();
 
-const { openGraph, syndicationFeed, profile, origin, defaultTitle } = siteConfig
+const { openGraph, syndicationFeed, profile, origin } = siteConfig;
 
 const feed = new Feed({
   title: syndicationFeed.title,
@@ -33,17 +33,18 @@ const feed = new Feed({
     rss: `${origin}/rss.xml`,
     atom: `${origin}/atom.xml`,
   },
-})
+});
 
 const relativeToAbsolute = (url: { host?: string; path?: string }) => {
-  if (url.host === null) return `${origin}${url.path}?source=Syndication+Feed`
-}
+  if (url.host === null) return `${origin}${url.path}?source=Syndication+Feed`;
+  return undefined;
+};
 
 const buildKeepReadingCTA = (postURL: string) => `
 <div style="margin-top: 50px; font-style: italic;">
   <strong><a href="${postURL}">Keep reading</a></strong>
   <br/><br/>
-</div>`
+</div>`;
 
 const markdownProcessor = unified()
   .use(markdown)
@@ -51,16 +52,16 @@ const markdownProcessor = unified()
   .use(rehypeTruncate, { maxChars: 250, ignoreTags: ['ul', 'h1', 'h2'] })
   .use(urls, relativeToAbsolute)
   .use(format)
-  .use(html)
+  .use(html);
 
 posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) => {
-  const postURL = `${origin}/post/${slug}`
-  const trackedPostURL = `${postURL}?source=Syndication+Feed`
-  const keepReadingCTA = buildKeepReadingCTA(trackedPostURL)
-  const itemContent = markdownProcessor.processSync(content).toString().concat(keepReadingCTA)
+  const postURL = `${origin}/post/${slug}`;
+  const trackedPostURL = `${postURL}?source=Syndication+Feed`;
+  const keepReadingCTA = buildKeepReadingCTA(trackedPostURL);
+  const itemContent = markdownProcessor.processSync(content).toString().concat(keepReadingCTA);
 
   feed.addItem({
-    title: title,
+    title,
     link: trackedPostURL,
     id: postURL,
     description: summary,
@@ -75,11 +76,11 @@ posts.forEach(({ content, ogImage, publishedAt, slug, summary, tags, title }) =>
         link: `${origin}/`,
       },
     ],
-  })
-})
+  });
+});
 
-const rssFeed = feed.rss2()
-const atomFeed = feed.atom1()
+const rssFeed = feed.rss2();
+const atomFeed = feed.atom1();
 
-fs.writeFileSync('./public/rss.xml', rssFeed)
-fs.writeFileSync('./public/atom.xml', atomFeed)
+fs.writeFileSync('./public/rss.xml', rssFeed);
+fs.writeFileSync('./public/atom.xml', atomFeed);

@@ -1,3 +1,30 @@
 extends:
+  - airbnb
+  - airbnb-typescript
   - next/core-web-vitals
   - prettier
+parserOptions:
+  project: ./tsconfig.json
+rules:
+  react/jsx-props-no-spreading:
+    - error
+    - html: enforce
+      custom: enforce
+      explicitSpread: ignore
+      exceptions:
+        - Component
+        - DefaultSeo
+  jsx-a11y/anchor-is-valid:
+    - error
+    - components:
+        - Link
+      specialLink:
+        - to
+      aspects:
+        - invalidHref
+        - preferButton
+overrides:
+  - files:
+      - scripts/**
+    rules:
+      import/no-extraneous-dependencies: off

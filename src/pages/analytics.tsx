@@ -1,15 +1,15 @@
-import type { GetStaticProps, NextPageWithLayout } from 'next'
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
-import SingleColumnLayout from '@/layouts/SingleColumnLayout'
-import Analytics from '@/components/Analytics'
+import type { GetStaticProps, NextPageWithLayout } from 'next';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+import SingleColumnLayout from '@/layouts/SingleColumnLayout';
+import Analytics from '@/components/Analytics';
 
 type AnalyticsPageProps = {
-  origin: string
-}
+  origin: string;
+};
 
 const AnalyticsPage: NextPageWithLayout<AnalyticsPageProps> = ({ origin }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <>
@@ -23,21 +23,21 @@ const AnalyticsPage: NextPageWithLayout<AnalyticsPageProps> = ({ origin }) => {
       />
       <Analytics />
     </>
-  )
-}
+  );
+};
 
-AnalyticsPage.Layout = SingleColumnLayout
+AnalyticsPage.Layout = SingleColumnLayout;
 
-export default AnalyticsPage
+export default AnalyticsPage;
 
 export const getStaticProps: GetStaticProps<AnalyticsPageProps> = async () => {
   const {
     default: { origin },
-  } = await import('@/site.config')
+  } = await import('@/site.config');
 
   return {
     props: {
       origin,
     },
-  }
-}
+  };
+};

@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 type MenuProps = {
-  menu: { label: string; path: string }[]
-}
+  menu: { label: string; path: string }[];
+};
 
 const Menu: React.VFC<MenuProps> = ({ menu }) => (
   <nav>
@@ -17,6 +17,6 @@ const Menu: React.VFC<MenuProps> = ({ menu }) => (
       ))}
     </ul>
   </nav>
-)
+);
 
-export default Menu
+export default Menu;

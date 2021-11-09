@@ -1,12 +1,12 @@
-import React from 'react'
-import SkillItem from '@/components/About/SkillItem'
+import React from 'react';
+import SkillItem from '@/components/About/SkillItem';
 
-type SkillItemProps = React.ComponentPropsWithoutRef<typeof SkillItem>
+type SkillItemProps = React.ComponentPropsWithoutRef<typeof SkillItem>;
 
 type SkillsListProps = {
-  product: SkillItemProps[]
-  infrastructure: SkillItemProps[]
-}
+  product: SkillItemProps[];
+  infrastructure: SkillItemProps[];
+};
 
 const SkillsList: React.VFC<SkillsListProps> = ({ product, infrastructure }) => (
   <>
@@ -15,21 +15,21 @@ const SkillsList: React.VFC<SkillsListProps> = ({ product, infrastructure }) => 
       <div className="mt-l mr-[40px]">
         <h3 className="mt-0">Product</h3>
         <ul className="p-0">
-          {product.map((skill) => (
-            <SkillItem {...skill} key={skill.name} />
+          {product.map(({ iconPath, name, url }) => (
+            <SkillItem {...{ iconPath, name, url }} key={name} />
           ))}
         </ul>
       </div>
       <div className="mt-l">
         <h3 className="mt-0">Infrastructure</h3>
         <ul className="p-0">
-          {infrastructure.map((skill) => {
-            return <SkillItem {...skill} key={skill.name} />
-          })}
+          {infrastructure.map(({ iconPath, name, url }) => (
+            <SkillItem {...{ iconPath, name, url }} key={name} />
+          ))}
         </ul>
       </div>
     </div>
   </>
-)
+);
 
-export default SkillsList
+export default SkillsList;

@@ -1,7 +1,7 @@
 // @ts-check
 
-const { createSecureHeaders } = require('next-secure-headers')
-const defaultSrcCSPDirectives = ["'self'", 'https://igassmann.me', 'https://*.igassmann.me']
+const { createSecureHeaders } = require('next-secure-headers');
+const defaultSrcCSPDirectives = ["'self'", 'https://igassmann.me', 'https://*.igassmann.me'];
 
 /**
  * @type {import('next').NextConfig}
@@ -29,8 +29,8 @@ const nextConfig = {
           referrerPolicy: 'no-referrer-when-downgrade',
         }),
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

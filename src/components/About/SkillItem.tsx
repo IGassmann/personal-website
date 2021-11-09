@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from 'next/image';
+import React from 'react';
 
 type SkillItemProps = {
-  name: string
-  iconPath: string
-  url: string
-}
+  name: string;
+  iconPath: string;
+  url: string;
+};
 
 const SkillItem: React.VFC<SkillItemProps> = ({ iconPath, name, url }) => (
   <li>
@@ -14,6 +14,6 @@ const SkillItem: React.VFC<SkillItemProps> = ({ iconPath, name, url }) => (
       <span className="ml-m text-body-text-color">{name}</span>
     </a>
   </li>
-)
+);
 
-export default SkillItem
+export default SkillItem;

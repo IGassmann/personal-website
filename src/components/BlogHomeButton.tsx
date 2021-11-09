@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 const BlogHomeButton: React.VFC = () => (
   <Link href="/">
@@ -7,6 +7,6 @@ const BlogHomeButton: React.VFC = () => (
       All Posts
     </a>
   </Link>
-)
+);
 
-export default BlogHomeButton
+export default BlogHomeButton;

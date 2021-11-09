@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import SkillsList from '@/components/About/SkillsList';
 import MainInterestsList from '@/components/About/MainInterestsList';
 
-
 type AboutProps = {
   title: string
   skills: React.ComponentPropsWithoutRef<typeof SkillsList>
@@ -13,7 +12,7 @@ type AboutProps = {
 
 const About: React.VFC<AboutProps> = ({ content, mainInterests, skills }) => (
   <div className="-mt-l">
-    <ReactMarkdown children={content} />
+    <ReactMarkdown>{content}</ReactMarkdown>
     <SkillsList {...skills} />
     <MainInterestsList mainInterests={mainInterests} />
   </div>

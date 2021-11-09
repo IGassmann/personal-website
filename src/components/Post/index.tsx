@@ -14,7 +14,7 @@ const Post: React.VFC<PostProps> = ({ post}) => (
     <h1 className="text-[36px] leading-[48px] sm:text-[48px]">{post.title}</h1>
     <PostMetadata publishedAt={post.publishedAt} tags={post.tags}/>
     {/*@ts-ignore*/}
-    <ReactMarkdown plugins={[directive]} className="mb-xxl prose" renderers={markdownRenderers} children={post.content} />
+    <ReactMarkdown plugins={[directive]} className="mb-xxl prose" renderers={markdownRenderers}>{post.content}</ReactMarkdown>
   </article>
 );
 

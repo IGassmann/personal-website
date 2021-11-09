@@ -6,7 +6,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export const markdownRenderers = {
   code: ({language, value}: {language: string, value: string}) => {
-    return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
+    return <SyntaxHighlighter style={vscDarkPlus} language={language}>{value}</SyntaxHighlighter>
   },
   leafDirective: ({ attributes, name }: { attributes: Record<string, any>, name: string}) => {
     if (name === 'figma') {

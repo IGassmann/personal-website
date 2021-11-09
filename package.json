@@ -21,7 +21,8 @@
     "build:feeds": "node --loader ts-node/esm  scripts/generateFeeds.ts",
     "prebuild": "yarn build:sitemap & yarn build:feeds",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.3.0",
@@ -50,6 +51,8 @@
     "eslint-config-prettier": "^8.3.0",
     "feed": "^4.2.2",
     "globby": "^12.0.2",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "next-secure-headers": "^2.2.0",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",

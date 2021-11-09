@@ -15,6 +15,7 @@
   "main": "n/a",
   "scripts": {
     "dev": "next dev",
+    "lint": "next lint --fix --ignore-path ./.gitignore",
     "build:sitemap": "node --loader ts-node/esm scripts/generateSitemap.ts",
     "build:feeds": "node --loader ts-node/esm  scripts/generateFeeds.ts",
     "prebuild": "yarn build:sitemap & yarn build:feeds",
@@ -43,6 +44,8 @@
     "@types/react": "^17.0.33",
     "@types/tailwindcss": "^2.2.3",
     "autoprefixer": "^10.4.0",
+    "eslint": "<8.0.0",
+    "eslint-config-next": "12.0.3",
     "feed": "^4.2.2",
     "globby": "^12.0.2",
     "next-secure-headers": "^2.2.0",

@@ -9,6 +9,9 @@ const defaultSrcCSPDirectives = ["'self'", "https://igassmann.me", "https://*.ig
 const nextConfig = {
   reactStrictMode: true,
   distDir: './dist/',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async headers() {
     return [{
       source: "/(.*)",

@@ -45,15 +45,15 @@ have been producing content from a very young age and have been doing it for mor
 content creator is not only an artist, he’s a committed entrepreneur. They probably deserve a lot
 more respect for their work than people are willing to give them.
 
-_Thanks to [Monisy](https://www.instagram.com/mmonisy/),
-[Diêgo Alan](https://www.instagram.com/diegoalan_/),
+_Thanks to [Monisy](https://www.instagram.com/mmonisy/), [Diêgo
+Alan](https://www.instagram.com/diegoalan_/),
 [Iconic Duncan](https://www.instagram.com/iconicduncan/),
 [Jessica Leopoldina](https://www.instagram.com/oxeejessica/),
 [Biel Figueirôa](https://www.instagram.com/bielfiigueiroa/),
 [Luís Augusto Brito](https://www.instagram.com/luisaugustobrito/),
 [Mateus Fernandes](https://www.instagram.com/mateusfernanded/), and
 [Luelves](https://www.instagram.com/luelvesfelix/) for accepting being interviewed and for sharing
-details about their life as creator._
+details about their life as creator.\_
 
 ---
 
@@ -95,12 +95,12 @@ produzindo conteúdo desde muito jovens e o fazem há mais de cinco anos. Um cri
 apenas um artista, ele é um empresário que leva o seu trabalho muito a sério. Eles provavelmente
 merecem muito mais respeito por seu trabalho do que as pessoas estão dispostas a lhes dar.
 
-_Obrigado a [Monisy](https://www.instagram.com/mmonisy/),
-[Diêgo Alan](https://www.instagram.com/diegoalan_/),
+_Obrigado a [Monisy](https://www.instagram.com/mmonisy/), [Diêgo
+Alan](https://www.instagram.com/diegoalan_/),
 [Iconic Duncan](https://www.instagram.com/iconicduncan/),
 [Jessica Leopoldina](https://www.instagram.com/oxeejessica/),
 [Biel Figueirôa](https://www.instagram.com/bielfiigueiroa/),
 [Luís Augusto Brito](https://www.instagram.com/luisaugustobrito/),
 [Mateus Fernandes](https://www.instagram.com/mateusfernanded/) e
 [Luelves](https://www.instagram.com/luelvesfelix/) por aceitarem ser entrevistados e por
-compartilharem detalhes sobre sua vida como criador._
+compartilharem detalhes sobre sua vida como criador.\_

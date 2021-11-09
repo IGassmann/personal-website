@@ -15,8 +15,8 @@
   "main": "n/a",
   "scripts": {
     "dev": "next dev",
-    "lint": "next lint --fix --ignore-path ./.gitignore",
-    "format": "prettier . --write --ignore-path ./.gitignore",
+    "lint": "next lint --dir ./src/ --dir ./scripts/ --ignore-path ./.gitignore --fix",
+    "format": "prettier . --ignore-path ./.gitignore --write",
     "build:sitemap": "node --loader ts-node/esm scripts/generateSitemap.ts",
     "build:feeds": "node --loader ts-node/esm  scripts/generateFeeds.ts",
     "prebuild": "yarn build:sitemap & yarn build:feeds",

@@ -1,14 +1,14 @@
 # Node dependencies
 node_modules/
 
+# Build output
+/dist/
+
 # Log files
 *.log*
 
-# Compiled sources
-/dist/
-
-# Code coverage output
-**/coverage/
+# Test coverage output
+/coverage/
 
 # Local environment variables
 .env*.local

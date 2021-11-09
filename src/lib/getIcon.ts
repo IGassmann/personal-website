@@ -1,28 +1,28 @@
-import ICONS from '@/constants/icons';
+import ICONS from '@/constants/icons'
 
 export const getIcon = (name: string): any => {
-  let icon;
+  let icon
 
   switch (name) {
     case 'twitter':
-      icon = ICONS.TWITTER;
-      break;
+      icon = ICONS.TWITTER
+      break
     case 'github':
-      icon = ICONS.GITHUB;
-      break;
+      icon = ICONS.GITHUB
+      break
     case 'email':
-      icon = ICONS.EMAIL;
-      break;
+      icon = ICONS.EMAIL
+      break
     case 'rss':
-      icon = ICONS.RSS;
-      break;
+      icon = ICONS.RSS
+      break
     case 'linkedin':
-      icon = ICONS.LINKEDIN;
-      break;
+      icon = ICONS.LINKEDIN
+      break
     default:
-      icon = {};
-      break;
+      icon = {}
+      break
   }
 
-  return icon;
-};
+  return icon
+}

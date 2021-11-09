@@ -1,10 +1,10 @@
 type Post = {
   title: string
   slug: string
-  publishedAt: string,
-  content: string,
+  publishedAt: string
+  content: string
   summary?: string
-  category?: string,
+  category?: string
   tags?: string[]
   ogImage?: string
 }

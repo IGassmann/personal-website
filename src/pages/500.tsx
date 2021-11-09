@@ -1,7 +1,7 @@
-import React from 'react';
-import { GetStaticProps, NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import React from 'react'
+import { GetStaticProps, NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 type ServerErrorPageProps = {
   origin: string
@@ -13,7 +13,7 @@ const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
   return (
     <>
       <NextSeo
-        title='Server Error'
+        title="Server Error"
         description="Something went wrong."
         openGraph={{
           title: 'Server Error',
@@ -23,17 +23,19 @@ const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
       <h1>Server Error</h1>
       <p>Oops, somewthing went wrong.</p>
     </>
-  );
-};
+  )
+}
 
-export default ServerErrorPage;
+export default ServerErrorPage
 
 export const getStaticProps: GetStaticProps<ServerErrorPageProps> = async () => {
-  const { default: { origin } } = await import('@/site.config')
+  const {
+    default: { origin },
+  } = await import('@/site.config')
 
   return {
     props: {
       origin,
     },
-  };
+  }
 }

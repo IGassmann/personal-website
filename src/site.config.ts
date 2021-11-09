@@ -1,6 +1,5 @@
-const siteOrigin = process.env.NODE_ENV === 'production' ?
-  `https://igassmann.me` :
-  'http://localhost:3000';
+const siteOrigin =
+  process.env.NODE_ENV === 'production' ? `https://igassmann.me` : 'http://localhost:3000'
 
 export default {
   defaultTitle: 'Igor Gassmann',
@@ -16,21 +15,21 @@ export default {
       twitter: 'i_gassmann',
       github: 'IGassmann',
       linkedin: 'igassmann',
-    }
+    },
   },
   postsPerPage: 4,
   menu: [
     {
       label: 'Blog',
-      path: '/'
+      path: '/',
     },
     {
       label: 'About',
-      path: '/about'
+      path: '/about',
     },
     {
       label: 'Work',
-      path: '/work'
+      path: '/work',
     },
   ],
   origin: siteOrigin,
@@ -55,7 +54,7 @@ export default {
         width: 1200,
         height: 600,
       },
-    ]
+    ],
   },
   twitter: {
     handle: '@i_gassmann',
@@ -64,6 +63,6 @@ export default {
   },
   syndicationFeed: {
     title: "Igor Gassmann's Blog",
-    description: 'Blog posts of a curious engineer.'
-  }
-};
+    description: 'Blog posts of a curious engineer.',
+  },
+}

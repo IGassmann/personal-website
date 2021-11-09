@@ -1,9 +1,9 @@
-import React from 'react';
-import dayjs from 'dayjs';
-import Tags from 'components/Post/Tags';
+import React from 'react'
+import dayjs from 'dayjs'
+import Tags from 'components/Post/Tags'
 
 type PostMetadataProps = {
-  publishedAt: string,
+  publishedAt: string
   tags?: string[]
 }
 
@@ -14,6 +14,6 @@ const PostMetadata: React.VFC<PostMetadataProps> = ({ publishedAt, tags }) => (
     </time>
     {tags && <Tags tags={tags} />}
   </div>
-);
+)
 
-export default PostMetadata;
+export default PostMetadata

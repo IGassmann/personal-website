@@ -17,8 +17,8 @@
 
 ## Designs
 
-The website and its design system have been designed on [Figma](https://figma.com/) and published 
-on [Zeplin](https://zeplin.io/) for development handoff.
+The website and its design system have been designed on [Figma](https://figma.com/) and published on
+[Zeplin](https://zeplin.io/) for development handoff.
 
 - [Design System](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0)
 - Mockups
@@ -40,7 +40,9 @@ The website's analytics are publicly available at
 
 - [x] Migrate to [Tailwind CSS](https://tailwindcss.com/)
 - [x] Migrate to [TypeScript](https://www.typescriptlang.org/)
-- [ ] Set up [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [commitlint](https://commitlint.js.org/#/), and [lint-staged](https://github.com/okonet/lint-staged)
+- [ ] Set up [ESLint](https://eslint.org/), [Prettier](https://prettier.io/),
+      [commitlint](https://commitlint.js.org/#/), and
+      [lint-staged](https://github.com/okonet/lint-staged)
 - [ ] Set up [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/)
 - [ ] Add tests
 - [ ] Add share buttons for posts

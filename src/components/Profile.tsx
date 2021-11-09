@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import useMediaQuery from '@/hooks/use-media-query';
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import useMediaQuery from '@/hooks/use-media-query'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '@/../tailwind.config'
 import siteConfig from '@/site.config'
@@ -15,13 +15,13 @@ type ProfileProps = {
 }
 
 const Profile: React.VFC<ProfileProps> = ({ isInline, isHeading }) => {
-  const { profile } = siteConfig;
+  const { profile } = siteConfig
 
   // @ts-ignore
   const isPageWide = useMediaQuery(`(min-width: ${fullConfig.theme.screens?.sm})`)
   isInline = isInline || !isPageWide
 
-  const imageSize = isInline ? 64 : 80;
+  const imageSize = isInline ? 64 : 80
 
   const TitleTag = isHeading ? 'h1' : 'span'
 
@@ -47,7 +47,7 @@ const Profile: React.VFC<ProfileProps> = ({ isInline, isHeading }) => {
         <p className="text-body-text-color text-opacity-80 m-0">{profile.tagline}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

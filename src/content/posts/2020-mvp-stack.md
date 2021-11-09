@@ -8,11 +8,14 @@ tags:
 
 This is the stack I would use if I would build a new MVP at this moment.
 
-The MVP in mind is any web and mobile application. The idea is to have tools that don’t have a steep learning curve and let you focus on the essential: **releasing your MVP**.
+The MVP in mind is any web and mobile application. The idea is to have tools that don’t have a steep
+learning curve and let you focus on the essential: **releasing your MVP**.
 
-The choices have been influenced by my experience of building a [startup](https://odeon.tv/) in a remote environment during the past two years.
+The choices have been influenced by my experience of building a [startup](https://odeon.tv/) in a
+remote environment during the past two years.
 
-Let me know on [Twitter](https://twitter.com/i_gassmann) what would be your preferred MVP stack for an application or what you would change on my.
+Let me know on [Twitter](https://twitter.com/i_gassmann) what would be your preferred MVP stack for
+an application or what you would change on my.
 
 ## Tech Stack
 

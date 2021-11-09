@@ -9,7 +9,12 @@
 @layer base {
   @include meta.load-css('./fonts.scss');
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-primary font-medium;
   }
 
@@ -21,7 +26,10 @@
     @apply text-h2 my-l;
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-h3 my-m;
   }
 

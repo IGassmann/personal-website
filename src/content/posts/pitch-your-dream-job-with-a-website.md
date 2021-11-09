@@ -18,9 +18,10 @@ I shared my experience with the people at [Praxis](https://discoverpraxis.com/) 
 [Crash](https://crash.co/), and they persuaded me to keep trying until I hadn't a clear negative
 answer. They also suggested I record a video.
 
-So I started drafting a script and made sure to follow the [tips from Crash to make a great 
-video pitch](https://crash.co/content/how-to-make-a-great-video-pitch/). After two days of work, the
-video was ready. But it wasn’t enough for showing that I could do the job they required.
+So I started drafting a script and made sure to follow the
+[tips from Crash to make a great video pitch](https://crash.co/content/how-to-make-a-great-video-pitch/).
+After two days of work, the video was ready. But it wasn’t enough for showing that I could do the
+job they required.
 
 I wanted to prove that I could easily learn their tech stack and follow their coding style. So I
 started dissecting [their website](https://usestir.com/) to uncover what technologies they used, how
@@ -50,7 +51,8 @@ accelerate their careers with their programs. Stir’s founders themselves have
 [met through the On Deck Fellowship](https://www.beondeck.com/case-studies/stir)!
 
 This whole project shows that with just a week of work you can turn a boring job application into an
-exciting marketing campaign that could not only get you the job but also help you develop your brand.
+exciting marketing campaign that could not only get you the job but also help you develop your
+brand.
 
 If you don't have the skills to build a website yourself, you can easily build one on
 [Crash](https://crash.co/). On Crash, you can build a pitch for your dream job.

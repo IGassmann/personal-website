@@ -8,7 +8,10 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" className="text-body-text text-body-text-color antialiased font-normal sm:font-medium sm:text-body-text-desktop">
+      <Html
+        lang="en"
+        className="text-body-text text-body-text-color antialiased font-normal sm:font-medium sm:text-body-text-desktop"
+      >
         <Head>
           <link rel="icon" type="image/svg+xml" href="/icon.svg" />
           <link rel="icon" sizes="192x192" href="/icon.png" />
@@ -64,8 +67,8 @@ class MyDocument extends Document {
           />
         </Head>
         <body className="bg-background">
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )

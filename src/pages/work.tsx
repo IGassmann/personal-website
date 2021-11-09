@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { GetStaticProps, NextPage } from 'next'
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
-import Work from '@/components/Work';
+import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
+import Work from '@/components/Work'
 
 type WorkPageProps = {
   origin: string
@@ -14,26 +14,28 @@ const WorkPage: NextPage<WorkPageProps> = ({ origin }) => {
   return (
     <>
       <NextSeo
-        title='Work'
+        title="Work"
         description="Igor Gassmann's Work"
         openGraph={{
           url: `${origin}${router.asPath}`,
-          title: 'Work'
+          title: 'Work',
         }}
       />
       <Work />
     </>
-  );
-};
+  )
+}
 
-export default WorkPage;
+export default WorkPage
 
 export const getStaticProps: GetStaticProps<WorkPageProps> = async () => {
-  const { default: { origin } } = await import('@/site.config')
+  const {
+    default: { origin },
+  } = await import('@/site.config')
 
   return {
     props: {
       origin,
     },
-  };
+  }
 }

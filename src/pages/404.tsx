@@ -1,8 +1,8 @@
-import { usePlausible } from 'next-plausible';
-import React, { useEffect } from 'react';
-import { GetStaticProps, NextPage } from 'next';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import { usePlausible } from 'next-plausible'
+import React, { useEffect } from 'react'
+import { GetStaticProps, NextPage } from 'next'
+import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo'
 
 type PlausibleEvents = {
   '404': { path: string }
@@ -17,13 +17,13 @@ const NotFoundPage: NextPage<NotFoundPageProps> = ({ origin }) => {
   const plausible = usePlausible<PlausibleEvents>()
 
   useEffect(() => {
-    plausible('404',{ props: { path: router.asPath } });
+    plausible('404', { props: { path: router.asPath } })
   })
 
   return (
     <>
       <NextSeo
-        title='Not Found'
+        title="Not Found"
         description="The page doesn't exist."
         openGraph={{
           title: 'Not Found',
@@ -33,17 +33,19 @@ const NotFoundPage: NextPage<NotFoundPageProps> = ({ origin }) => {
       <h1>Not Found</h1>
       <p>Nothing to see here. Move along.</p>
     </>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
 
 export const getStaticProps: GetStaticProps<NotFoundPageProps> = async () => {
-  const { default: { origin } } = await import('@/site.config')
+  const {
+    default: { origin },
+  } = await import('@/site.config')
 
   return {
     props: {
       origin,
     },
-  };
+  }
 }

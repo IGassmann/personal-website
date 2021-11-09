@@ -26,11 +26,11 @@ module.exports = {
       xxxl: '48px',
     },
     borderRadius: {
-      'none': '0',
-      'sm': '4px',
+      none: '0',
+      sm: '4px',
       DEFAULT: '12px',
-      'lg': '16px',
-      'full': '9999px',
+      lg: '16px',
+      full: '9999px',
     },
     fontFamily: {
       sans: ['Blender Pro', 'Blender Pro Book'],
@@ -46,9 +46,7 @@ module.exports = {
   variants: {
     extend: {
       borderWidth: ['hover', 'focus'],
-    }
+    },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

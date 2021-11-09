@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from 'react'
+import Image from 'next/image'
 
 const Work: React.VFC = () => {
   const workCards = [
@@ -32,11 +32,19 @@ const Work: React.VFC = () => {
   return (
     <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
       {workCards.map(({ imageSrc, subtitle, title, url }, index) => (
-        <a href={url} key={index}
-           className="group relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]">
-          <Image src={imageSrc} layout="fill" objectFit="cover" alt={title} className="opacity-90"/>
-          <div
-            className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
+        <a
+          href={url}
+          key={index}
+          className="group relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]"
+        >
+          <Image
+            src={imageSrc}
+            layout="fill"
+            objectFit="cover"
+            alt={title}
+            className="opacity-90"
+          />
+          <div className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
             <div className="absolute left-[16px] bottom-[16px]">
               <h2 className="m-0">{title}</h2>
               <p className="m-0 text-body-text-color">{subtitle}</p>
@@ -45,7 +53,7 @@ const Work: React.VFC = () => {
         </a>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

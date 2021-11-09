@@ -7,24 +7,48 @@ tags:
 publishedAt: '2017-06-30'
 ---
 
-During the 2nd year of my apprenticeship as a developer, we received an offer from the local hospital. They wanted us to develop a mobile app for people who have apraxia of speech.
+During the 2nd year of my apprenticeship as a developer, we received an offer from the local
+hospital. They wanted us to develop a mobile app for people who have apraxia of speech.
 
-Apraxia of speech is a disorder in which the person has difficulty speaking. It frequently happens because of vascular lesions. The app would help those people by playing videos for them. The videos would consist of a person making sounds and pronouncing words. The patient would then try to repeat what was said. By seeing the movements of the mouth in the video, he can more easily repeat.
+Apraxia of speech is a disorder in which the person has difficulty speaking. It frequently happens
+because of vascular lesions. The app would help those people by playing videos for them. The videos
+would consist of a person making sounds and pronouncing words. The patient would then try to repeat
+what was said. By seeing the movements of the mouth in the video, he can more easily repeat.
 
-The application is named “Je Parle” which means in French “I Speak”. It’s a multiplatform mobile app developed for iOS and Android. Since it’s a B2B application, it’s not available in any public app store. We used the programming language Java for Android and Swift for iOS.
+The application is named “Je Parle” which means in French “I Speak”. It’s a multiplatform mobile app
+developed for iOS and Android. Since it’s a B2B application, it’s not available in any public app
+store. We used the programming language Java for Android and Swift for iOS.
 
 ![App's design](/images/posts/je-parle-design.png)
 
-The project started in February 2015 with the kick-off meeting. Four apprentices were assigned to develop the app, including myself. We were separated into two distinct teams. One for developing the Android and the other for iOS. I was myself on the iOS team.
+The project started in February 2015 with the kick-off meeting. Four apprentices were assigned to
+develop the app, including myself. We were separated into two distinct teams. One for developing the
+Android and the other for iOS. I was myself on the iOS team.
 
-We started by learning the basics of mobile development and familiarizing ourselves with the tools (Xcode and Android Studio). For me, it was mostly learning the Swift programming language.
+We started by learning the basics of mobile development and familiarizing ourselves with the tools
+(Xcode and Android Studio). For me, it was mostly learning the Swift programming language.
 
-It was only after that that we began to develop the application. The first part was the simplest. We needed to create two views for displaying the sounds and words for the patient. The first list displays the different levels of difficulty and the second one displays the words or sounds for the selected level. It was straightforward to develop those.
+It was only after that that we began to develop the application. The first part was the simplest. We
+needed to create two views for displaying the sounds and words for the patient. The first list
+displays the different levels of difficulty and the second one displays the words or sounds for the
+selected level. It was straightforward to develop those.
 
-The second part was more difficult and it took us more time to finish it. It was the video player view. It wasn’t a simple video player since we had to develop some specific features. Like, for example, the need to play the same video twice and hiding it for a few seconds in between the plays. I remember walking to my home after a long day of work and still thinking on how to resolve the different problems that I encountered during the development of those features. I was so enthusiastic about resolving the problem that arriving home, I immediately opened my computer so I could try to implement the multiple solutions that I’ve thought through while walking home.
+The second part was more difficult and it took us more time to finish it. It was the video player
+view. It wasn’t a simple video player since we had to develop some specific features. Like, for
+example, the need to play the same video twice and hiding it for a few seconds in between the plays.
+I remember walking to my home after a long day of work and still thinking on how to resolve the
+different problems that I encountered during the development of those features. I was so
+enthusiastic about resolving the problem that arriving home, I immediately opened my computer so I
+could try to implement the multiple solutions that I’ve thought through while walking home.
 
-After finalizing the iOS app, I joined the Android team so I could help them finish their app. It didn’t take much time since I already learned the different algorithms during the iOS development.
+After finalizing the iOS app, I joined the Android team so I could help them finish their app. It
+didn’t take much time since I already learned the different algorithms during the iOS development.
 
-Finally, after a few months, we had finished the app. Before shipping the app, we spent many hours testing the app in many smartphones to ensure that everything was working as expected. During those tests, we could identify a few minor bugs that have been fixed quickly. The app was then deployed and shipped to the hospital.
+Finally, after a few months, we had finished the app. Before shipping the app, we spent many hours
+testing the app in many smartphones to ensure that everything was working as expected. During those
+tests, we could identify a few minor bugs that have been fixed quickly. The app was then deployed
+and shipped to the hospital.
 
-We were happy to learn afterward that the app was proving itself helpful to the patients for recovering their ability to speak. It was a simple app to develop. Nevertheless, it added a great value for their users.
+We were happy to learn afterward that the app was proving itself helpful to the patients for
+recovering their ability to speak. It was a simple app to develop. Nevertheless, it added a great
+value for their users.

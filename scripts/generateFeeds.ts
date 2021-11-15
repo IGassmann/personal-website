@@ -1,6 +1,6 @@
 import { Feed } from 'feed';
 import fs from 'fs';
-import unified from 'unified';
+import { unified } from 'unified';
 import markdown from 'remark-parse';
 import remark2rehype from 'remark-rehype';
 import rehypeTruncate from 'rehype-truncate';

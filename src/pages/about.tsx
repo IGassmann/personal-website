@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
       about: {
         ...metadata,
         content,
-      } as React.ComponentPropsWithoutRef<typeof About>,
+      } as React.ComponentPropsWithoutRef<typeof About> & { title: string },
     },
   };
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import resolveConfig from 'tailwindcss/resolveConfig';
+import ProfilePicture from '../../public/images/profile-picture.jpg';
 import useMediaQuery from '@/hooks/use-media-query';
 import tailwindConfig from '@/../tailwind.config';
 import siteConfig from '@/site.config';
@@ -21,25 +22,21 @@ const Profile: React.VFC<ProfileProps> = ({ isInline, isHeading }) => {
   const isPageWide = useMediaQuery(`(min-width: ${fullConfig.theme.screens?.sm})`);
   const displayInline = isInline || !isPageWide;
 
-  const imageSize = displayInline ? 64 : 80;
-
   const TitleTag = isHeading ? 'h1' : 'span';
 
   return (
-    <div className={`flex flex-col w-full ${displayInline ? 'flex-row' : ''}`}>
+    <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
       <Link href="/">
-        <a className={`w-[64px] ${displayInline ? 'mr-l' : ''}`}>
+        <a className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
           <Image
-            src={profile.picture}
-            className="inline-block rounded-full bg-clip-padding sm:w-[80px]"
-            width={imageSize}
-            height={imageSize}
+            src={ProfilePicture}
+            className="inline-block rounded-full bg-clip-padding"
             alt={profile.name}
           />
         </a>
       </Link>
-      <div className={isInline ? 'flex-1' : ''}>
-        <TitleTag className={`text-h3 my-l ${isInline ? 'my-0' : ''}`}>
+      <div className={`${displayInline && 'flex-1'}`}>
+        <TitleTag className={`text-h3 my-l ${displayInline && 'my-0'}`}>
           <Link href="/">
             <a className="text-primary">{profile.name}</a>
           </Link>

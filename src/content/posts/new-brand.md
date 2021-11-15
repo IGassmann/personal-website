@@ -109,19 +109,19 @@ I made sure to effectively use all useful Figma features such as
 and, [styles](https://help.figma.com/hc/en-us/articles/360039238753-Styles-in-Figma). After a few
 days of work, I had my all my mockups ready and filled with content for desktop, table, and mobile.
 
-::figma{url='https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=0%3A1'}
+::figma-file{url='https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=0%3A1'}
 
 With the mockups, I built the
 [prototypes](https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma)
 that I shared with some trusted friends to receive early-feedback.
 
-::figma{url='https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=78%3A327&viewport=-1854%2C372%2C0.5385761857032776&scaling=scale-down&page-id=78%3A140'}
+::figma-file{url='https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=78%3A327&viewport=-1854%2C372%2C0.5385761857032776&scaling=scale-down&page-id=78%3A140'}
 
 Finally, I made a design system and published all the
 [designs on Zeplin](https://scene.zeplin.io/project/605ca4ee92a33101a2c90ac4) for development
 handoff.
 
-::figma{url='https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0'}
+::figma-file{url='https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=65%3A0'}
 
 ### Development
 

@@ -20,7 +20,7 @@ const config = {
     // Use babel-jest to transpile tests with the next/babel preset
     '\\.(ts|tsx|js)$': ['babel-jest', { presets: ['next/babel'] }],
   },
-  setupFilesAfterEnv: ['<rootDir>/test/jest.setup.js'],
+  setupFilesAfterEnv: ['<rootDir>/test/jest.setup.ts'],
 };
 
 module.exports = config;

@@ -3,8 +3,6 @@ extends:
   - airbnb-typescript
   - next/core-web-vitals
   - prettier
-parserOptions:
-  project: ./tsconfig.json
 rules:
   react/jsx-props-no-spreading:
     - error
@@ -25,6 +23,21 @@ rules:
         - preferButton
 overrides:
   - files:
-      - scripts/**
+      - '**/*'
+    parser: '@typescript-eslint/parser'
+    parserOptions:
+      project: ./tsconfig.json
+      warnOnUnsupportedTypeScriptVersion: false
+  - files:
+      - '**/*.test.{tsx,ts,js}'
+    extends:
+      - airbnb
+      - airbnb-typescript
+      - next/core-web-vitals
+      - plugin:jest/all
+      - plugin:testing-library/react
+      - prettier
+  - files:
+      - './{test,scripts}/**/*'
     rules:
       import/no-extraneous-dependencies: off

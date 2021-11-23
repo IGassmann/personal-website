@@ -36,6 +36,7 @@ overrides:
       - next/core-web-vitals
       - plugin:jest/all
       - plugin:testing-library/react
+      - plugin:jest-dom/recommended
       - prettier
   - files:
       - './{test,scripts}/**/*'

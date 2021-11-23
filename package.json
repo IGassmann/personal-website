@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "next lint --dir ./src/ --dir ./test/ --dir ./scripts/ --ignore-path ./.gitignore --fix",
     "format": "prettier . --ignore-path ./.gitignore --write",
     "build:sitemap": "node --loader ts-node/esm scripts/generateSitemap.ts",

@@ -15,7 +15,7 @@ type ProfileProps = {
   isHeading?: boolean;
 };
 
-const Profile: React.VFC<ProfileProps> = ({ isInline, isHeading }) => {
+const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false }) => {
   const { profile } = siteConfig;
 
   // @ts-ignore

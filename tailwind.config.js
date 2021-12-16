@@ -41,5 +41,4 @@ module.exports = {
       h1: ['48px', { lineHeight: '56px' }],
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
 };

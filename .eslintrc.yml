@@ -4,6 +4,7 @@ extends:
   - next/core-web-vitals
   - prettier
 rules:
+  react/function-component-definition: off
   react/jsx-props-no-spreading:
     - error
     - html: enforce

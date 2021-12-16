@@ -27,7 +27,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.3.0",
     "dayjs": "^1.10.7",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
@@ -41,18 +40,18 @@
     "remark-directive": "^2.0.1",
     "remark-directive-rehype": "^0.4.0",
     "remark-unwrap-images": "^3.0.1",
-    "sass": "^1.43.4",
-    "tailwindcss": "^2.2.19"
+    "sass": "^1.43.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/node": "^14.x",
     "@types/react": "^17.0.33",
     "@types/react-syntax-highlighter": "^13.5.2",
-    "@types/tailwindcss": "^2.2.3",
+    "@types/tailwindcss": "^2.2.4",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "autoprefixer": "^10.4.0",
@@ -74,7 +73,7 @@
     "husky": ">=6",
     "jest": "^27.3.1",
     "lint-staged": ">=10",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.5",
     "prettier": "^2.4.1",
     "rehype-format": "^3.1.0",
     "rehype-stringify": "^8.0.0",
@@ -82,6 +81,7 @@
     "rehype-urls": "^1.1.1",
     "remark-rehype": "^8.1.0",
     "sitemap": "^7.0.0",
+    "tailwindcss": "^3.0.5",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4",
     "unified": "^10.1.0"

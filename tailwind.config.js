@@ -1,7 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
       sm: '700px',
@@ -41,11 +39,6 @@ module.exports = {
       h3: ['24px', { lineHeight: '32px' }],
       h2: ['32px', { lineHeight: '40px' }],
       h1: ['48px', { lineHeight: '56px' }],
-    },
-  },
-  variants: {
-    extend: {
-      borderWidth: ['hover', 'focus'],
     },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],

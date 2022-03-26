@@ -48,7 +48,7 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
-    "@types/node": "^14.x",
+    "@types/node": "^14.17",
     "@types/react": "^17.0.33",
     "@types/react-syntax-highlighter": "^13.5.2",
     "@types/tailwindcss": "^2.2.4",
@@ -86,6 +86,7 @@
     "unified": "^10.1.0"
   },
   "engines": {
-    "node": "14.x"
+    "node": "^14.17",
+    "yarn": "^1.22.17"
   }
 }

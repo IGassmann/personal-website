@@ -49,14 +49,14 @@ mainInterests:
   - technology
   - startups
   - liberty
+  - psychology
   - ethics
   - culture
-  - content-creation
 ---
 
 ## Introduction
 
-I'm a Product and DevOps Engineer working at startups.
+I'm a Product Engineer working at startups.
 
 I started working 8 years ago at 16 after moving out from my parents’ house in Brazil to pursue a
 career in software engineering in Switzerland. While working there, I’ve built web and mobile

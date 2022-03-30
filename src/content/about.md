@@ -65,7 +65,7 @@ applications, and designed network and server infrastructures.
 Five years later, I graduated from an entrepreneurship bootcamp and jumped from being an intern at a
 [US startup](https://lbry.com/) to being a founder of
 [one](https://www.crunchbase.com/organization/odeon). We raised about 1M dollars and shipped a
-[consumer product for video creators](https://odeon.tv/).
+consumer product for video creators.
 
 I believe startups are the best place to be for building a product that customers love so much that
 they are the ones promoting it the most.

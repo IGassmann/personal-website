@@ -4,6 +4,9 @@ const ESLintTask = (fileNames) =>
     .join(' --file ')}`;
 
 module.exports = {
+  // Type check TypeScript files
+  '**/*.{tsx,ts}': 'tsc-files --noEmit',
+  // Run tests
   './{src,scripts,test}/**/*.{tsx,ts,js}': 'jest --bail --passWithNoTests --findRelatedTests',
   // Run ESLint before Prettier for TypeScript and JavaScript files
   './{src,test,scripts}/**/*.{tsx,ts,js}': [ESLintTask, 'prettier --write'],

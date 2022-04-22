@@ -24,6 +24,7 @@
     "prebuild": "yarn build:sitemap & yarn build:feeds",
     "build": "next build",
     "start": "next start",
+    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -45,6 +46,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cz-commitlint": "^16.2.3",
+    "@commitlint/types": "^16.2.1",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -56,6 +61,7 @@
     "@typescript-eslint/parser": "^5.7.0",
     "autoprefixer": "^10.4.0",
     "babel-jest": "^27.3.1",
+    "commitizen": "^4.2.4",
     "eslint": "^8.4.1",
     "eslint-config-airbnb": "19.0.2",
     "eslint-config-airbnb-typescript": "^16.1.0",

@@ -24,7 +24,6 @@
     "prebuild": "yarn build:sitemap & yarn build:feeds",
     "build": "next build",
     "start": "next start",
-    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
     "prepare": "husky install"
   },
   "dependencies": {

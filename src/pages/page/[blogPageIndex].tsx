@@ -25,4 +25,6 @@ export const getStaticPaths: GetStaticPaths<StaticPathParams> = async () => {
   return { paths: pagePaths, fallback: false };
 };
 
+// Disabled due to https://github.com/eslint/eslint/issues/15617
+// eslint-disable-next-line no-restricted-exports
 export { default, getStaticProps } from '@/pages';

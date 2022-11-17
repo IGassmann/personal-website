@@ -56,16 +56,13 @@ mainInterests:
 
 ## Introduction
 
-I'm a Product Engineer working at startups.
+Product Engineer with 9 years of experience. I started a career in software engineering at 16. I
+worked at a Swiss college for 4 years, building products from ideation to launch.
 
-I started working 8 years ago at 16 after moving out from my parents’ house in Brazil to pursue a
-career in software engineering in Switzerland. While working there, I’ve built web and mobile
-applications, and designed network and server infrastructures.
+Later on, I co-founded a US startup that went on to raise $1M. I architected and built a scalable
+video platform API with paid subscriptions and hired our first employee.
 
-Five years later, I graduated from an entrepreneurship bootcamp and jumped from being an intern at a
-[US startup](https://lbry.com/) to being a founder of
-[one](https://www.crunchbase.com/organization/odeon). We raised about 1M dollars and shipped a
-consumer product for video creators.
+For the past 5 years, I’ve been building and shipping products at startups.
 
 I believe startups are the best place to be for building a product that customers love so much that
 they are the ones promoting it the most.

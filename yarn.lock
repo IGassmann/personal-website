@@ -5250,10 +5250,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-plausible@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.0.1.tgz#4aff886f438b79c2f7767f204e0ca1fd4ebdc387"
-  integrity sha512-DA7MgmLf68HWkUdncQwok/auALuZR6G2OkgDydy0ADncRIjmX5nv+E3ia8C3LJ5jLvoNRwX5eUeuna0Ao+exuQ==
+next-plausible@^3.6.5:
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.6.5.tgz#9a4a221d26382c0ea5d25c14a597df90901a0c1e"
+  integrity sha512-eGsyie68xIyX+If1PSIJsgv7pkiMUm66Yt9gELl3kUvljaxoJOCwUEALGk5JHvhByGsBiRswkrGioDMthL3gfQ==
 
 next-seo@^4.28.1:
   version "4.28.1"

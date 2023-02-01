@@ -469,6 +469,13 @@
   dependencies:
     chalk "^4.0.0"
 
+"@commitlint/types@^17.4.0":
+  version "17.4.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-17.4.0.tgz#c7c2b97b959f6175c164632bf26208ce417b3f31"
+  integrity sha512-2NjAnq5IcxY9kXtUeO2Ac0aPpvkuOmwbH/BxIm36XXK5LtWFObWJWjXOA+kcaABMrthjWu6la+FUpyYFMHRvbA==
+  dependencies:
+    chalk "^4.1.0"
+
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-consumer/-/source-map-consumer-0.8.0.tgz#33bf4b7b39c178821606f669bbc447a6a629786b"

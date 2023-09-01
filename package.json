@@ -79,7 +79,7 @@
     "jest": "^27.5.1",
     "lint-staged": ">=12.3.7",
     "postcss": "^8.4.16",
-    "prettier": "^2.5.1",
+    "prettier": "^3.0.3",
     "rehype-format": "^3.1.0",
     "rehype-stringify": "^8.0.0",
     "rehype-truncate": "^1.2.2",

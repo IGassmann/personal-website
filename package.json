@@ -50,7 +50,7 @@
     "@types/react": "18.2.67",
     "@types/react-syntax-highlighter": "13.5.2",
     "@types/tailwindcss": "2.2.4",
-    "@typescript-eslint/eslint-plugin": "5.7.0",
+    "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "autoprefixer": "10.4.0",
     "commitizen": "4.2.4",

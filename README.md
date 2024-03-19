@@ -7,7 +7,6 @@
 </h1>
 <br>
 
-- Inspired by [Gatsby starter Lumen](https://github.com/alxshelepenok/gatsby-starter-lumen)
 - Designed on [Figma](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website)
 - Designs published on [Zeplin](https://scene.zeplin.io/project/605ca4ee92a33101a2c90ac4)
 - Built with [Next.js](https://nextjs.org/)
@@ -30,13 +29,15 @@ The website and its design system have been designed on [Figma](https://figma.co
   - [Mobile](https://www.figma.com/proto/dBF5UcvvdzhuzEd4ZYTgux/Personal-Website?node-id=78%3A327&viewport=-893%2C509%2C0.2890481948852539&scaling=scale-down&page-id=78%3A140)
 - [Moodboard](https://www.figma.com/file/dBF5UcvvdzhuzEd4ZYTgux/?node-id=270%3A12)
 
-## Analytics
-
-The website's analytics are publicly available at
-[igassmann.me/analytics](https://igassmann.me/analytics).
-
 ## Future Improvements
 
+- [ ] Migrate to App Router
+- [ ] Remove `next-seo`
+- [ ] Remove `sitemap`
+- [ ] Remove `ts-node`
+- [ ] Find simpler markdown tooling
+- [ ] Remove `dayjs`
+- [ ] Fully switch to ESM
 - [ ] Add share buttons for posts
 - [ ] Add commenting feature
 - [ ] Add "Edit on GitHub" button to pages

@@ -19,9 +19,7 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
             ← PREV
           </Link>
         ) : (
-          <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
-            ← PREV
-          </span>
+          <span className="text-[26px] font-bold text-fuchsia-900 cursor-not-allowed">← PREV</span>
         )}
       </div>
       <div>
@@ -30,9 +28,7 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
             NEXT →
           </Link>
         ) : (
-          <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
-            NEXT →
-          </span>
+          <span className="text-[26px] font-bold text-fuchsia-900 cursor-not-allowed">NEXT →</span>
         )}
       </div>
     </div>

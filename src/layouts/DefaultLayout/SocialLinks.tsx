@@ -17,7 +17,7 @@ export default function SocialLinks({ socialLinks }: SocialLinksProps) {
 
           return (
             <li
-              className="flex items-center justify-center w-[42px] h-[42px] border border-secondary-dark rounded-[20px]"
+              className="flex items-center justify-center w-[42px] h-[42px] border border-fuchsia-900 rounded-[20px]"
               key={name}
             >
               <a href={getContactHref(name, socialLink)}>

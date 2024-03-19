@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html
         lang="en"
-        className="text-body-text text-body-text-color antialiased font-normal sm:font-medium sm:text-body-text-desktop"
+        className="text-body-text text-white antialiased font-normal sm:font-medium sm:text-body-text-desktop"
       >
         <Head>
           <link rel="icon" type="image/svg+xml" href="/icon.svg" />
@@ -66,7 +66,7 @@ class MyDocument extends Document {
             href="/atom.xml"
           />
         </Head>
-        <body className="bg-background">
+        <body className="bg-[#000037]">
           <Main />
           <NextScript />
         </body>

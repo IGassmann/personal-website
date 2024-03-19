@@ -12,7 +12,7 @@ export default function PostFeed({ posts }: PostFeedProps) {
       {posts.map(({ category, publishedAt, summary, slug, title }) => (
         <div className="mb-xxxl" key={slug}>
           <div className="text-[18px]">
-            <time className="mr-m text-body-text-color text-opacity-80" dateTime={publishedAt}>
+            <time className="mr-m text-white text-opacity-80" dateTime={publishedAt}>
               {dayjs(publishedAt).format('MMMM YYYY')}
             </time>
             {category && <span>{category}</span>}
@@ -21,7 +21,7 @@ export default function PostFeed({ posts }: PostFeedProps) {
             <Link
               href={`/post/${slug}`}
               prefetch={false}
-              className="text-primary hover:border-b focus:border-b"
+              className="text-cyan-500 hover:border-b focus:border-b"
             >
               {title}
             </Link>

@@ -15,7 +15,7 @@
   h4,
   h5,
   h6 {
-    @apply text-primary font-medium;
+    @apply text-cyan-500 font-medium;
   }
 
   h1 {
@@ -34,12 +34,12 @@
   }
 
   a {
-    @apply text-secondary hover:text-primary focus:text-primary;
+    @apply text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500;
   }
 
   b,
   strong {
-    @apply text-primary;
+    @apply text-cyan-500;
   }
 
   ul {

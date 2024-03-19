@@ -34,11 +34,11 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
       </Link>
       <div className={`${displayInline && 'flex-1'}`}>
         <TitleTag className={`text-h3 my-l ${displayInline && 'my-0'}`}>
-          <Link href="/" className="text-primary">
+          <Link href="/" className="text-cyan-500">
             {profile.name}
           </Link>
         </TitleTag>
-        <p className="text-body-text-color text-opacity-80 m-0">{profile.tagline}</p>
+        <p className="text-white text-opacity-80 m-0">{profile.tagline}</p>
       </div>
     </div>
   );

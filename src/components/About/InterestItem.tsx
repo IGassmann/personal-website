@@ -5,7 +5,7 @@ type InterestItemProps = {
 export default function InterestItem({ interest }: InterestItemProps) {
   return (
     <li>
-      - <span className="text-secondary">{`#${interest}`}</span>
+      - <span className="text-fuchsia-600">{`#${interest}`}</span>
     </li>
   );
 }

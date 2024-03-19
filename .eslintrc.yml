@@ -29,17 +29,3 @@ overrides:
     parserOptions:
       project: ./tsconfig.json
       warnOnUnsupportedTypeScriptVersion: false
-  - files:
-      - '**/*.test.{tsx,ts,js}'
-    extends:
-      - airbnb
-      - airbnb-typescript
-      - next/core-web-vitals
-      - plugin:jest/all
-      - plugin:testing-library/react
-      - plugin:jest-dom/recommended
-      - prettier
-  - files:
-      - './{test,scripts}/**/*'
-    rules:
-      import/no-extraneous-dependencies: off

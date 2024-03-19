@@ -43,8 +43,6 @@ The website's analytics are publicly available at
 - [x] Set up [ESLint](https://eslint.org/), [Prettier](https://prettier.io/),
       [commitlint](https://commitlint.js.org/#/), and
       [lint-staged](https://github.com/okonet/lint-staged)
-- [ ] Set up [Jest](https://jestjs.io/) and [Cypress](https://www.cypress.io/)
-- [ ] Add tests
 - [ ] Add share buttons for posts
 - [ ] Add commenting feature
 - [ ] Add "Edit on GitHub" button to pages

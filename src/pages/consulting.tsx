@@ -26,7 +26,7 @@ const ConsultingPage: NextPage<ConsultingPageProps> = ({ origin, consulting }) =
           title,
         }}
       />
-      <div className="-mt-l">
+      <div className="-mt-4">
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
     </>

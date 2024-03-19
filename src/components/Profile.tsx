@@ -25,7 +25,7 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
 
   return (
     <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
-      <Link href="/" className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
+      <Link href="/" className={`${displayInline ? 'w-[64px] mr-4' : 'w-[80px]'}`}>
         <Image
           src={ProfilePicture}
           className="inline-block rounded-full bg-clip-padding"
@@ -33,7 +33,7 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
         />
       </Link>
       <div className={`${displayInline && 'flex-1'}`}>
-        <TitleTag className={`text-2xl my-l ${displayInline && 'my-0'}`}>
+        <TitleTag className={`text-2xl my-4 ${displayInline && 'my-0'}`}>
           <Link href="/" className="text-cyan-500">
             {profile.name}
           </Link>

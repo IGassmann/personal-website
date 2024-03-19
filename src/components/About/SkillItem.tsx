@@ -20,7 +20,7 @@ export default function SkillItem({ iconPath, name, url }: SkillItemProps) {
             height: 'auto',
           }}
         />
-        <span className="ml-m text-white">{name}</span>
+        <span className="ml-2 text-white">{name}</span>
       </a>
     </li>
   );

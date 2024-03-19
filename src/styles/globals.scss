@@ -23,14 +23,14 @@
   }
 
   h2 {
-    @apply text-2xl my-l;
+    @apply text-2xl my-4;
   }
 
   h3,
   h4,
   h5,
   h6 {
-    @apply text-xl my-m;
+    @apply text-xl my-2;
   }
 
   a {
@@ -43,7 +43,7 @@
   }
 
   ul {
-    @apply my-l pl-xxl;
+    @apply my-4 pl-8;
 
     ul {
       @apply m-0;
@@ -51,6 +51,6 @@
   }
 
   p {
-    @apply my-xl;
+    @apply my-6;
   }
 }

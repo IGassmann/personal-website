@@ -24,12 +24,12 @@ export default function Post({ post }: PostProps) {
   };
 
   return (
-    <article className="max-w-[945px] px-[15px] mt-xxl mx-auto sm:p-0 sm:max-w-[640px] md:-mt-xxl">
+    <article className="max-w-[945px] px-[15px] mt-8 mx-auto sm:p-0 sm:max-w-[640px] md:-mt-8">
       <h1 className="text-3xl sm:text-4xl">{post.title}</h1>
       <PostMetadata publishedAt={post.publishedAt} tags={post.tags} />
       <ReactMarkdown
         remarkPlugins={[remarkUnwrapImages, remarkDirective, remarkDirectiveRehype]}
-        className="mb-xxl prose"
+        className="mb-8 prose"
         components={reactMarkdownComponents}
       >
         {post.content}

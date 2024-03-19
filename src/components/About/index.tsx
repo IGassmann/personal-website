@@ -14,7 +14,7 @@ export default function About({
   skills: { product, infrastructure },
 }: AboutProps) {
   return (
-    <div className="-mt-l">
+    <div className="-mt-4">
       <ReactMarkdown>{content}</ReactMarkdown>
       <SkillsList {...{ product, infrastructure }} />
       <MainInterestsList mainInterests={mainInterests} />

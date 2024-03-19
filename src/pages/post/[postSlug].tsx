@@ -2,10 +2,11 @@ import type { ParsedUrlQuery } from 'querystring';
 import type { GetStaticPaths, GetStaticProps, NextPageWithLayout } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+
 import type PostType from '@/types/Post';
-import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import BlogHomeButton from '@/components/BlogHomeButton';
 import Post from '@/components/Post';
+import SingleColumnLayout from '@/layouts/SingleColumnLayout';
 import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
 
 type PostPageProps = {

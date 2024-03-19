@@ -13,7 +13,7 @@ const PostImage: NormalComponents['img'] = ({ src, alt, title }) => {
       : defaultDimensions;
 
   return (
-    <div className="w-max max-w-full mx-auto">
+    <div className="mx-auto w-max max-w-full">
       <Image
         src={src}
         alt={alt}

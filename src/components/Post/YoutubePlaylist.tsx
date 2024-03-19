@@ -5,7 +5,7 @@ type YoutubePlaylistProps = {
 export default function YoutubePlaylist({ id }: YoutubePlaylistProps) {
   return (
     <iframe
-      className="w-full aspect-video"
+      className="aspect-video w-full"
       title="Embedded YouTube playlist"
       allowFullScreen
       src={`https://www.youtube-nocookie.com/embed/videoseries?list=${id}`}

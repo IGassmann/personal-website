@@ -9,7 +9,7 @@ type SocialLinksProps = {
 export default function SocialLinks({ socialLinks }: SocialLinksProps) {
   return (
     <div>
-      <ul className="flex p-0 space-x-4">
+      <ul className="flex space-x-4 p-0">
         {Object.keys(socialLinks).map((name) => {
           const socialLink = socialLinks[name];
 
@@ -17,7 +17,7 @@ export default function SocialLinks({ socialLinks }: SocialLinksProps) {
 
           return (
             <li
-              className="flex items-center justify-center w-10 h-10 border border-fuchsia-900 rounded-full"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-fuchsia-900"
               key={name}
             >
               <a

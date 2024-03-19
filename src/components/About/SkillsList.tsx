@@ -10,10 +10,10 @@ type SkillsListProps = {
 export default function SkillsList({ product, infrastructure }: SkillsListProps) {
   return (
     <>
-      <h2 className="text-cyan-500 font-medium text-2xl my-4">Skills</h2>
-      <div className="flex flex-wrap justify-between -mt-4">
-        <div className="mt-4 mr-10">
-          <h3 className="text-cyan-500 font-medium text-xl mb-2 mt-0">Product</h3>
+      <h2 className="my-4 text-2xl font-medium text-cyan-500">Skills</h2>
+      <div className="-mt-4 flex flex-wrap justify-between">
+        <div className="mr-10 mt-4">
+          <h3 className="mb-2 mt-0 text-xl font-medium text-cyan-500">Product</h3>
           <ul className="p-0">
             {product.map(({ iconPath, name, url }) => (
               <SkillItem {...{ iconPath, name, url }} key={name} />
@@ -21,7 +21,7 @@ export default function SkillsList({ product, infrastructure }: SkillsListProps)
           </ul>
         </div>
         <div className="mt-4">
-          <h3 className="text-cyan-500 font-medium text-xl mb-2 mt-0">Infrastructure</h3>
+          <h3 className="mb-2 mt-0 text-xl font-medium text-cyan-500">Infrastructure</h3>
           <ul className="p-0">
             {infrastructure.map(({ iconPath, name, url }) => (
               <SkillItem {...{ iconPath, name, url }} key={name} />

@@ -19,7 +19,7 @@ const NotFoundPage: NextPage<NotFoundPageProps> = ({ origin }) => {
           url: `${origin}${router.asPath}`,
         }}
       />
-      <h1 className="text-xl text-cyan-500 font-medium">Not Found</h1>
+      <h1 className="text-xl font-medium text-cyan-500">Not Found</h1>
       <p>Nothing to see here. Move along.</p>
     </>
   );

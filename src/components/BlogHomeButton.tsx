@@ -4,7 +4,7 @@ export default function BlogHomeButton() {
   return (
     <Link
       href="/"
-      className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 block w-max py-1.5 px-6 text-center border border-fuchsia-900 rounded-full mx-auto hover:focus:text-cyan-500 lg:sticky lg:m-0 lg:top-8"
+      className="mx-auto block w-max rounded-full border border-fuchsia-900 px-6 py-1.5 text-center text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 hover:focus:text-cyan-500 lg:sticky lg:top-8 lg:m-0"
     >
       All Posts
     </Link>

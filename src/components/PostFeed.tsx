@@ -1,5 +1,6 @@
-import dayjs from 'dayjs';
 import Link from 'next/link';
+import dayjs from 'dayjs';
+
 import type Post from '@/types/Post';
 
 type PostFeedProps = {
@@ -17,11 +18,11 @@ export default function PostFeed({ posts }: PostFeedProps) {
             </time>
             {category && <span>{category}</span>}
           </div>
-          <h2 className="text-cyan-500 font-medium text-2xl m-0">
+          <h2 className="m-0 text-2xl font-medium text-cyan-500">
             <Link
               href={`/post/${slug}`}
               prefetch={false}
-              className="hover:text-cyan-500 focus:text-cyan-500 text-cyan-500 hover:border-b focus:border-b"
+              className="text-cyan-500 hover:border-b hover:text-cyan-500 focus:border-b focus:text-cyan-500"
             >
               {title}
             </Link>

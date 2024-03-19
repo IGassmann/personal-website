@@ -29,12 +29,12 @@ const workCards = [
 
 export default function Work() {
   return (
-    <div className="flex flex-wrap justify-center -m-2 md:mt-24">
+    <div className="-m-2 flex flex-wrap justify-center md:mt-24">
       {workCards.map(({ imageSrc, subtitle, title, url }) => (
         <a
           href={url}
           key={title}
-          className="group relative w-[322px] h-[182px] m-[12px] lg:w-[300px] lg:h-[170px]"
+          className="group relative m-[12px] h-[182px] w-[322px] lg:h-[170px] lg:w-[300px]"
         >
           <Image
             src={imageSrc}
@@ -46,9 +46,9 @@ export default function Work() {
               objectFit: 'cover',
             }}
           />
-          <div className="relative h-full w-full rounded-xl bg-gradient-to-tr from-blue-900 to-fuchsia-900 opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
-            <div className="absolute left-4 bottom-4">
-              <h2 className="text-cyan-500 font-medium text-2xl m-0">{title}</h2>
+          <div className="duration-250 relative h-full w-full rounded-xl bg-gradient-to-tr from-blue-900 to-fuchsia-900 opacity-0 transition-opacity ease-in-out group-hover:opacity-90 group-focus:opacity-90">
+            <div className="absolute bottom-4 left-4">
+              <h2 className="m-0 text-2xl font-medium text-cyan-500">{title}</h2>
               <p className="m-0 text-white">{subtitle}</p>
             </div>
           </div>

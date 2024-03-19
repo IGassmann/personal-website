@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript, type DocumentContext } from 'next/document';
+import Document, { Head, Html, Main, NextScript, type DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" className="text-white antialiased font-normal">
+      <Html lang="en" className="font-normal text-white antialiased">
         <Head>
           <link rel="icon" type="image/svg+xml" href="/icon.svg" />
           <link rel="icon" sizes="192x192" href="/icon.png" />

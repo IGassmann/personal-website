@@ -18,12 +18,12 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
           <Link
             href={previousPagePath}
             rel="prev"
-            className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 text-xl font-bold"
+            className="text-xl font-bold text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500"
           >
             ← PREV
           </Link>
         ) : (
-          <span className="text-xl font-bold text-fuchsia-900 cursor-not-allowed">← PREV</span>
+          <span className="cursor-not-allowed text-xl font-bold text-fuchsia-900">← PREV</span>
         )}
       </div>
       <div>
@@ -31,12 +31,12 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
           <Link
             href={nextPagePath}
             rel="next"
-            className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 text-xl font-bold"
+            className="text-xl font-bold text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500"
           >
             NEXT →
           </Link>
         ) : (
-          <span className="text-xl font-bold text-fuchsia-900 cursor-not-allowed">NEXT →</span>
+          <span className="cursor-not-allowed text-xl font-bold text-fuchsia-900">NEXT →</span>
         )}
       </div>
     </div>

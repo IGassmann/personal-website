@@ -1,6 +1,7 @@
 import fs from 'fs';
-import matter from 'gray-matter';
 import { join } from 'path';
+import matter from 'gray-matter';
+
 import type Post from '@/types/Post';
 
 type PostMetadata = {
@@ -24,7 +25,7 @@ type ValidPostMetadata = {
 const postsDirectory = join(process.cwd(), 'src', 'content', 'posts');
 
 const hasAllRequiredMetadata = (
-  postMetadata: Record<string, unknown>
+  postMetadata: Record<string, unknown>,
 ): postMetadata is ValidPostMetadata => {
   const requiredKeys = ['title', 'publishedAt'];
   return requiredKeys.every((key) => Object.keys(postMetadata).includes(key));

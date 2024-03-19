@@ -12,7 +12,6 @@ importOrder:
   - '^@/(.*)$'
   - '^[./]'
 importOrderTypeScriptVersion: 5.4.2
-pluginSearchDirs: false
 plugins:
   - '@ianvs/prettier-plugin-sort-imports'
   - 'prettier-plugin-tailwindcss'

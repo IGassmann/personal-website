@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
-import SkillsList from '@/components/About/SkillsList';
+
 import MainInterestsList from '@/components/About/MainInterestsList';
+import SkillsList from '@/components/About/SkillsList';
 
 type AboutProps = {
   skills: React.ComponentPropsWithoutRef<typeof SkillsList>;
@@ -15,7 +16,7 @@ export default function About({
 }: AboutProps) {
   return (
     <div className="-mt-4">
-      <h2 className="text-cyan-500 font-medium text-2xl my-4">Introduction</h2>
+      <h2 className="my-4 text-2xl font-medium text-cyan-500">Introduction</h2>
       <ReactMarkdown>{content}</ReactMarkdown>
       <SkillsList {...{ product, infrastructure }} />
       <MainInterestsList mainInterests={mainInterests} />

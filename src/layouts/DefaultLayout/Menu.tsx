@@ -7,7 +7,7 @@ type MenuProps = {
 export default function Menu({ menu }: MenuProps) {
   return (
     <nav>
-      <ul className="p-0 my-6">
+      <ul className="my-6 p-0">
         {menu.map((item) => (
           <li className="my-4 md:my-2" key={item.path}>
             <Link

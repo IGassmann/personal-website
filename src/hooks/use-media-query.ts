@@ -9,7 +9,7 @@ const useMediaQuery = (query: string): boolean => {
     }
 
     const handleWidthChange = (
-      mediaQueryListEventOrMediaQueryList: MediaQueryListEvent | MediaQueryList
+      mediaQueryListEventOrMediaQueryList: MediaQueryListEvent | MediaQueryList,
     ) => {
       setMatches(mediaQueryListEventOrMediaQueryList.matches);
     };

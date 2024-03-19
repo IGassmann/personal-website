@@ -1,9 +1,11 @@
 import type { NextPageWithLayout } from 'next';
 import type { AppProps } from 'next/app';
-import { DefaultSeo } from 'next-seo';
 import localFont from 'next/font/local';
+import { DefaultSeo } from 'next-seo';
+
 import DefaultLayout from '@/layouts/DefaultLayout';
 import siteConfig from '@/site.config';
+
 import '@/styles/globals.css';
 
 const blenderPro = localFont({

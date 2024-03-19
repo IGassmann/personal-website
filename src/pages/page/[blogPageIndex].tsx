@@ -1,5 +1,6 @@
 import type { ParsedUrlQuery } from 'querystring';
 import type { GetStaticPaths } from 'next';
+
 import { getAllPostSlugs } from '@/lib/posts';
 
 interface StaticPathParams extends ParsedUrlQuery {

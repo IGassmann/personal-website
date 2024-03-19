@@ -1,9 +1,9 @@
+import fs from 'fs';
+import { join } from 'path';
 import type { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
 import matter from 'gray-matter';
-import { join } from 'path';
-import fs from 'fs';
+import { NextSeo } from 'next-seo';
 import ReactMarkdown from 'react-markdown';
 
 type ConsultingPageProps = {

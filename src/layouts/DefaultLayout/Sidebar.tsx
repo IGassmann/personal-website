@@ -1,6 +1,6 @@
+import Profile from '@/components/Profile';
 import Menu from '@/layouts/DefaultLayout/Menu';
 import SocialLinks from '@/layouts/DefaultLayout/SocialLinks';
-import Profile from '@/components/Profile';
 import siteConfig from '@/site.config';
 
 export default function Sidebar() {
@@ -10,7 +10,7 @@ export default function Sidebar() {
   } = siteConfig;
 
   return (
-    <aside className="relative mb-12 md:pr-5 md:border-r md:border-fuchsia-600 ">
+    <aside className="relative mb-12 md:border-r md:border-fuchsia-600 md:pr-5 ">
       <Profile isHeading />
       <Menu menu={menu} />
       <SocialLinks socialLinks={socialLinks} />

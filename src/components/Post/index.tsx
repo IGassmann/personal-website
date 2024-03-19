@@ -24,8 +24,8 @@ export default function Post({ post }: PostProps) {
   };
 
   return (
-    <article className="max-w-4xl px-4 mt-8 mx-auto sm:p-0 sm:max-w-2xl md:-mt-8">
-      <h1 className="text-3xl sm:text-4xl">{post.title}</h1>
+    <article className="max-w-4xl px-4 mt-8 mx-auto md:p-0 md:max-w-2xl lg:-mt-8">
+      <h1 className="text-3xl md:text-4xl">{post.title}</h1>
       <PostMetadata publishedAt={post.publishedAt} tags={post.tags} />
       <ReactMarkdown
         remarkPlugins={[remarkUnwrapImages, remarkDirective, remarkDirectiveRehype]}

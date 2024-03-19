@@ -29,12 +29,12 @@ const workCards = [
 
 export default function Work() {
   return (
-    <div className="flex flex-wrap justify-center -m-2 sm:mt-24">
+    <div className="flex flex-wrap justify-center -m-2 md:mt-24">
       {workCards.map(({ imageSrc, subtitle, title, url }) => (
         <a
           href={url}
           key={title}
-          className="group relative w-[322px] h-[182px] m-[12px] md:w-[300px] md:h-[170px]"
+          className="group relative w-[322px] h-[182px] m-[12px] lg:w-[300px] lg:h-[170px]"
         >
           <Image
             src={imageSrc}

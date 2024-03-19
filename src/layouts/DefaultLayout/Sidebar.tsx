@@ -10,7 +10,7 @@ export default function Sidebar() {
   } = siteConfig;
 
   return (
-    <aside className="relative mb-12 sm:pr-5 sm:border-r sm:border-fuchsia-600 ">
+    <aside className="relative mb-12 md:pr-5 md:border-r md:border-fuchsia-600 ">
       <Profile isHeading />
       <Menu menu={menu} />
       <SocialLinks socialLinks={socialLinks} />

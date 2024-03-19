@@ -63,7 +63,7 @@ class MyDocument extends Document {
             href="/atom.xml"
           />
         </Head>
-        <body className="bg-[#000037] sm:text-xl sm:font-medium">
+        <body className="bg-[#000037] md:text-xl md:font-medium">
           <Main />
           <NextScript />
         </body>

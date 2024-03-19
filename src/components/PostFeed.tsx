@@ -10,7 +10,7 @@ export default function PostFeed({ posts }: PostFeedProps) {
   return (
     <div className="flex flex-col">
       {posts.map(({ category, publishedAt, summary, slug, title }) => (
-        <div className="mb-6" key={slug}>
+        <div className="mb-12" key={slug}>
           <div className="text-sm">
             <time className="mr-2 text-white text-opacity-80" dateTime={publishedAt}>
               {dayjs(publishedAt).format('MMMM YYYY')}

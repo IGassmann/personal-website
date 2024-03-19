@@ -16,37 +16,37 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000037" />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Book.woff2"
+            href="/src/fonts/BlenderPro/BlenderPro-Book.woff2"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Book.woff"
+            href="/src/fonts/BlenderPro/BlenderPro-Book.woff"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Medium.woff2"
+            href="/src/fonts/BlenderPro/BlenderPro-Medium.woff2"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Medium.woff"
+            href="/src/fonts/BlenderPro/BlenderPro-Medium.woff"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Bold.woff2"
+            href="/src/fonts/BlenderPro/BlenderPro-Bold.woff2"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/BlenderPro/BlenderPro-Bold.woff"
+            href="/src/fonts/BlenderPro/BlenderPro-Bold.woff"
             as="font"
             crossOrigin=""
           />

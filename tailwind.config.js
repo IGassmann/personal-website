@@ -1,8 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      sans: ['Blender Pro', 'Blender Pro Book'],
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-blender-pro)', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

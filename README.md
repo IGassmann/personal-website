@@ -37,8 +37,10 @@ The website's analytics are publicly available at
 
 ## Future Improvements
 
-- [ ] Upgrade TypeScript
+- [ ] Improve TypeScript configuration
+- [ ] Use next/font
 - [ ] Migrate to default Tailwind CSS configuration
+- [ ] Remove SCSS
 - [ ] Add share buttons for posts
 - [ ] Add commenting feature
 - [ ] Add "Edit on GitHub" button to pages

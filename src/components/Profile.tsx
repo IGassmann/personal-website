@@ -3,7 +3,7 @@ import Link from 'next/link';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import ProfilePicture from '../../public/images/profile-picture.jpg';
 import useMediaQuery from '@/hooks/use-media-query';
-import tailwindConfig from '@/../tailwind.config';
+import tailwindConfig from '../../tailwind.config';
 import siteConfig from '@/site.config';
 
 // @ts-ignore

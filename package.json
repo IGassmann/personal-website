@@ -18,7 +18,7 @@
     "format": "prettier . --ignore-path ./.gitignore --write",
     "build:sitemap": "node --loader ts-node/esm scripts/generateSitemap.ts",
     "build:feeds": "node --loader ts-node/esm scripts/generateFeeds.ts",
-    "prebuild": "yarn build:sitemap & yarn build:feeds",
+    "prebuild": "pnpm build:sitemap & pnpm build:feeds",
     "build": "next build",
     "start": "next start",
     "prepare": "husky install"

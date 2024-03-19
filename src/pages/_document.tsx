@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html
         lang="en"
-        className="text-body-text text-white antialiased font-normal sm:font-medium sm:text-body-text-desktop"
+        className="text-text-lg text-white antialiased font-normal sm:font-medium sm:text-xl"
       >
         <Head>
           <link rel="icon" type="image/svg+xml" href="/icon.svg" />

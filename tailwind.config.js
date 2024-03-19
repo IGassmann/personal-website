@@ -16,13 +16,6 @@ module.exports = {
       sans: ['Blender Pro', 'Blender Pro Book'],
     },
     extend: {
-      fontSize: {
-        'body-text': ['18px', { lineHeight: '28px' }],
-        'body-text-desktop': ['20px', { lineHeight: '28px' }],
-        h3: ['24px', { lineHeight: '32px' }],
-        h2: ['32px', { lineHeight: '40px' }],
-        h1: ['48px', { lineHeight: '56px' }],
-      },
       spacing: {
         s: '4px',
         m: '8px',

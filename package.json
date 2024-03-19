@@ -24,6 +24,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@tailwindcss/typography": "0.5.10",
     "@types/react-dom": "18.2.22",
     "dayjs": "1.11.5",
     "gray-matter": "4.0.3",

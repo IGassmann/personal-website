@@ -48,7 +48,7 @@ export default function Work() {
           />
           <div className="relative h-full w-full rounded-xl bg-gradient-to-tr from-blue-900 to-fuchsia-900 opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
             <div className="absolute left-4 bottom-4">
-              <h2 className="m-0">{title}</h2>
+              <h2 className="text-cyan-500 font-medium text-2xl m-0">{title}</h2>
               <p className="m-0 text-white">{subtitle}</p>
             </div>
           </div>

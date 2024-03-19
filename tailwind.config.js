@@ -5,4 +5,5 @@ module.exports = {
       sans: ['Blender Pro', 'Blender Pro Book'],
     },
   },
+  plugins: [require('@tailwindcss/typography')],
 };

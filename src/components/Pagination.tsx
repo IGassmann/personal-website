@@ -15,7 +15,11 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
     <div className="flex justify-between">
       <div>
         {hasPreviousPage ? (
-          <Link href={previousPagePath} rel="prev" className="text-xl font-bold">
+          <Link
+            href={previousPagePath}
+            rel="prev"
+            className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 text-xl font-bold"
+          >
             ← PREV
           </Link>
         ) : (
@@ -24,7 +28,11 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
       </div>
       <div>
         {hasNextPage ? (
-          <Link href={nextPagePath} rel="next" className="text-xl font-bold">
+          <Link
+            href={nextPagePath}
+            rel="next"
+            className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 text-xl font-bold"
+          >
             NEXT →
           </Link>
         ) : (

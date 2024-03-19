@@ -8,49 +8,4 @@
 
 @layer base {
   @include meta.load-css('./fonts.scss');
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-cyan-500 font-medium;
-  }
-
-  h1 {
-    @apply text-3xl;
-  }
-
-  h2 {
-    @apply text-2xl my-4;
-  }
-
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-xl my-2;
-  }
-
-  a {
-    @apply text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500;
-  }
-
-  b,
-  strong {
-    @apply text-cyan-500;
-  }
-
-  ul {
-    @apply my-4 pl-8;
-
-    ul {
-      @apply m-0;
-    }
-  }
-
-  p {
-    @apply my-6;
-  }
 }

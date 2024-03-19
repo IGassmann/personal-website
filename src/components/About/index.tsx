@@ -15,6 +15,7 @@ export default function About({
 }: AboutProps) {
   return (
     <div className="-mt-4">
+      <h2 className="text-cyan-500 font-medium text-2xl my-4">Introduction</h2>
       <ReactMarkdown>{content}</ReactMarkdown>
       <SkillsList {...{ product, infrastructure }} />
       <MainInterestsList mainInterests={mainInterests} />

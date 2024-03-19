@@ -9,7 +9,10 @@ type SkillItemProps = {
 export default function SkillItem({ iconPath, name, url }: SkillItemProps) {
   return (
     <li>
-      <a href={url} className="flex items-center">
+      <a
+        href={url}
+        className="flex items-center text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500"
+      >
         <Image
           src={iconPath}
           width={16}

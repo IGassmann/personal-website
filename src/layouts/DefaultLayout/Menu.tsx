@@ -10,7 +10,12 @@ export default function Menu({ menu }: MenuProps) {
       <ul className="p-0 my-6">
         {menu.map((item) => (
           <li className="my-4 md:my-2" key={item.path}>
-            <Link href={item.path}>{item.label}</Link>
+            <Link
+              className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500"
+              href={item.path}
+            >
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

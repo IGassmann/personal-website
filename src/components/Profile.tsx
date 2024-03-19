@@ -25,7 +25,14 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
 
   return (
     <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
-      <Link href="/" className={`${displayInline ? 'w-16 mr-4' : 'w-20'}`}>
+      <Link
+        href="/"
+        className={`${
+          displayInline
+            ? 'text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 w-16 mr-4'
+            : 'text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500 w-20'
+        }`}
+      >
         <Image
           src={ProfilePicture}
           className="inline-block rounded-full bg-clip-padding"

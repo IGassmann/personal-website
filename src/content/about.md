@@ -54,8 +54,6 @@ mainInterests:
   - culture
 ---
 
-## Introduction
-
 Product Engineer with 9 years of experience. I started a career in software engineering at 16. I
 worked at a Swiss college for 4 years, building products from ideation to launch.
 

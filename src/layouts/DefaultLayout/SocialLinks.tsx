@@ -20,7 +20,10 @@ export default function SocialLinks({ socialLinks }: SocialLinksProps) {
               className="flex items-center justify-center w-10 h-10 border border-fuchsia-900 rounded-full"
               key={name}
             >
-              <a href={getContactHref(name, socialLink)}>
+              <a
+                className="text-fuchsia-600 hover:text-cyan-500 focus:text-cyan-500"
+                href={getContactHref(name, socialLink)}
+              >
                 <Icon icon={getIcon(name)} />
               </a>
             </li>

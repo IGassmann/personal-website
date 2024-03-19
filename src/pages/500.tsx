@@ -19,7 +19,7 @@ const ServerErrorPage: NextPage<ServerErrorPageProps> = ({ origin }) => {
           url: `${origin}${router.asPath}`,
         }}
       />
-      <h1 className="text-xl">Server Error</h1>
+      <h1 className="text-xl text-cyan-500 font-medium">Server Error</h1>
       <p>Oops, something went wrong.</p>
     </>
   );

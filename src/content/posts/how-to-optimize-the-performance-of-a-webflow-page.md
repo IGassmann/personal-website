@@ -18,7 +18,7 @@ If you’re using Webflow, it’s not very clear what are the most effective cha
 improve the performance of your website. That’s why I compiled a list of what I believe are the most
 impactful improvements for most Webflow websites.
 
-# 1. Use Image Elements Over Background Images
+## 1. Use Image Elements Over Background Images
 
 Image elements have better optimization capabilities than background images. For getting the best
 results, you will want to replace all
@@ -27,7 +27,7 @@ for [image elements](https://university.webflow.com/lesson/image). In some cases
 use the [object-fit property](https://webflow.com/feature/object-fit-support) to reproduce the
 background behavior.
 
-# 2. Resize and Compress Images
+## 2. Resize and Compress Images
 
 Image size is often what slows down the load time the most. That’s why it’s important to compress
 and correctly size them.
@@ -46,7 +46,7 @@ Then you just need to upload the new images into your assets and
 [replace the images](https://university.webflow.com/lesson/image#replace-images) with the optimized
 ones.
 
-# 3. Preconnect to assets’ origin
+## 3. Preconnect to assets’ origin
 
 Webflow serves uploaded assets such as images and fonts from the domain _assets.website-files.com_.
 For loading the assets, the browser needs to make an extra connection to that domain. A
@@ -63,7 +63,7 @@ Improve the page load speed by adding the following to the top of the
 
 Further reading: [Preconnect to required origins ](https://web.dev/uses-rel-preconnect/)
 
-# 4. Preload LCP Image
+## 4. Preload LCP Image
 
 Preload allows you to inform the browser about critical resources you want to load as soon as
 possible. Preload can be a **game-changer** for improving your page speed.
@@ -93,7 +93,7 @@ add to the top of the
 wio preload https://webflow.com/
 ```
 
-# 5. Lazy Load Images
+## 5. Lazy Load Images
 
 Lazy loading is a technique for loading images when they are needed rather than all at once. This
 can considerably improve your loading speed by deferring the loading of off-screen images.
@@ -119,7 +119,7 @@ It’s also important that you have either height or width set explicitly as **A
 [image’s style settings](https://university.webflow.com/lesson/style-panel-overview) so that the
 image resizes without breaking its aspect ratio.
 
-# Further Optimizations
+## Further Optimizations
 
 - Remove unused
   [styles](https://university.webflow.com/lesson/style-manager#deleting-all-unused-styles-in-the-style-manager)

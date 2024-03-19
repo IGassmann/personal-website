@@ -11,7 +11,7 @@ const Menu: React.VFC<MenuProps> = ({ menu }) => (
       {menu.map((item) => (
         <li className="my-l sm:my-m" key={item.path}>
           <Link href={item.path}>
-            <a>{item.label}</a>
+            {item.label}
           </Link>
         </li>
       ))}

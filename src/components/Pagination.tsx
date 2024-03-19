@@ -16,10 +16,10 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
     <div className="flex justify-between">
       <div>
         {hasPreviousPage ? (
-          <Link href={previousPagePath}>
-            <a rel="prev" className="text-[26px] font-bold">
+          <Link href={previousPagePath} rel="prev" className="text-[26px] font-bold">
+            
               ← PREV
-            </a>
+            
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
@@ -29,10 +29,10 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
       </div>
       <div>
         {hasNextPage ? (
-          <Link href={nextPagePath}>
-            <a rel="next" className="text-[26px] font-bold">
+          <Link href={nextPagePath} rel="next" className="text-[26px] font-bold">
+            
               NEXT →
-            </a>
+            
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">

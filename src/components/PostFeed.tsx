@@ -18,8 +18,11 @@ const PostFeed: React.VFC<PostFeedProps> = ({ posts }) => (
           {category && <span>{category}</span>}
         </div>
         <h2 className="m-0">
-          <Link href={`/post/${slug}`} prefetch={false}>
-            <a className="text-primary hover:border-b focus:border-b">{title}</a>
+          <Link
+            href={`/post/${slug}`}
+            prefetch={false}
+            className="text-primary hover:border-b focus:border-b">
+            {title}
           </Link>
         </h2>
         {summary && <p className="mt-s">{summary}</p>}

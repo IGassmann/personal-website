@@ -26,7 +26,10 @@ const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false 
 
   return (
     <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
-      <Link href="/" className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
+      <Link
+        href="/"
+        className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}
+        >
         <Image
           src={ProfilePicture}
           className="inline-block rounded-full bg-clip-padding"
@@ -35,8 +38,8 @@ const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false 
       </Link>
       <div className={`${displayInline && 'flex-1'}`}>
         <TitleTag className={`text-h3 my-l ${displayInline && 'my-0'}`}>
-          <Link href="/">
-            <a className="text-primary">{profile.name}</a>
+          <Link href="/" className="text-primary">
+            {profile.name}
           </Link>
         </TitleTag>
         <p className="text-body-text-color text-opacity-80 m-0">{profile.tagline}</p>

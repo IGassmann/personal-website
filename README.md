@@ -37,11 +37,8 @@ The website's analytics are publicly available at
 
 ## Future Improvements
 
-- [x] Migrate to [Tailwind CSS](https://tailwindcss.com/)
-- [x] Migrate to [TypeScript](https://www.typescriptlang.org/)
-- [x] Set up [ESLint](https://eslint.org/), [Prettier](https://prettier.io/),
-      [commitlint](https://commitlint.js.org/#/), and
-      [lint-staged](https://github.com/okonet/lint-staged)
+- [ ] Upgrade TypeScript
+- [ ] Migrate to default Tailwind CSS configuration
 - [ ] Add share buttons for posts
 - [ ] Add commenting feature
 - [ ] Add "Edit on GitHub" button to pages

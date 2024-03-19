@@ -9,16 +9,14 @@ type AboutProps = {
   content: string;
 };
 
-const About: React.VFC<AboutProps> = ({
-  content,
-  mainInterests,
-  skills: { product, infrastructure },
-}) => (
-  <div className="-mt-l">
+export default function About({
+                 content,
+                 mainInterests,
+                 skills: { product, infrastructure },
+               }: AboutProps) {
+  return <div className="-mt-l">
     <ReactMarkdown>{content}</ReactMarkdown>
     <SkillsList {...{ product, infrastructure }} />
-    <MainInterestsList mainInterests={mainInterests} />
-  </div>
-);
-
-export default About;
+    <MainInterestsList mainInterests={mainInterests}/>
+  </div>;
+}

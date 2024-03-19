@@ -7,8 +7,8 @@ type SkillItemProps = {
   url: string;
 };
 
-const SkillItem: React.VFC<SkillItemProps> = ({ iconPath, name, url }) => (
-  <li>
+export default function SkillItem({ iconPath, name, url }: SkillItemProps) {
+  return <li>
     <a href={url} className="flex items-center">
       <Image
         src={iconPath}
@@ -17,11 +17,9 @@ const SkillItem: React.VFC<SkillItemProps> = ({ iconPath, name, url }) => (
         alt={name}
         style={{
           maxWidth: "100%",
-          height: "auto"
-        }} />
+          height: "auto",
+        }}/>
       <span className="ml-m text-body-text-color">{name}</span>
     </a>
-  </li>
-);
-
-export default SkillItem;
+  </li>;
+}

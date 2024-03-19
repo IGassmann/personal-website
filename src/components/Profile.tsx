@@ -15,7 +15,7 @@ type ProfileProps = {
   isHeading?: boolean;
 };
 
-const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false }) => {
+export default function Profile({ isInline = false, isHeading = false }: ProfileProps) {
   const { profile } = siteConfig;
 
   // @ts-ignore
@@ -29,12 +29,12 @@ const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false 
       <Link
         href="/"
         className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}
-        >
+      >
         <Image
           src={ProfilePicture}
           className="inline-block rounded-full bg-clip-padding"
           alt={profile.name}
-          />
+        />
       </Link>
       <div className={`${displayInline && 'flex-1'}`}>
         <TitleTag className={`text-h3 my-l ${displayInline && 'my-0'}`}>
@@ -46,6 +46,5 @@ const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false 
       </div>
     </div>
   );
-};
+}
 
-export default Profile;

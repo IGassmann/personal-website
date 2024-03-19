@@ -7,8 +7,8 @@ type PostFeedProps = {
   posts: Post[];
 };
 
-const PostFeed: React.VFC<PostFeedProps> = ({ posts }) => (
-  <div className="flex flex-col">
+export default function PostFeed({ posts }: PostFeedProps) {
+  return <div className="flex flex-col">
     {posts.map(({ category, publishedAt, summary, slug, title }) => (
       <div className="mb-xxxl" key={slug}>
         <div className="text-[18px]">
@@ -28,7 +28,5 @@ const PostFeed: React.VFC<PostFeedProps> = ({ posts }) => (
         {summary && <p className="mt-s">{summary}</p>}
       </div>
     ))}
-  </div>
-);
-
-export default PostFeed;
+  </div>;
+}

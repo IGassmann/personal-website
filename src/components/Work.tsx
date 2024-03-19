@@ -28,8 +28,8 @@ const workCards = [
   },
 ];
 
-const Work: React.VFC = () => (
-  <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
+export default function Work() {
+  return <div className="flex flex-wrap justify-center -m-m sm:mt-[96px]">
     {workCards.map(({ imageSrc, subtitle, title, url }) => (
       <a
         href={url}
@@ -43,9 +43,10 @@ const Work: React.VFC = () => (
           fill
           sizes="100vw"
           style={{
-            objectFit: "cover"
-          }} />
-        <div className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
+            objectFit: "cover",
+          }}/>
+        <div
+          className="relative h-full w-full rounded-[12px] bg-gradient-to-tr from-primary-dark via-red-500 to-secondary-dark opacity-0 transition-opacity duration-250 ease-in-out group-hover:opacity-90 group-focus:opacity-90">
           <div className="absolute left-[16px] bottom-[16px]">
             <h2 className="m-0">{title}</h2>
             <p className="m-0 text-body-text-color">{subtitle}</p>
@@ -53,7 +54,5 @@ const Work: React.VFC = () => (
         </div>
       </a>
     ))}
-  </div>
-);
-
-export default Work;
+  </div>;
+}

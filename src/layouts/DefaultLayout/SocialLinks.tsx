@@ -7,8 +7,8 @@ type SocialLinksProps = {
   socialLinks: Record<string, string>;
 };
 
-const SocialLinks: React.VFC<SocialLinksProps> = ({ socialLinks }) => (
-  <div>
+export default function SocialLinks({ socialLinks }: SocialLinksProps) {
+  return <div>
     <ul className="flex p-0 space-x-[16px]">
       {Object.keys(socialLinks).map((name) => (
         <li
@@ -16,12 +16,10 @@ const SocialLinks: React.VFC<SocialLinksProps> = ({ socialLinks }) => (
           key={name}
         >
           <a href={getContactHref(name, socialLinks[name])}>
-            <Icon icon={getIcon(name)} />
+            <Icon icon={getIcon(name)}/>
           </a>
         </li>
       ))}
     </ul>
-  </div>
-);
-
-export default SocialLinks;
+  </div>;
+}

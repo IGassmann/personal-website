@@ -4,10 +4,8 @@ type InterestItemProps = {
   interest: string;
 };
 
-const InterestItem: React.VFC<InterestItemProps> = ({ interest }) => (
-  <li>
+export default function InterestItem({ interest }: InterestItemProps) {
+  return <li>
     - <span className="text-secondary">{`#${interest}`}</span>
-  </li>
-);
-
-export default InterestItem;
+  </li>;
+}

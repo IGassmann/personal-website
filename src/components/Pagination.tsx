@@ -6,7 +6,7 @@ type PaginationProps = {
   numberOfPages: number;
 };
 
-const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) => {
+export default function Pagination({ currentPage, numberOfPages }: PaginationProps) {
   const hasPreviousPage = currentPage > 0;
   const hasNextPage = currentPage + 1 < numberOfPages;
   const previousPagePath = currentPage === 1 ? '/' : `/page/${currentPage - 1}`;
@@ -17,9 +17,9 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
       <div>
         {hasPreviousPage ? (
           <Link href={previousPagePath} rel="prev" className="text-[26px] font-bold">
-            
-              ← PREV
-            
+
+            ← PREV
+
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
@@ -30,9 +30,9 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
       <div>
         {hasNextPage ? (
           <Link href={nextPagePath} rel="next" className="text-[26px] font-bold">
-            
-              NEXT →
-            
+
+            NEXT →
+
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
@@ -42,6 +42,4 @@ const Pagination: React.VFC<PaginationProps> = ({ currentPage, numberOfPages }) 
       </div>
     </div>
   );
-};
-
-export default Pagination;
+}

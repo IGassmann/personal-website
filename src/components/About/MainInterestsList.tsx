@@ -5,15 +5,13 @@ type MainInterestsListProps = {
   mainInterests: string[];
 };
 
-const MainInterestsList: React.VFC<MainInterestsListProps> = ({ mainInterests }) => (
-  <>
+export default function MainInterestsList({ mainInterests }: MainInterestsListProps) {
+  return <>
     <h2>Main Interests</h2>
     <ul className="p-0">
       {mainInterests.map((interest) => (
-        <InterestItem interest={interest} key={interest} />
+        <InterestItem interest={interest} key={interest}/>
       ))}
     </ul>
-  </>
-);
-
-export default MainInterestsList;
+  </>;
+}

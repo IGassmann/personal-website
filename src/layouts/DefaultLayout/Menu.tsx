@@ -5,8 +5,8 @@ type MenuProps = {
   menu: { label: string; path: string }[];
 };
 
-const Menu: React.VFC<MenuProps> = ({ menu }) => (
-  <nav>
+export default function Menu({ menu }: MenuProps) {
+  return <nav>
     <ul className="p-0 my-xl">
       {menu.map((item) => (
         <li className="my-l sm:my-m" key={item.path}>
@@ -16,7 +16,5 @@ const Menu: React.VFC<MenuProps> = ({ menu }) => (
         </li>
       ))}
     </ul>
-  </nav>
-);
-
-export default Menu;
+  </nav>;
+}

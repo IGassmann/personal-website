@@ -1,11 +1,9 @@
-import React from 'react';
-
 type TagsProps = {
   tags: string[];
 };
 
-const Tags: React.VFC<TagsProps> = ({ tags }) => (
-  <div>
+export default function Tags({ tags }: TagsProps) {
+  return <div>
     <ul className="m-0 -mx-s p-0 pt-l">
       {tags &&
         tags.map((tag) => (
@@ -14,7 +12,5 @@ const Tags: React.VFC<TagsProps> = ({ tags }) => (
           </li>
         ))}
     </ul>
-  </div>
-);
-
-export default Tags;
+  </div>;
+}

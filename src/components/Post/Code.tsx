@@ -1,5 +1,4 @@
-import React from 'react';
-import { CodeComponent } from 'react-markdown/lib/ast-to-react';
+import type { CodeComponent } from 'react-markdown/lib/ast-to-react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 

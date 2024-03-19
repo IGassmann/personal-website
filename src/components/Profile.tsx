@@ -1,5 +1,4 @@
-import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import ProfilePicture from '../../public/images/profile-picture.jpg';
@@ -26,10 +25,7 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
 
   return (
     <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
-      <Link
-        href="/"
-        className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}
-      >
+      <Link href="/" className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
         <Image
           src={ProfilePicture}
           className="inline-block rounded-full bg-clip-padding"
@@ -47,4 +43,3 @@ export default function Profile({ isInline = false, isHeading = false }: Profile
     </div>
   );
 }
-

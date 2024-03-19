@@ -1,9 +1,8 @@
-import { ParsedUrlQuery } from 'querystring';
-import React from 'react';
-import { GetStaticProps, NextPage } from 'next';
+import type { ParsedUrlQuery } from 'querystring';
+import type { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import Post from '@/types/Post';
+import type Post from '@/types/Post';
 import Pagination from '@/components/Pagination';
 import PostFeed from '@/components/PostFeed';
 import { getAllPosts } from '@/lib/posts';

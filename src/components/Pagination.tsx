@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 type PaginationProps = {
@@ -17,9 +16,7 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
       <div>
         {hasPreviousPage ? (
           <Link href={previousPagePath} rel="prev" className="text-[26px] font-bold">
-
             ← PREV
-
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">
@@ -30,9 +27,7 @@ export default function Pagination({ currentPage, numberOfPages }: PaginationPro
       <div>
         {hasNextPage ? (
           <Link href={nextPagePath} rel="next" className="text-[26px] font-bold">
-
             NEXT →
-
           </Link>
         ) : (
           <span className="text-[26px] font-bold text-secondary-dark cursor-not-allowed">

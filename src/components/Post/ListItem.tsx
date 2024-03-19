@@ -1,5 +1,4 @@
-import React from 'react';
-import { LiComponent } from 'react-markdown/lib/ast-to-react';
+import type { LiComponent } from 'react-markdown/lib/ast-to-react';
 
 const ListItem: LiComponent = ({ children }) => (
   <>

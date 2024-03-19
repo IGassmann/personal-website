@@ -1,4 +1,3 @@
-import React from 'react';
 import Menu from '@/layouts/DefaultLayout/Menu';
 import SocialLinks from '@/layouts/DefaultLayout/SocialLinks';
 import Profile from '@/components/Profile';
@@ -12,9 +11,9 @@ export default function Sidebar() {
 
   return (
     <aside className="relative mb-xxxl sm:pr-[20px] sm:border-r sm:border-secondary ">
-      <Profile isHeading/>
-      <Menu menu={menu}/>
-      <SocialLinks socialLinks={socialLinks}/>
+      <Profile isHeading />
+      <Menu menu={menu} />
+      <SocialLinks socialLinks={socialLinks} />
     </aside>
   );
 }

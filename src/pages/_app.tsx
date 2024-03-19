@@ -1,5 +1,5 @@
-import { NextPageWithLayout } from 'next';
-import { AppProps } from 'next/app';
+import type { NextPageWithLayout } from 'next';
+import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import siteConfig from '@/site.config';

@@ -37,7 +37,6 @@ The website's analytics are publicly available at
 
 ## Future Improvements
 
-- [ ] Improve TypeScript configuration
 - [ ] Use next/font
 - [ ] Migrate to default Tailwind CSS configuration
 - [ ] Remove SCSS

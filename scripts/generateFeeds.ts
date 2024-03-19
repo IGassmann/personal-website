@@ -20,9 +20,11 @@ const feed = new Feed({
   id: `${origin}/`,
   link: `${origin}/`,
   language: 'en',
+  // @ts-ignore
   image: openGraph.images[0].url,
   favicon: `${origin}/icon.png`,
   copyright: 'Unlicense',
+  // @ts-ignore
   updated: new Date(posts[0].publishedAt),
   author: {
     name: profile.name,
@@ -45,7 +47,6 @@ const buildKeepReadingCTA = (postURL: string) => `
   <strong><a href="${postURL}">Keep reading</a></strong>
   <br/><br/>
 </div>`;
-
 
 const markdownProcessor = unified()
   // @ts-ignore

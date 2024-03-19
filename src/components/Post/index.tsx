@@ -1,6 +1,4 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Components } from 'react-markdown/lib/ast-to-react';
 import remarkUnwrapImages from 'remark-unwrap-images';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
@@ -17,7 +15,7 @@ type PostProps = {
 };
 
 export default function Post({ post }: PostProps) {
-  const reactMarkdownComponents: Components = {
+  const reactMarkdownComponents = {
     code: Code,
     'figma-file': FigmaFile,
     'youtube-playlist': YoutubePlaylist,
@@ -28,7 +26,7 @@ export default function Post({ post }: PostProps) {
   return (
     <article className="max-w-[945px] px-[15px] mt-xxl mx-auto sm:p-0 sm:max-w-[640px] md:-mt-xxl">
       <h1 className="text-[36px] leading-[48px] sm:text-[48px]">{post.title}</h1>
-      <PostMetadata publishedAt={post.publishedAt} tags={post.tags}/>
+      <PostMetadata publishedAt={post.publishedAt} tags={post.tags} />
       <ReactMarkdown
         remarkPlugins={[remarkUnwrapImages, remarkDirective, remarkDirectiveRehype]}
         className="mb-xxl prose"

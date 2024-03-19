@@ -1,7 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
-import Post from '@/types/Post';
+import type Post from '@/types/Post';
 
 type PostMetadata = {
   title?: string;

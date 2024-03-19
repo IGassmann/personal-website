@@ -1,6 +1,5 @@
-import { ParsedUrlQuery } from 'querystring';
-import React from 'react';
-import { GetStaticPaths, GetStaticProps, NextPageWithLayout } from 'next';
+import type { ParsedUrlQuery } from 'querystring';
+import type { GetStaticPaths, GetStaticProps, NextPageWithLayout } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import type PostType from '@/types/Post';

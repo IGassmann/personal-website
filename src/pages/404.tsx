@@ -1,12 +1,7 @@
-import { usePlausible } from 'next-plausible';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-
-type PlausibleEvents = {
-  '404': { path: string };
-};
 
 type NotFoundPageProps = {
   origin: string;
@@ -14,11 +9,6 @@ type NotFoundPageProps = {
 
 const NotFoundPage: NextPage<NotFoundPageProps> = ({ origin }) => {
   const router = useRouter();
-  const plausible = usePlausible<PlausibleEvents>();
-
-  useEffect(() => {
-    plausible('404', { props: { path: router.asPath } });
-  });
 
   return (
     <>

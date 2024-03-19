@@ -1,11 +1,13 @@
-import React from 'react';
 import Sidebar from '@/layouts/DefaultLayout/Sidebar';
 
-const DefaultLayout: React.FC = ({ children }) => (
-  <div className="max-w-[1019px] my-xxl mx-auto px-l sm:grid sm:grid-cols-[295px,1fr] sm:gap-[20px] sm:px-xxl">
-    <Sidebar />
-    <main>{children}</main>
-  </div>
-);
+type DefaultLayoutProps = {
+  children: React.ReactNode;
+}
 
-export default DefaultLayout;
+export default function DefaultLayout({ children }: DefaultLayoutProps) {
+  return <div
+    className="max-w-[1019px] my-xxl mx-auto px-l sm:grid sm:grid-cols-[295px,1fr] sm:gap-[20px] sm:px-xxl">
+    <Sidebar/>
+    <main>{children}</main>
+  </div>;
+}

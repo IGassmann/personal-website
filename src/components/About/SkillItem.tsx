@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from 'react';
 
 type SkillItemProps = {
@@ -10,7 +10,15 @@ type SkillItemProps = {
 const SkillItem: React.VFC<SkillItemProps> = ({ iconPath, name, url }) => (
   <li>
     <a href={url} className="flex items-center">
-      <Image src={iconPath} width={16} height={16} alt={name} />
+      <Image
+        src={iconPath}
+        width={16}
+        height={16}
+        alt={name}
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <span className="ml-m text-body-text-color">{name}</span>
     </a>
   </li>

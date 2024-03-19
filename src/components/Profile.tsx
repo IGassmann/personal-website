@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import ProfilePicture from '../../public/images/profile-picture.jpg';
@@ -26,14 +26,12 @@ const Profile: React.VFC<ProfileProps> = ({ isInline = false, isHeading = false 
 
   return (
     <div className={`flex w-full ${displayInline ? 'flex-row' : 'flex-col'}`}>
-      <Link href="/">
-        <a className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
-          <Image
-            src={ProfilePicture}
-            className="inline-block rounded-full bg-clip-padding"
-            alt={profile.name}
+      <Link href="/" className={`${displayInline ? 'w-[64px] mr-l' : 'w-[80px]'}`}>
+        <Image
+          src={ProfilePicture}
+          className="inline-block rounded-full bg-clip-padding"
+          alt={profile.name}
           />
-        </a>
       </Link>
       <div className={`${displayInline && 'flex-1'}`}>
         <TitleTag className={`text-h3 my-l ${displayInline && 'my-0'}`}>

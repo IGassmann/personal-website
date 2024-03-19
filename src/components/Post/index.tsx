@@ -24,7 +24,7 @@ export default function Post({ post }: PostProps) {
   };
 
   return (
-    <article className="max-w-[945px] px-[15px] mt-8 mx-auto sm:p-0 sm:max-w-[640px] md:-mt-8">
+    <article className="max-w-4xl px-4 mt-8 mx-auto sm:p-0 sm:max-w-2xl md:-mt-8">
       <h1 className="text-3xl sm:text-4xl">{post.title}</h1>
       <PostMetadata publishedAt={post.publishedAt} tags={post.tags} />
       <ReactMarkdown

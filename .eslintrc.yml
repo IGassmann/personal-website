@@ -1,9 +1,2 @@
 extends:
   - next/core-web-vitals
-overrides:
-  - files:
-      - '**/*'
-    parser: '@typescript-eslint/parser'
-    parserOptions:
-      project: ./tsconfig.json
-      warnOnUnsupportedTypeScriptVersion: false

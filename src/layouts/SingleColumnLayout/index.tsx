@@ -6,7 +6,7 @@ type SingleColumnLayoutProps = {
 
 export default function SingleColumnLayout({ children }: SingleColumnLayoutProps) {
   return (
-    <div className="max-w-[1019px] my-8 mx-auto px-4 sm:px-8">
+    <div className="max-w-5xl my-8 mx-auto px-4 sm:px-8">
       <main>{children}</main>
       <Footer />
     </div>

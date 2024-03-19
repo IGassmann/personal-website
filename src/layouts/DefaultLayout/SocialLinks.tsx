@@ -9,7 +9,7 @@ type SocialLinksProps = {
 export default function SocialLinks({ socialLinks }: SocialLinksProps) {
   return (
     <div>
-      <ul className="flex p-0 space-x-[16px]">
+      <ul className="flex p-0 space-x-4">
         {Object.keys(socialLinks).map((name) => {
           const socialLink = socialLinks[name];
 
@@ -17,7 +17,7 @@ export default function SocialLinks({ socialLinks }: SocialLinksProps) {
 
           return (
             <li
-              className="flex items-center justify-center w-[42px] h-[42px] border border-fuchsia-900 rounded-full"
+              className="flex items-center justify-center w-10 h-10 border border-fuchsia-900 rounded-full"
               key={name}
             >
               <a href={getContactHref(name, socialLink)}>

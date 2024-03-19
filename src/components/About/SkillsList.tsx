@@ -12,7 +12,7 @@ export default function SkillsList({ product, infrastructure }: SkillsListProps)
     <>
       <h2>Skills</h2>
       <div className="flex flex-wrap justify-between -mt-4">
-        <div className="mt-4 mr-[40px]">
+        <div className="mt-4 mr-10">
           <h3 className="mt-0">Product</h3>
           <ul className="p-0">
             {product.map(({ iconPath, name, url }) => (

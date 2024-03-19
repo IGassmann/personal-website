@@ -1,3 +1,18 @@
 singleQuote: true
 printWidth: 100
 proseWrap: always
+importOrder:
+  - '^(react/(.*)$)|^(react$)'
+  - '^(next/(.*)$)|^(next$)'
+  - '<THIRD_PARTY_MODULES>'
+  - ''
+  - '^types$'
+  - '^@/types/(.*)$'
+  - '^@/styles/(.*)$'
+  - '^@/(.*)$'
+  - '^[./]'
+importOrderTypeScriptVersion: 5.4.2
+pluginSearchDirs: false
+plugins:
+  - '@ianvs/prettier-plugin-sort-imports'
+  - 'prettier-plugin-tailwindcss'

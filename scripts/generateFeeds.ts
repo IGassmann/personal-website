@@ -46,7 +46,9 @@ const buildKeepReadingCTA = (postURL: string) => `
   <br/><br/>
 </div>`;
 
+
 const markdownProcessor = unified()
+  // @ts-ignore
   .use(markdown)
   .use(remark2rehype)
   .use(rehypeTruncate, { maxChars: 250, ignoreTags: ['ul', 'h1', 'h2'] })

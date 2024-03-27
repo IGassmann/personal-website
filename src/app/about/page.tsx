@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
 import { Container } from '@/components/Container';
-import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons';
+import { GitHubIcon, InstagramIcon, LinkedInIcon, XIcon } from '@/components/social-icons';
 import portraitImage from './portrait.jpg';
 
 function SocialLink({

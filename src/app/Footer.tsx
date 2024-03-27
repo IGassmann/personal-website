@@ -2,14 +2,6 @@ import Link from 'next/link';
 
 import { ContainerInner, ContainerOuter } from '@/components/Container';
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <Link href={href} className="transition hover:text-cyan-500 dark:hover:text-cyan-400">
-      {children}
-    </Link>
-  );
-}
-
 export function Footer() {
   return (
     <footer className="mt-32 flex-none">
@@ -29,5 +21,13 @@ export function Footer() {
         </div>
       </ContainerOuter>
     </footer>
+  );
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="transition hover:text-cyan-500 dark:hover:text-cyan-400">
+      {children}
+    </Link>
   );
 }

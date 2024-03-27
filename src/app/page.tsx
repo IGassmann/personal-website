@@ -4,7 +4,7 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { Container } from '@/components/Container';
 import CopyButton from '@/components/CopyButton';
-import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/SocialIcons';
+import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/social-icons';
 import covalentLogo from '@/images/logos/covalent-logo.png';
 import inngestLogo from '@/images/logos/inngest-logo.jpeg';
 import odeonLogo from '@/images/logos/odeon-logo.jpeg';

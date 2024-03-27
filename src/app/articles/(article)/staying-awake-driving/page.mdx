@@ -1,0 +1,31 @@
+import Article from '../Article';
+
+export const article = {
+  author: 'Igor Gassmann',
+  date: '2017-09-26',
+  title: 'How to Stay Awake While Driving',
+  description: 'Tips for staying up while driving.',
+};
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+};
+
+export default (props) => <Article article={article} children={props.children} {...props} />;
+
+Today I drove about 1000 miles in 14 hours. Naturally, I felt sleepy sometimes. I’m conscious of the
+danger of driving when you’re almost falling asleep, so I developed some practices to avoid these
+types of situations.
+
+The most popular way to avoid getting sleepy when driving is to drink an energy drink or a lot of
+coffee. It’s a useful technique, but it’s also not the best on your health.
+
+My two preferred methods are to either listen to a podcast that demands some concentration or play a
+music that I know the lyrics so I can sing along. The first method is the one that I use the most.
+On top of making me stay awake, I'm learning stuff and reflecting about things that interest me. The
+focus on the content of the podcast will keep you awake.
+
+If the previous techniques don’t work for you stop driving. Stop somewhere, turn off your car, and
+fall asleep wihile holding the car’s keys in your hand. When the keys drop off your hand because you
+passed out, you’ll be good to go.

@@ -1,0 +1,25 @@
+import Article from '../Article';
+import YoutubePlaylist from '../YoutubePlaylist';
+
+export const article = {
+  author: 'Igor Gassmann',
+  date: '2021-04-22',
+  title: 'YouTube Creator Essentials',
+  description: 'Must-watch videos for creators on YouTube.',
+  tags: ['content-creation'],
+};
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+};
+
+export default (props) => <Article article={article} children={props.children} {...props} />;
+
+You might be starting a YouTube channel, or you are a YouTuber and you're trying to figure out how
+to grow your audience, or maybe you want to understand how YouTube’s algorithm works.
+
+If you’re one of these people, I’ve saved time for you and compiled the essential videos to get a
+grasp of how to successfully grow as a YouTuber from the best channels about the subject.
+
+<YoutubePlaylist id="PLpFpxBexdqyp7nPBUkxBDJdEqPVONUEsF" />

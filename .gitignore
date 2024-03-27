@@ -18,15 +18,3 @@ next-env.d.ts
 
 # Vercel
 .vercel/
-
-# Generated syndication feed files
-/public/rss.xml
-/public/atom.xml
-
-# Generated sitemap file
-/public/sitemap.xml
-
-# Code editors and IDEs
-.idea/
-*.iml
-.vscode/

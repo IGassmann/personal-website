@@ -58,6 +58,8 @@ export async function GET(request: Request) {
     });
   }
 
+  feed.items.sort((a, b) => b.date.valueOf() - a.date.valueOf());
+
   return new Response(feed.json1(), {
     status: 200,
     headers: {

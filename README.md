@@ -9,6 +9,7 @@
 
 ## To Do
 
+- [ ] Update feed.json to also include external articles
 - [ ] Update projects page
 - [ ] Update `README.md` file
 - [ ] Organize icons

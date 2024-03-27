@@ -9,6 +9,7 @@ export default function FigmaFile({ url }: FigmaFileProps) {
       title="Embedded Figma file"
       allowFullScreen
       src={`https://www.figma.com/embed?embed_host=share&url=${url}`}
+      loading="lazy"
     />
   );
 }

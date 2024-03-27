@@ -10,6 +10,7 @@ export default function YoutubePlaylist({ id }: YoutubePlaylistProps) {
       allowFullScreen
       src={`https://www.youtube-nocookie.com/embed/videoseries?list=${id}`}
       allow="autoplay; encrypted-media"
+      loading="lazy"
     />
   );
 }

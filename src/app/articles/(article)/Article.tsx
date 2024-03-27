@@ -1,4 +1,3 @@
-import { Prose } from '@/app/articles/(article)/Prose';
 import type { Article } from '@/lib/articles';
 import { formatDate } from '@/lib/formatDate';
 
@@ -23,9 +22,10 @@ export default function Article({
           <span className="ml-3">{formatDate(article.date)}</span>
         </time>
       </header>
-      <Prose className="mt-8" data-mdx-content>
+      <div className="prose mt-8 dark:prose-invert" data-mdx-content>
+        {' '}
         {children}
-      </Prose>
+      </div>
     </article>
   );
 }

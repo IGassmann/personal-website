@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Popover, Transition } from '@headlessui/react';
+import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { twJoin, twMerge } from 'tailwind-merge';
 
@@ -150,7 +151,11 @@ function NavItem({ href, children }: { href: string; children: React.ReactNode }
       >
         {children}
         {isActive ? (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-cyan-500/0 via-cyan-500/40 to-cyan-500/0 dark:from-cyan-400/0 dark:via-cyan-400/40 dark:to-cyan-400/0" />
+          <motion.span
+            layoutId="bubble"
+            className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-cyan-500/0 via-cyan-500/40 to-cyan-500/0 dark:from-cyan-400/0 dark:via-cyan-400/40 dark:to-cyan-400/0"
+            transition={{ type: 'spring', bounce: 0.2, duration: 0.4 }}
+          />
         ) : null}
       </Link>
     </li>

@@ -152,7 +152,7 @@ function NavItem({ href, children }: { href: string; children: React.ReactNode }
         {children}
         {isActive ? (
           <motion.span
-            layoutId="bubble"
+            layoutId="underline"
             className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-cyan-500/0 via-cyan-500/40 to-cyan-500/0 dark:from-cyan-400/0 dark:via-cyan-400/40 dark:to-cyan-400/0"
             transition={{ type: 'spring', bounce: 0.2, duration: 0.4 }}
           />

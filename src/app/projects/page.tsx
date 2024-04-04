@@ -6,8 +6,8 @@ import { SimpleLayout } from '@/components/SimpleLayout';
 import athemLogo from '@/images/logos/athem-logo.png';
 import covalentLogo from '@/images/logos/covalent-logo.png';
 import githubLogo from '@/images/logos/github-logo.svg';
+import igorstirLogo from '@/images/logos/igorstir-logo.png';
 import inngestLogo from '@/images/logos/inngest-logo.png';
-import lbryLogo from '@/images/logos/lbry-logo.png';
 import odeonLogo from '@/images/logos/odeon-logo.png';
 
 const projects = [
@@ -31,10 +31,10 @@ const projects = [
     logo: odeonLogo,
   },
   {
-    name: 'LBRY',
-    description: 'Electron App - A P2P decentralized video sharing platform.',
-    link: { href: 'https://github.com/lbryio/lbry-desktop', label: 'github.com' },
-    logo: lbryLogo,
+    name: 'Igor <> Stir',
+    description: 'A website that I made just to pitch myself for a job.',
+    link: { href: 'https://igor4stir.com/', label: 'igor4stir.com' },
+    logo: igorstirLogo,
   },
   {
     name: 'Covalent',

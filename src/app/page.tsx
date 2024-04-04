@@ -6,9 +6,9 @@ import { Container } from '@/components/Container';
 import CopyButton from '@/components/CopyButton';
 import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/social-icons';
 import covalentLogo from '@/images/logos/covalent-logo.png';
-import inngestLogo from '@/images/logos/inngest-logo.jpeg';
-import odeonLogo from '@/images/logos/odeon-logo.jpeg';
-import synthesisLogo from '@/images/logos/synthesis-logo.jpg';
+import inngestLogo from '@/images/logos/inngest-logo.png';
+import odeonLogo from '@/images/logos/odeon-logo.png';
+import synthesisLogo from '@/images/logos/synthesis-logo.png';
 import { getAllArticles, type Article } from '@/lib/articles';
 import { formatDate } from '@/lib/formatDate';
 

@@ -3,56 +3,62 @@ import Image from 'next/image';
 
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
-import logoAnimaginary from '@/images/logos/animaginary.svg';
-import logoCosmos from '@/images/logos/cosmos.svg';
-import logoHelioStream from '@/images/logos/helio-stream.svg';
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg';
-import logoPlanetaria from '@/images/logos/planetaria.svg';
+import athemLogo from '@/images/logos/athem-logo.png';
+import covalentLogo from '@/images/logos/covalent-logo.png';
+import githubLogo from '@/images/logos/github-logo.svg';
+import inngestLogo from '@/images/logos/inngest-logo.png';
+import lbryLogo from '@/images/logos/lbry-logo.png';
+import odeonLogo from '@/images/logos/odeon-logo.png';
 
 const projects = [
   {
-    name: 'Athem',
-    description:
-      'Creative Website - Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'https://www.athem.fr', label: 'athem.fr' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Original Works',
-    description:
-      'Marketing Website - High performance web animation library, hand-written in optimized WASM.',
-    link: { href: 'https://original.works/', label: 'original.works' },
-    logo: logoAnimaginary,
+    name: 'Inngest',
+    description: 'Web App - A dashboard for managing and monitoring durable functions and events.',
+    link: {
+      href: 'https://github.com/inngest/inngest/tree/main/ui/apps/dashboard/',
+      label: 'github.com',
+    },
+    logo: inngestLogo,
   },
   {
     name: 'Odeon',
     description:
-      'Video Platform - Real-time video streaming library, optimized for interstellar transmission.',
+      'Web App - A video platform that allowed creators to join forces by bundling their subscriptions.',
     link: {
-      href: 'https://www.linkedin.com/in/igassmann/details/experience/',
+      href: 'https://www.linkedin.com/in/igassmann/details/experience/urn:li:fsd_profilePosition:(ACoAAAzO5DAB8u4NCNgwxGNt3gF0lZNQ3IX5Wg0,1350622780)/treasury/',
       label: 'linkedin.com',
     },
-    logo: logoHelioStream,
+    logo: odeonLogo,
   },
   {
     name: 'LBRY',
-    description:
-      'Electron App - Real-time video streaming library, optimized for interstellar transmission.',
+    description: 'Electron App - A P2P decentralized video sharing platform.',
     link: { href: 'https://github.com/lbryio/lbry-desktop', label: 'github.com' },
-    logo: logoHelioStream,
+    logo: lbryLogo,
   },
   {
-    name: 'cosmOS',
-    description: 'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
+    name: 'Covalent',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Web App - A dashboard for creating and scheduling matchmaking programs for communities.',
+    link: {
+      href: 'https://www.linkedin.com/in/igassmann/details/experience/urn:li:fsd_profilePosition:(ACoAAAzO5DAB8u4NCNgwxGNt3gF0lZNQ3IX5Wg0,1908473790)/treasury/',
+      label: 'linkedin.com',
+    },
+    logo: covalentLogo,
+  },
+  {
+    name: 'Athem',
+    description:
+      'Creative Website - Creating technology to empower civilians to explore space on their own terms.',
+    link: { href: 'https://www.athem.fr/', label: 'athem.fr' },
+    logo: athemLogo,
+  },
+  {
+    name: 'Web App Template',
+    description:
+      'A template for building web apps that I use to collect learnings and opinions on best practices and configurations.',
+    link: { href: 'https://github.com/IGassmann/web-app-template', label: 'github.com' },
+    logo: githubLogo,
   },
 ];
 
@@ -69,20 +75,20 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Things I’ve worked on over the years.',
 };
 
 export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve worked on"
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="Here are some of the projects I’ve worked on over the years."
     >
       <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card as="li" key={project.name}>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={project.logo} alt="" className="h-8 w-8" unoptimized />
+              <Image src={project.logo} alt="" className="h-8 w-8 rounded-full object-cover" />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>

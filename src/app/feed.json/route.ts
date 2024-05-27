@@ -33,7 +33,7 @@ export async function GET(request: Request) {
 
   for (const article of allArticles) {
     const isLocalArticle = 'pathname' in article;
-    if (!isLocalArticle) return;
+    if (!isLocalArticle) continue;
 
     const articleURL = String(new URL(article.pathname, request.url));
     const html = await (await fetch(articleURL)).text();

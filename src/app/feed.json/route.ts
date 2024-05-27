@@ -48,7 +48,7 @@ export async function GET(request: Request) {
     const html = await (await fetch(articleURL)).text();
     const $ = cheerio.load(html);
 
-    const publicURL = `${siteURL}/articles/${article}`;
+    const publicURL = new URL(article.pathname, siteURL);
     const articleElement = $('article').first();
     const title = articleElement.find('h1').first().text();
     const date = articleElement.find('time').first().attr('datetime');
@@ -59,9 +59,9 @@ export async function GET(request: Request) {
     assert(typeof sanitizedContent === 'string', `content of ${title} is not a string`);
 
     feed.addItem({
-      id: publicURL,
+      id: publicURL.href,
       title,
-      link: publicURL,
+      link: publicURL.href,
       author: [author],
       date: new Date(date),
       content: sanitizedContent,

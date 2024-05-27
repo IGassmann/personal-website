@@ -32,8 +32,17 @@ export async function GET(request: Request) {
   const allArticles = getAllArticles();
 
   for (const article of allArticles) {
-    const isLocalArticle = 'pathname' in article;
-    if (!isLocalArticle) continue;
+    const isExternalArticle = 'url' in article;
+    if (isExternalArticle) {
+      feed.addItem({
+        id: article.url,
+        title: article.title,
+        link: article.url,
+        author: [author],
+        date: article.date,
+      });
+      continue;
+    }
 
     const articleURL = String(new URL(article.pathname, request.url));
     const html = await (await fetch(articleURL)).text();

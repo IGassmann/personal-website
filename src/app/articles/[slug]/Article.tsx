@@ -23,7 +23,6 @@ export default function Article({
         </time>
       </header>
       <div className="prose mt-8 dark:prose-invert" data-mdx-content>
-        {' '}
         {children}
       </div>
     </article>

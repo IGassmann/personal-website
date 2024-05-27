@@ -32,7 +32,6 @@
     "next-themes": "0.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remark-gfm": "4.0.0",
     "tailwind-merge": "2.2.2"
   },
   "devDependencies": {
@@ -40,7 +39,6 @@
     "@types/node": "~20.12.4",
     "@types/react": "18.2.74",
     "@types/react-dom": "18.2.24",
-    "@types/webpack-env": "1.18.4",
     "autoprefixer": "10.4.19",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.1",

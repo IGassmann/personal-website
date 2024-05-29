@@ -1,0 +1,21 @@
+---
+title: Towards Continuous Delivery
+author: Igor Gassmann
+date: 2020-05-12
+---
+
+I’ve been studying the past weeks the OpenAPI specification and the tools around it. I'm using it as
+a solution for bringing a REST API closer to continuous delivery.
+
+The mentioned API lacks automated testing. Contract testing is the first sane step towards achieving
+continuous delivery. Thanks to OpenAPI and its tool ecosystem, it can generate contract tests.
+
+The strategy consists of first having contract testing to have more confidence when changing the
+code and to prepare the ground for a large-scale refactoring.
+
+The following step would be to figure out the new architecture and continuously refactor it starting
+from the domain layer while applying TDD. It’s important that this is an incremental and continuous
+effort in order to not stop our ability to add features to our product.
+
+The idea is to gradually increase the testing coverage with fast unit tests to turn our
+[ice-cream cone into a pyramid.](https://watirmelon.blog/melon-of-knowledge/testing-pyramids/)

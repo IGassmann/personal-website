@@ -1,9 +1,6 @@
 // @ts-check
 
-// @ts-ignore
-import rehypePrism from '@mapbox/rehype-prism';
-import nextMDX from '@next/mdx';
-import remarkGfm from 'remark-gfm';
+import { createMdxtsPlugin } from 'mdxts/next';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -25,11 +22,9 @@ const nextConfig = {
   },
 };
 
-const withMDX = nextMDX({
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
-  },
+const withMDXTS = createMdxtsPlugin({
+  theme: 'nord',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
 });
 
-export default withMDX(nextConfig);
+export default withMDXTS(nextConfig);

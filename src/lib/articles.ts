@@ -1,19 +1,19 @@
-import glob from 'fast-glob';
+import { createSource } from 'mdxts';
 
 export type LocalArticle = {
   title: string;
   description?: string;
   author: string;
-  date: string;
+  date: Date;
   tags?: string[];
-  slug: string;
+  pathname: string;
 };
 
 export type ExternalArticle = {
   title: string;
   description?: string;
   author: string;
-  date: string;
+  date: Date;
   tags?: string[];
   url: string;
 };
@@ -25,7 +25,7 @@ const externalArticles: ExternalArticle[] = [
     title: 'Migrating from Vite to Next.js',
     description: 'A how-to guide on migrating from Vite to Next.js.',
     author: 'Igor Gassmann',
-    date: '2023-07-20',
+    date: new Date('2023-07-20'),
     url: 'https://www.inngest.com/blog/migrating-from-vite-to-nextjs',
   },
   {
@@ -33,29 +33,31 @@ const externalArticles: ExternalArticle[] = [
     description:
       'What did we (Inngest) learn from building and shipping our new app with the Next.js 13 App Router?',
     author: 'Igor Gassmann',
-    date: '2023-05-05',
+    date: new Date('2023-05-05'),
     url: 'https://www.inngest.com/blog/5-lessons-learned-from-taking-next-js-app-router-to-production',
   },
 ];
 
-async function importArticle(articleFilename: string): Promise<LocalArticle> {
-  const { article } = (await import(`@/app/articles/(article)/${articleFilename}`)) as {
-    default: React.ComponentType;
-    article: Article;
-  };
+type FrontMatter = {
+  title: string;
+  description?: string;
+  author: string;
+  date: Date;
+  tags?: string[];
+};
 
-  return {
-    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
-    ...article,
-  };
-}
+export const allLocalArticles = createSource<{
+  frontMatter: FrontMatter;
+}>('../app/articles/content/**/*.mdx', {
+  baseDirectory: 'src/app/articles/content',
+  basePathname: '/articles',
+});
 
-export async function getAllArticles() {
-  const articleFilenames = await glob('*/page.mdx', {
-    cwd: './src/app/articles/(article)',
-  });
-
-  const localArticles = await Promise.all(articleFilenames.map(importArticle));
+export function getAllArticles(): Article[] {
+  const localArticles = allLocalArticles.all().map(({ frontMatter, pathname }) => ({
+    pathname,
+    ...frontMatter,
+  }));
 
   const allArticles = [...localArticles, ...externalArticles];
 

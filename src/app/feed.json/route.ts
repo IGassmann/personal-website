@@ -2,6 +2,8 @@ import assert from 'node:assert';
 import * as cheerio from 'cheerio';
 import { Feed } from 'feed';
 
+import { getAllArticles } from '@/lib/articles';
+
 export async function GET(request: Request) {
   const siteURL = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -27,31 +29,39 @@ export async function GET(request: Request) {
     },
   });
 
-  const articleIDs = require
-    .context('../articles/(article)', true, /\/page\.mdx$/)
-    .keys()
-    .filter((key) => key.startsWith('./'))
-    .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''));
+  const allArticles = getAllArticles();
 
-  for (const id of articleIDs) {
-    const url = String(new URL(`/articles/${id}`, request.url));
-    const html = await (await fetch(url)).text();
+  for (const article of allArticles) {
+    const isExternalArticle = 'url' in article;
+    if (isExternalArticle) {
+      feed.addItem({
+        id: article.url,
+        title: article.title,
+        link: article.url,
+        author: [author],
+        date: article.date,
+      });
+      continue;
+    }
+
+    const articleURL = String(new URL(article.pathname, request.url));
+    const html = await (await fetch(articleURL)).text();
     const $ = cheerio.load(html);
 
-    const publicURL = `${siteURL}/articles/${id}`;
-    const article = $('article').first();
-    const title = article.find('h1').first().text();
-    const date = article.find('time').first().attr('datetime');
-    const content = article.find('[data-mdx-content]').first();
+    const publicURL = new URL(article.pathname, siteURL);
+    const articleElement = $('article').first();
+    const title = articleElement.find('h1').first().text();
+    const date = articleElement.find('time').first().attr('datetime');
+    const content = articleElement.find('[data-mdx-content]').first();
     const sanitizedContent = transformRelativeURLsToAbsolute(content, siteURL).html();
 
     assert(typeof date === 'string', `date ${date} of ${title} is not a string`);
     assert(typeof sanitizedContent === 'string', `content of ${title} is not a string`);
 
     feed.addItem({
-      id: publicURL,
+      id: publicURL.href,
       title,
-      link: publicURL,
+      link: publicURL.href,
       author: [author],
       date: new Date(date),
       content: sanitizedContent,

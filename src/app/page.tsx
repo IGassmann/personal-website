@@ -66,10 +66,10 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function Article({ article }: { article: Article }) {
   return (
     <Card as="article">
-      <Card.Title href={'slug' in article ? `/articles/${article.slug}` : article.url}>
+      <Card.Title href={'pathname' in article ? article.pathname : article.url}>
         {article.title}
       </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
+      <Card.Eyebrow as="time" dateTime={article.date.toISOString()} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
@@ -212,7 +212,7 @@ function Resume() {
   );
 }
 export default async function Home() {
-  const articles = (await getAllArticles()).slice(0, 4);
+  const articles = getAllArticles().slice(0, 4);
 
   return (
     <>
@@ -252,7 +252,10 @@ export default async function Home() {
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
-              <Article key={'slug' in article ? article.slug : article.url} article={article} />
+              <Article
+                key={'pathname' in article ? article.pathname : article.url}
+                article={article}
+              />
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">

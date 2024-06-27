@@ -2,8 +2,6 @@ import assert from 'node:assert';
 import * as cheerio from 'cheerio';
 import { Feed } from 'feed';
 
-export const dynamic = 'force-static';
-
 export async function GET(request: Request) {
   const siteURL = process.env.NEXT_PUBLIC_SITE_URL;
 
@@ -66,6 +64,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       'content-type': 'application/feed+json',
+      'cache-control': 's-maxage=31556952',
     },
   });
 }

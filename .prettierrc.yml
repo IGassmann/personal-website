@@ -12,6 +12,7 @@ importOrder:
   - '^@/(.*)$'
   - '^[./]'
 importOrderTypeScriptVersion: 5.4.2
+tailwindStylesheet: ./src/styles/tailwind.css
 plugins:
   - '@ianvs/prettier-plugin-sort-imports'
   - 'prettier-plugin-tailwindcss' # Must come last

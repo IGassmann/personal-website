@@ -5,7 +5,7 @@ import { Footer } from '@/app/Footer';
 import { Header } from '@/app/Header';
 import { Providers } from '@/app/providers';
 
-import '@/styles/globals.css';
+import '@/styles/tailwind.css';
 
 if (typeof process.env.NEXT_PUBLIC_SITE_URL !== 'string') {
   throw new Error('NEXT_PUBLIC_SITE_URL is not defined');

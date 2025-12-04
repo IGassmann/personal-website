@@ -7,8 +7,11 @@ import remarkGfm from 'remark-gfm';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // We configure `pageExtensions` to include MDX files
   pageExtensions: ['ts', 'tsx', 'mdx'],
+  // Include MDX files in the output file tracing for serverless deployments (e.g., Vercel)
+  outputFileTracingIncludes: {
+    '/articles/*': ['./src/app/articles/**/*.mdx'],
+  },
   async redirects() {
     return [
       {
@@ -26,6 +29,7 @@ const nextConfig = {
 };
 
 const withMDX = nextMDX({
+  extension: /\.mdx?$/,
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypePrism],

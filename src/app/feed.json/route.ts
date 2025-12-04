@@ -1,5 +1,6 @@
 import assert from 'node:assert';
 import * as cheerio from 'cheerio';
+import type { Element } from 'domhandler';
 import { Feed } from 'feed';
 
 export async function GET(request: Request) {
@@ -70,7 +71,7 @@ export async function GET(request: Request) {
 }
 
 function transformRelativeURLsToAbsolute(
-  content: cheerio.Cheerio<cheerio.Element>,
+  content: cheerio.Cheerio<Element>,
   baseURL: string,
 ) {
   content.find('[href], [src]').each((_, element) => {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -159,11 +159,11 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
 function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   return (
     <button

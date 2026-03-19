@@ -7,7 +7,7 @@
     "noUncheckedIndexedAccess": true,
     "module": "preserve",
     "verbatimModuleSyntax": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "noEmit": true,
     "incremental": true,
     "paths": {
@@ -20,6 +20,13 @@
     ],
     "target": "ES2017"
   },
-  "include": ["**/*.ts", "**/*.tsx", "./next.config.js", "./next-env.d.ts", ".next/types/**/*.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "./next.config.js",
+    "./next-env.d.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": ["./node_modules"]
 }

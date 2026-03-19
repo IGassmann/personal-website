@@ -23,7 +23,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "./next.config.js",
+    "./next.config.ts",
     "./next-env.d.ts",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"

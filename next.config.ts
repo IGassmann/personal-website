@@ -1,9 +1,7 @@
-// @ts-check
-
+import type { NextConfig } from 'next';
 import nextMDX from '@next/mdx';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'mdx'],
   // Include MDX files in the output file tracing for serverless deployments (e.g., Vercel)
   outputFileTracingIncludes: {

@@ -5,12 +5,18 @@ import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/components/SimpleLayout';
 import athemLogo from '@/images/logos/athem-logo.png';
 import covalentLogo from '@/images/logos/covalent-logo.png';
-import githubLogo from '@/images/logos/github-logo.svg';
 import igorstirLogo from '@/images/logos/igorstir-logo.png';
 import inngestLogo from '@/images/logos/inngest-logo.png';
+import livestoreLogo from '@/images/logos/livestore-logo.svg';
 import odeonLogo from '@/images/logos/odeon-logo.png';
 
 const projects = [
+  {
+    name: 'LiveStore',
+    description: 'A reactive SQLite-based state management and sync engine library.',
+    link: { href: 'https://livestore.dev', label: 'livestore.dev' },
+    logo: livestoreLogo,
+  },
   {
     name: 'Inngest',
     description: 'Web App - A dashboard for managing and monitoring durable functions and events.',
@@ -53,13 +59,6 @@ const projects = [
     link: { href: 'https://www.athem.fr/', label: 'athem.fr' },
     logo: athemLogo,
   },
-  {
-    name: 'Web App Template',
-    description:
-      'A template for building web apps that I use to collect learnings and opinions on best practices and configurations.',
-    link: { href: 'https://github.com/IGassmann/web-app-template', label: 'github.com' },
-    logo: githubLogo,
-  },
 ];
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -87,7 +86,7 @@ export default function Projects() {
       <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card as="li" key={project.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image src={project.logo} alt="" className="h-8 w-8 rounded-full object-cover" />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">

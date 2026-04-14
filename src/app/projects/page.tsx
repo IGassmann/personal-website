@@ -31,7 +31,7 @@ const projects = [
     description:
       'Web App - A video platform that allowed creators to join forces by bundling their subscriptions.',
     link: {
-      href: 'https://www.linkedin.com/in/igassmann/details/experience/urn:li:fsd_profilePosition:(ACoAAAzO5DAB8u4NCNgwxGNt3gF0lZNQ3IX5Wg0,1350622780)/treasury/',
+      href: 'https://www.linkedin.com/in/igassmann/details/projects/',
       label: 'linkedin.com',
     },
     logo: odeonLogo,
@@ -47,7 +47,7 @@ const projects = [
     description:
       'Web App - A dashboard for creating and scheduling matchmaking programs for communities.',
     link: {
-      href: 'https://www.linkedin.com/in/igassmann/details/experience/urn:li:fsd_profilePosition:(ACoAAAzO5DAB8u4NCNgwxGNt3gF0lZNQ3IX5Wg0,1908473790)/treasury/',
+      href: 'https://www.linkedin.com/in/igassmann/details/projects/',
       label: 'linkedin.com',
     },
     logo: covalentLogo,

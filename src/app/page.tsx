@@ -7,6 +7,7 @@ import CopyButton from '@/components/CopyButton';
 import { GitHubIcon, LinkedInIcon, XIcon } from '@/components/social-icons';
 import covalentLogo from '@/images/logos/covalent-logo.png';
 import inngestLogo from '@/images/logos/inngest-logo.png';
+import livestoreLogo from '@/images/logos/livestore-logo.svg';
 import odeonLogo from '@/images/logos/odeon-logo.png';
 import synthesisLogo from '@/images/logos/synthesis-logo.png';
 import { getAllArticles, type Article } from '@/lib/articles';
@@ -138,7 +139,7 @@ function Role({ role }: { role: Role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex size-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+      <div className="relative mt-1 flex size-10 flex-none items-center justify-center rounded-full shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image src={role.logo} alt="" className="size-7 rounded-full object-cover" />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
@@ -163,6 +164,13 @@ function Role({ role }: { role: Role }) {
 
 function Resume() {
   const resume: Role[] = [
+    {
+      company: 'LiveStore',
+      title: 'Open Source Developer',
+      logo: livestoreLogo,
+      start: '2025',
+      end: new Date().getFullYear().toString(),
+    },
     {
       company: 'Inngest',
       title: 'Software Engineer',

@@ -1,0 +1,48 @@
+import Article from '../Article';
+
+export const article = {
+  author: 'Igor Gassmann',
+  date: '2026-05-27',
+  title: 'Premature Configurability',
+  description: 'Why software should avoid exposing configuration prematurely.',
+  tags: ['software development', 'product management', 'api design'],
+};
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+};
+
+export default (props) => <Article article={article} children={props.children} {...props} />;
+
+When building software that others will use — a library, a framework, a tool — there's a recurring
+temptation to expose configuration for anything that might vary. It feels like you're giving more
+power to the user. But most of the time, it's premature.
+
+---
+
+**Every option has a cost.** More configuration means more documentation, more test surface, more
+edge cases, and more decisions the user has to understand before they can get started. Every path
+interacts with every other path, so the complexity isn't additive; it's multiplicative
+
+**Configuration options are permanent contracts.** Once you ship a config option, you can never
+remove it without hurting users that depend on it. Users will depend on it, wrap it, document it
+internally, and build tooling around it.
+
+**Premature configuration is a deferred design decision.** When you're tempted to expose a knob,
+ask: do I genuinely not know which choice is right, or do I know but feel uncomfortable imposing it?
+The second case isn't a reason to add configuration — it's a reason to make the call and own it.
+Adding an option just transfers your uncertainty to the user, and they often have less context than
+you do.
+
+**You lose signal.** If you ship configuration preemptively, you'll never know if anyone actually
+needed it. If the defaults genuinely don't work for some use cases, that user will show up with a
+concrete problem. At that point you'll know which parameter matters, what direction it needs to
+move, and why — and can either adjust the behavior or add configuration in the right shape with real
+evidence. Waiting gives you better information.
+
+---
+
+Configuration is justified when the user has facts you cannot know. When users have facts you can't
+know (e.g., credentials, brand colors, currency), those need to be configurable. That's them
+supplying facts about their world, not you avoiding a design decision. The distinction matters.
